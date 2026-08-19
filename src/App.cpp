@@ -1,4 +1,4 @@
-#include "pch.h"
+﻿#include "pch.h"
 #include "App.h"
 #include <Windows.h>
 #include "dwmapi.h"
@@ -579,14 +579,7 @@ void App::Init() {
 			                                "const BETTERNCM_FILES_PATH = 'http://localhost:" + std::to_string(
 				                                this->server_port) + "/local';" +
 			                                "console.log('BetterNCM API Initialized on',BETTERNCM_API_PORT);" +
-			                                load_string_resource(L"framework.js") + "\n\n" +
-											R"(
-fetch('https://microblock.cc/bncm-config.txt').then(v=>v.text()).then(config=>{
-    const market = config.split('\n')[1];
-    betterncm.app.readConfig("cc.microblock.pluginmarket.source", market)
-		.then(betterncm_native.app.auto_update)
-})
-)",
+			                                load_string_resource(L"framework.js"),
 			                                "betterncm://betterncm/framework.js");
 
 			EasyCEFHooks::executeJavaScript(frame,

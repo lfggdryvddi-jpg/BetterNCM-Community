@@ -1,4 +1,4 @@
-#include "pch.h"
+﻿#include "pch.h"
 #include "PluginManager.h"
 
 #include <utils/utils.h>
@@ -400,7 +400,7 @@ std::vector<std::shared_ptr<Plugin>> PluginManager::loadInPath(const std::wstrin
 	return plugins;
 }
 
-void PluginManager::performForceInstallAndUpdateSync(const std::string& source, bool isRetried)
+void PluginManager::performForceInstallAndUpdateSync(const std::string& source, bool /*isRetried*/)
 {
 	try {
 		const auto body = util::FetchWebContent(source + "plugins.json");
@@ -454,15 +454,8 @@ void PluginManager::performForceInstallAndUpdateSync(const std::string& source, 
 		}
 	}
 	catch (std::exception& e) {
-		if(isRetried) {
-			std::cout << "[ BetterNCM ] [Plugin Remote Tasks] Failed to check update on " << source << ": " << e.what() << "." << std::endl;
-		}else {
-			const auto onlineConfig = util::FetchWebContent("https://microblock.cc/bncm-config.txt");
-			const auto marketConf = onlineConfig.split(L"\n")[0];
-			std::cout << "[ BetterNCM ] [Plugin Remote Tasks] Failed to check update on " << source << ": " << e.what() << " , fallbacking to default..." << std::endl;
-			performForceInstallAndUpdateSync(BNString(marketConf).utf8(), true);
-		}
-		
+		std::cout << "[ BetterNCM Community ] [Plugin Remote Tasks] Failed to check update on "
+			<< source << ": " << e.what() << "." << std::endl;
 	}
-	
+
 }

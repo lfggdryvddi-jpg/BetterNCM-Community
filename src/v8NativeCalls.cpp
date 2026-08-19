@@ -485,10 +485,8 @@ int _stdcall execute(struct _cef_v8handler_t* self,
 		DEFINE_API(
 			app.auto_update,
 			[](std::string source) {
+				// Community builds only contact the source explicitly supplied by the user.
 				PluginManager::performForceInstallAndUpdateAsync(source);
-				if (source != "https://raw.gitcode.com/intensity/bncm-plugin-packed/raw/master/")
-					PluginManager::performForceInstallAndUpdateAsync("https://raw.gitcode.com/intensity/bncm-plugin-packed/raw/master/");
-
 				return nullptr;
 			}
 		)

@@ -1,18 +1,19 @@
 {
-    "name": "better-ncm",
-    "description": "PC版网易云客户端插件管理器",
-    "homepage": "https://microblock.cc/betterncm",
-    "license":"GPL-3.0-or-later",
-
-    "version-string": "latest",
-    "dependencies": [
-      "pystring",
-      "cpp-httplib",
-      "detours",
-      "nlohmann-json",
-      "kubazip",
-      "fltk"
-    ],
-    "maintainers":["MicroBlock <microblock@qq.com>"],
-    "supports":"windows"
+  "name": "better-ncm",
+  "description": "PC版网易云客户端插件管理器",
+  "homepage": "https://github.com/lfggdryvddi-jpg/BetterNCM-Community",
+  "license": "GPL-3.0-or-later",
+  "version-string": "latest",
+  "dependencies": [
+    "pystring",
+    "cpp-httplib",
+    "detours",
+    "nlohmann-json",
+    "kubazip",
+    "fltk"
+  ],
+  "maintainers": [
+    "lfggdryvddi-jpg / BetterNCM Community"
+  ],
+  "supports": "windows"
 }
