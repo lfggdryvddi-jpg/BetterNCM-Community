@@ -60,11 +60,6 @@ void bncmMain() {
 						// Create data folder
 						fs::create_directories(datapath + L"/plugins");
 
-						// PluginMarket
-						if (!fs::exists(datapath + L"/plugins/PluginMarket.plugin")) {
-							util::extractPluginMarket();
-						}
-
 						// Inject NCM
 						auto app = new App();
 						app->Init();

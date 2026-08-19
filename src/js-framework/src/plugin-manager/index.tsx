@@ -1,6 +1,7 @@
 import BetterNCM from "../betterncm-api";
 import { isSafeMode, loadedPlugins } from "../loader";
 import { NCMPlugin } from "../plugin";
+import { CommunityThemePanel } from "./components/community-theme-panel";
 import { HeaderComponent } from "./components/header";
 import { SafeModeInfo } from "./components/safe-mode-info";
 import { StartupWarning } from "./components/warning";
@@ -106,9 +107,8 @@ export async function initPluginManager() {
 export let onPluginLoaded = (_: typeof loadedPlugins) => { };
 
 const PluginManager: React.FC = () => {
-	const [selectedPlugin, setSelectedPlugin] = React.useState<NCMPlugin | null>(
-		loadedPlugins["PluginMarket"],
-	);
+	const [selectedPlugin, setSelectedPlugin] = React.useState<NCMPlugin | null>(null);
+	const [communityThemeSelected, setCommunityThemeSelected] = React.useState(true);
 	const pluginConfigRef = React.useRef<HTMLDivElement | null>(null);
 	const [loadedPluginsList, setLoadedPlugins] = React.useState<string[]>([]);
 	const [showStartupWarnings, setShowStartupWarnings] = React.useState(
@@ -122,10 +122,6 @@ const PluginManager: React.FC = () => {
 				const loadPlugin = loadedPlugins[key];
 				const value = loadPlugin.haveConfigElement() ? 1 : 0;
 
-				// 将插件商店排到最前面
-				if (loadPlugin.manifest.name.startsWith("PluginMarket"))
-					return Number.MAX_SAFE_INTEGER;
-
 				return value;
 			};
 			return getSortValue(key2) - getSortValue(key1);
@@ -138,6 +134,8 @@ const PluginManager: React.FC = () => {
 	}, []);
 
 	React.useEffect(() => {
+		if (communityThemeSelected) return;
+
 		const myDomElement =
 			(selectedPlugin?.injects
 				.map((v) => v._getConfigElement())
@@ -150,7 +148,7 @@ const PluginManager: React.FC = () => {
 		}
 
 		pluginConfigRef.current?.replaceChildren(...myDomElement);
-	}, [selectedPlugin]);
+	}, [selectedPlugin, communityThemeSelected]);
 
 	return (
 		<div className="bncm-mgr">
@@ -187,6 +185,17 @@ const PluginManager: React.FC = () => {
 						>
 							<div>
 								<div>
+									<div
+										className={communityThemeSelected ? "plugin-btn selected" : "plugin-btn"}
+										data-plugin-slug="community-theme"
+										onClick={() => {
+											setCommunityThemeSelected(true);
+											setSelectedPlugin(null);
+										}}
+									>
+										<span className="plugin-list-name">社区皮肤</span>
+										<span className="bncm-theme-list-badge">内置</span>
+									</div>
 									{loadedPluginsList.map((key) => {
 										const loadPlugin = loadedPlugins[key];
 										const haveConfig = loadPlugin.haveConfigElement();
@@ -195,14 +204,17 @@ const PluginManager: React.FC = () => {
 											<div
 												className={
 													haveConfig
-														? selectedPlugin?.manifest.slug === key
+														? !communityThemeSelected && selectedPlugin?.manifest.slug === key
 															? "plugin-btn selected"
 															: "plugin-btn"
 														: "plugin-btn-disabled plugin-btn"
 												}
 												data-plugin-slug={key}
 												onClick={() => {
-													if (haveConfig) setSelectedPlugin(loadPlugin);
+													if (haveConfig) {
+													setCommunityThemeSelected(false);
+													setSelectedPlugin(loadPlugin);
+												}
 												}}
 											>
 												<span className="plugin-list-name">
@@ -210,7 +222,7 @@ const PluginManager: React.FC = () => {
 												</span>
 												{/* rome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
 												{
-													(!loadPlugin.pluginPath.includes("./plugins_dev") && loadPlugin.manifest.name !== "PluginMarket") &&
+													(!loadPlugin.pluginPath.includes("./plugins_dev")) &&
 													(
 														<span
 															className="plugin-uninstall-btn"
@@ -268,14 +280,18 @@ const PluginManager: React.FC = () => {
 						</div>
 						<div className="v-scroll">
 							<div>
-								<div
-									style={{
-										overflowY: "scroll",
-										overflowX: "hidden",
-										padding: "16px",
-									}}
-									ref={pluginConfigRef}
-								/>
+								{communityThemeSelected ? (
+									<CommunityThemePanel />
+								) : (
+									<div
+										style={{
+											overflowY: "scroll",
+											overflowX: "hidden",
+											padding: "16px",
+										}}
+										ref={pluginConfigRef}
+									/>
+								)}
 							</div>
 						</div>
 					</section>

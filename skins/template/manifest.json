@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "my-community-skin",
+  "name": "我的社区皮肤",
+  "version": "1.0.0",
+  "author": "你的名字",
+  "description": "一个从模板开始制作的 BetterNCM Community CSS 皮肤。",
+  "entry": "theme.css",
+  "license": "CC-BY-4.0",
+  "compatibility": {
+    "betterncm": ">=1.5.0",
+    "ncm": ">=3.1.0 <3.2.0"
+  },
+  "tags": ["dark", "custom"],
+  "preview": "preview.png"
+}

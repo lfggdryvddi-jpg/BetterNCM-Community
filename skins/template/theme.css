@@ -1,0 +1,20 @@
+/* BetterNCM Community skin template.
+ * Keep selectors scoped to html[data-bncm-community-theme] where possible.
+ * This file is CSS only: do not put JavaScript, remote @import rules, or data collection here.
+ */
+
+html[data-bncm-community-theme="midnight"] {
+    --my-skin-surface: rgba(20, 24, 42, .92);
+    --my-skin-accent: #8b5cf6;
+}
+
+html[data-bncm-community-theme="midnight"] .g-sd,
+html[data-bncm-community-theme="midnight"] .m-playbar {
+    background: var(--my-skin-surface) !important;
+    border-color: rgba(139, 92, 246, .35) !important;
+}
+
+html[data-bncm-community-theme="midnight"] a:hover,
+html[data-bncm-community-theme="midnight"] [aria-selected="true"] {
+    color: var(--my-skin-accent) !important;
+}

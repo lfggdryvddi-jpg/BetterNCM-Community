@@ -179,7 +179,6 @@ npm run build</Command>
     <ClCompile Include="src\v8NativeCalls.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="resource\PluginMarket.plugin" />
     <None Include="resource\rcdata2.bin" />
     <Text Include="src\framework.css">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
