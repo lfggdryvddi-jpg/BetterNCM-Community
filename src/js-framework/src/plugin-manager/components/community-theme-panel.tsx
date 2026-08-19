@@ -10,6 +10,7 @@ import {
 	saveCommunityThemeSettings,
 	validateCommunityCss,
 } from "../../community-theme";
+import { CommunityThemeGenerator } from "./theme-generator";
 
 const labelStyle: React.CSSProperties = {
 	display: "flex",
@@ -80,7 +81,7 @@ export const CommunityThemePanel: React.FC = () => {
 			</div>
 
 			<div className="bncm-theme-notice">
-				<strong>{selectedPreset?.name || "网易云原色"}</strong>
+				<strong>{settings.themeId === "generated" ? (settings.wallpaperName || "本地生成主题") : selectedPreset?.name || "网易云原色"}</strong>
 				<span>{selectedPreset?.description}</span>
 			</div>
 
@@ -161,6 +162,14 @@ export const CommunityThemePanel: React.FC = () => {
 					重新检测
 				</button>
 			</div>
+
+			<h3>自动生成主题</h3>
+			<CommunityThemeGenerator
+				settings={settings}
+				onUpdate={update}
+				onSettingsRefresh={setSettings}
+				onMessage={setMessage}
+			/>
 
 			<h3>导入社区 CSS 皮肤</h3>
 			<div className="bncm-theme-import">

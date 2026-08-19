@@ -1,4 +1,6 @@
-export type CommunityThemeId = "default" | "midnight" | "aurora" | "glass";
+import { fs as BetterNCMFs } from "./betterncm-api/fs";
+
+export type CommunityThemeId = "default" | "midnight" | "aurora" | "glass" | "generated";
 export type CommunityThemeSurface = "sidebar" | "topbar" | "main" | "player";
 
 export interface CommunityThemeSettings {
@@ -9,6 +11,21 @@ export interface CommunityThemeSettings {
 	accent: string;
 	customCss: string;
 	customCssName: string;
+	wallpaperPath: string;
+	wallpaperName: string;
+	palette?: CommunityThemePalette;
+}
+
+export interface CommunityThemePalette {
+	background: string;
+	sidebar: string;
+	surface: string;
+	surfaceElevated: string;
+	text: string;
+	muted: string;
+	accent: string;
+	danger: string;
+	success: string;
 }
 
 export interface CommunityThemePreset {
@@ -27,7 +44,7 @@ export interface CommunityThemeDiagnostics {
 }
 
 export const COMMUNITY_THEME_STORAGE_KEY = "betterncm.community.theme";
-export const COMMUNITY_THEME_SETTINGS_VERSION = 2;
+export const COMMUNITY_THEME_SETTINGS_VERSION = 3;
 export const COMMUNITY_CSS_MAX_BYTES = 512 * 1024;
 
 export const COMMUNITY_THEME_PRESETS: CommunityThemePreset[] = [
@@ -69,6 +86,8 @@ const DEFAULT_SETTINGS: CommunityThemeSettings = {
 	accent: "#ec4141",
 	customCss: "",
 	customCssName: "",
+	wallpaperPath: "",
+	wallpaperName: "",
 };
 
 const THEME_STYLE_ID = "betterncm-community-theme-style";
@@ -204,6 +223,28 @@ html[data-bncm-community-theme="glass"] {
 	--bncm-community-background-gradient: linear-gradient(145deg, #24111f, #3b1028 52%, #29152b);
 	--bncm-community-sidebar: rgba(53, 18, 47, var(--bncm-community-opacity));
 	--bncm-community-panel: rgba(75, 24, 53, var(--bncm-community-opacity));
+}
+
+html[data-bncm-community-theme="generated"] {
+	--bncm-community-background: var(--bncm-generated-background);
+	--bncm-community-background-gradient: linear-gradient(145deg, var(--bncm-generated-background), var(--bncm-generated-surface) 52%, var(--bncm-generated-sidebar));
+	--bncm-community-sidebar: var(--bncm-generated-sidebar);
+	--bncm-community-panel: var(--bncm-generated-surface);
+	--bncm-community-text: var(--bncm-generated-text);
+	--bncm-community-muted: var(--bncm-generated-muted);
+	--bncm-community-accent: var(--bncm-generated-accent);
+	--bncm-community-border: color-mix(in srgb, var(--bncm-generated-text) 18%, transparent);
+	--bncm-community-shadow: 0 18px 50px rgba(0, 0, 0, 0.26);
+	color-scheme: dark;
+}
+
+html[data-bncm-community-wallpaper="true"] body,
+html[data-bncm-community-wallpaper="true"] #app,
+html[data-bncm-community-wallpaper="true"] #g_iframe {
+	background-image: linear-gradient(rgba(0, 0, 0, var(--bncm-community-wallpaper-overlay)), var(--bncm-community-wallpaper), var(--bncm-community-background-gradient)) !important;
+	background-size: cover, cover, cover !important;
+	background-position: center, center, center !important;
+	background-attachment: fixed !important;
 }
 
 html[data-bncm-community-theme="midnight"] body,
@@ -342,6 +383,11 @@ html[data-bncm-community-theme="glass"] .bncm-mgr .cmd-button {
 }
 `;
 
+function isValidPalette(value: unknown): value is CommunityThemePalette {
+	if (!value || typeof value !== "object") return false;
+	return ["background", "sidebar", "surface", "surfaceElevated", "text", "muted", "accent", "danger", "success"].every((key) => /^#[0-9a-f]{6}$/i.test(String((value as Record<string, unknown>)[key] || "")));
+}
+
 function clamp(value: number, min: number, max: number) {
 	return Math.min(max, Math.max(min, value));
 }
@@ -465,7 +511,8 @@ export function getCommunityThemeSettings(): CommunityThemeSettings {
 		const themeId: CommunityThemeId =
 			stored.themeId === "midnight" ||
 			stored.themeId === "aurora" ||
-			stored.themeId === "glass"
+			stored.themeId === "glass" ||
+			stored.themeId === "generated"
 				? stored.themeId
 				: "default";
 		const storedAccent =
@@ -474,7 +521,7 @@ export function getCommunityThemeSettings(): CommunityThemeSettings {
 				: undefined;
 		const presetAccent =
 			COMMUNITY_THEME_PRESETS.find((preset) => preset.id === themeId)?.accent ||
-			DEFAULT_SETTINGS.accent;
+			(stored.palette && typeof stored.palette === "object" && typeof stored.palette.accent === "string" ? stored.palette.accent : DEFAULT_SETTINGS.accent);
 		const accent =
 			stored.version === COMMUNITY_THEME_SETTINGS_VERSION ||
 			storedAccent?.toLowerCase() !== "#8b5cf6"
@@ -487,8 +534,10 @@ export function getCommunityThemeSettings(): CommunityThemeSettings {
 			blur: clamp(Number(stored.blur ?? DEFAULT_SETTINGS.blur), 0, 36),
 			accent,
 			customCss: typeof stored.customCss === "string" ? stored.customCss : "",
-			customCssName:
-				typeof stored.customCssName === "string" ? stored.customCssName : "",
+			customCssName: typeof stored.customCssName === "string" ? stored.customCssName : "",
+			wallpaperPath: typeof stored.wallpaperPath === "string" ? stored.wallpaperPath : "",
+			wallpaperName: typeof stored.wallpaperName === "string" ? stored.wallpaperName : "",
+			palette: isValidPalette(stored.palette) ? stored.palette : undefined,
 		};
 	} catch {
 		return { ...DEFAULT_SETTINGS };
@@ -499,6 +548,26 @@ export function saveCommunityThemeSettings(settings: CommunityThemeSettings) {
 	const normalized = { ...settings, version: COMMUNITY_THEME_SETTINGS_VERSION };
 	localStorage.setItem(COMMUNITY_THEME_STORAGE_KEY, JSON.stringify(normalized));
 	applyCommunityTheme(normalized);
+}
+
+export function setCommunityWallpaperUrl(url: string) {
+	const root = document.documentElement;
+	if (url) root.style.setProperty("--bncm-community-wallpaper", `url(${JSON.stringify(url)})`);
+	else root.style.removeProperty("--bncm-community-wallpaper");
+}
+
+export async function useCommunityWallpaper(path: string, name: string) {
+	const url = await BetterNCMFs.mountFile(path);
+	setCommunityWallpaperUrl(url);
+	const settings = getCommunityThemeSettings();
+	saveCommunityThemeSettings({ ...settings, wallpaperPath: path, wallpaperName: name });
+	return url;
+}
+
+export function clearCommunityWallpaper() {
+	const settings = getCommunityThemeSettings();
+	setCommunityWallpaperUrl("");
+	saveCommunityThemeSettings({ ...settings, wallpaperPath: "", wallpaperName: "" });
 }
 
 export function resetCommunityTheme() {
@@ -530,12 +599,23 @@ export function applyCommunityTheme(settings: CommunityThemeSettings) {
 		document.head.appendChild(style);
 	}
 	const accentRgb = hexToRgb(settings.accent);
+	const palette = settings.palette;
+	const paletteCss = palette ? `html[data-bncm-community-theme="generated"] {
+		--bncm-generated-background: ${palette.background};
+		--bncm-generated-sidebar: ${palette.sidebar};
+		--bncm-generated-surface: ${palette.surface};
+		--bncm-generated-surface-elevated: ${palette.surfaceElevated};
+		--bncm-generated-text: ${palette.text};
+		--bncm-generated-muted: ${palette.muted};
+		--bncm-generated-accent: ${palette.accent};
+	}` : "";
 	const runtimeCss = `html[data-bncm-community-theme] {
 		--bncm-community-opacity: ${clamp(settings.intensity, 20, 100) / 100};
 		--bncm-community-blur: ${clamp(settings.blur, 0, 36)}px;
 		--bncm-community-accent: ${settings.accent};
 		--bncm-community-accent-rgb: ${accentRgb};
 		--bncm-community-accent-soft: rgba(${accentRgb}, 0.18);
+		--bncm-community-wallpaper-overlay: ${Math.max(0.12, 0.62 - settings.intensity / 220)};
 	}`;
 	style.textContent = `${runtimeCss}
 ${THEME_CSS}`;
@@ -572,8 +652,20 @@ function observeCommunityThemeTargets() {
 	});
 }
 
+async function restoreCommunityWallpaper() {
+	const settings = getCommunityThemeSettings();
+	if (!settings.wallpaperPath) return;
+	try {
+		setCommunityWallpaperUrl(await BetterNCMFs.mountFile(settings.wallpaperPath));
+	} catch {
+		setCommunityWallpaperUrl("");
+	}
+}
+
 function initializeCommunityTheme() {
-	applyCommunityTheme(getCommunityThemeSettings());
+	const settings = getCommunityThemeSettings();
+	applyCommunityTheme(settings);
+	void restoreCommunityWallpaper();
 	setTimeout(refreshCommunityThemeTargets, 800);
 	setTimeout(refreshCommunityThemeTargets, 2000);
 	observeCommunityThemeTargets();
