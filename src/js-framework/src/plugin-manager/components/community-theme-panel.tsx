@@ -1,12 +1,14 @@
 import BetterNCM from "../../betterncm-api";
 import {
-	applyCommunityTheme,
 	COMMUNITY_THEME_PRESETS,
-	CommunityThemeId,
+	CommunityThemeDiagnostics,
 	CommunityThemeSettings,
+	getCommunityThemeDiagnostics,
 	getCommunityThemeSettings,
+	refreshCommunityThemeTargets,
 	resetCommunityTheme,
 	saveCommunityThemeSettings,
+	validateCommunityCss,
 } from "../../community-theme";
 
 const labelStyle: React.CSSProperties = {
@@ -25,16 +27,42 @@ const cardStyle: React.CSSProperties = {
 	transition: "transform .15s ease, border-color .15s ease, background .15s ease",
 };
 
+const SURFACE_LABELS: Array<[keyof CommunityThemeDiagnostics, string]> = [
+	["sidebar", "侧栏"],
+	["topbar", "顶部栏"],
+	["main", "主内容"],
+	["player", "播放栏"],
+];
+
 export const CommunityThemePanel: React.FC = () => {
 	const [settings, setSettings] = React.useState<CommunityThemeSettings>(
 		getCommunityThemeSettings(),
 	);
+	const [diagnostics, setDiagnostics] = React.useState<CommunityThemeDiagnostics>(
+		getCommunityThemeDiagnostics(),
+	);
+	const [message, setMessage] = React.useState("");
+	const panelRef = React.useRef<HTMLDivElement | null>(null);
 	const cssFileInputRef = React.useRef<HTMLInputElement | null>(null);
 
+	React.useLayoutEffect(() => {
+		panelRef.current?.scrollTo(0, 0);
+		setDiagnostics(refreshCommunityThemeTargets());
+	}, []);
+
 	const update = (next: Partial<CommunityThemeSettings>) => {
-		const merged = { ...settings, ...next };
-		setSettings(merged);
-		saveCommunityThemeSettings(merged);
+		setSettings((current) => {
+			const merged = { ...current, ...next };
+			try {
+				saveCommunityThemeSettings(merged);
+				setMessage("");
+			} catch {
+				setMessage("设置保存失败，可能是自定义 CSS 过大或本地存储空间不足。");
+				return current;
+			}
+			return merged;
+		});
+		setTimeout(() => setDiagnostics(refreshCommunityThemeTargets()), 0);
 	};
 
 	const selectedPreset = COMMUNITY_THEME_PRESETS.find(
@@ -42,7 +70,7 @@ export const CommunityThemePanel: React.FC = () => {
 	);
 
 	return (
-		<div className="bncm-theme-panel">
+		<div className="bncm-theme-panel" ref={panelRef}>
 			<div className="bncm-theme-panel-title">
 				<div>
 					<h2>社区皮肤</h2>
@@ -62,15 +90,14 @@ export const CommunityThemePanel: React.FC = () => {
 					<button
 						key={preset.id}
 						type="button"
+						aria-pressed={settings.themeId === preset.id}
 						style={{
 							...cardStyle,
 							background: preset.preview,
 							borderColor:
-								settings.themeId === preset.id
-									? settings.accent
-									: "#8885",
+								settings.themeId === preset.id ? settings.accent : "#8885",
 						}}
-						onClick={() => update({ themeId: preset.id as CommunityThemeId })}
+						onClick={() => update({ themeId: preset.id, accent: preset.accent })}
 					>
 						<span>{preset.name}</span>
 						<small>{preset.description}</small>
@@ -108,17 +135,38 @@ export const CommunityThemePanel: React.FC = () => {
 			<label style={labelStyle}>
 				<span>强调色</span>
 				<input
+					className="bncm-theme-color"
 					type="color"
 					value={settings.accent}
 					onChange={(event) => update({ accent: event.target.value })}
 				/>
 			</label>
 
+			<h3>界面覆盖检测</h3>
+			<div className="bncm-theme-diagnostics">
+				<div className="bncm-theme-diagnostic-list">
+					{SURFACE_LABELS.map(([key, label]) => (
+						<span
+							key={key}
+							className={diagnostics[key] > 0 ? "is-ok" : "is-missing"}
+						>
+							{label}：{diagnostics[key] > 0 ? `已识别 ${diagnostics[key]}` : "未识别"}
+						</span>
+					))}
+				</div>
+				<button
+					type="button"
+					onClick={() => setDiagnostics(refreshCommunityThemeTargets())}
+				>
+					重新检测
+				</button>
+			</div>
+
 			<h3>导入社区 CSS 皮肤</h3>
 			<div className="bncm-theme-import">
 				<div>
 					<strong>{settings.customCssName || "尚未导入自定义 CSS"}</strong>
-					<span>仅接受本地 .css 文件，不运行 JavaScript。</span>
+					<span>仅接受不超过 512 KB 的本地 CSS；阻止远程导入和脚本式规则。</span>
 				</div>
 				<input
 					ref={cssFileInputRef}
@@ -126,10 +174,27 @@ export const CommunityThemePanel: React.FC = () => {
 					accept=".css,text/css"
 					style={{ display: "none" }}
 					onChange={async (event) => {
-						const file = event.currentTarget.files?.[0];
+						const input = event.currentTarget;
+						const file = input.files?.[0];
 						if (!file) return;
-						update({ customCss: await file.text(), customCssName: file.name });
-						event.currentTarget.value = "";
+						try {
+							if (!file.name.toLowerCase().endsWith(".css")) {
+								setMessage("请选择扩展名为 .css 的皮肤文件。");
+								return;
+							}
+							const css = await file.text();
+							const validationError = validateCommunityCss(css);
+							if (validationError) {
+								setMessage(validationError);
+								return;
+							}
+							update({ customCss: css, customCssName: file.name });
+							setMessage(`已导入 ${file.name}`);
+						} catch {
+							setMessage("CSS 文件读取失败，请确认文件可访问且编码正常。");
+						} finally {
+							input.value = "";
+						}
 					}}
 				/>
 				<button type="button" onClick={() => cssFileInputRef.current?.click()}>
@@ -144,27 +209,35 @@ export const CommunityThemePanel: React.FC = () => {
 					</button>
 				)}
 			</div>
+			{message && <p className="bncm-theme-message">{message}</p>}
+
 			<div className="bncm-theme-panel-actions">
 				<button
 					type="button"
 					onClick={() => {
 						resetCommunityTheme();
 						setSettings(getCommunityThemeSettings());
+						setDiagnostics(refreshCommunityThemeTargets());
+						setMessage("已恢复网易云原色并移除自定义 CSS。");
 					}}
 				>
 					恢复默认
 				</button>
 				<button
 					type="button"
-					onClick={() => BetterNCM.ncm.openUrl("https://github.com/lfggdryvddi-jpg/BetterNCM-Community")}
+					onClick={() =>
+						BetterNCM.ncm.openUrl(
+							"https://github.com/lfggdryvddi-jpg/BetterNCM-Community",
+						)
+					}
 				>
 					贡献皮肤
 				</button>
 			</div>
 
 			<p className="bncm-theme-footnote">
-				主题设置保存在当前网易云用户配置中，重启后仍然有效。社区皮肤仓库开放后，
-				可以在这里继续安装其他作者贡献的主题。
+				主题设置保存在当前网易云用户配置中，重启后仍然有效。若某个界面区域显示“未识别”，
+				可点击重新检测并向社区仓库提交当前网易云版本和截图。
 			</p>
 		</div>
 	);

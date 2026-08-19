@@ -279,7 +279,7 @@ const PluginManager: React.FC = () => {
 							</div>
 						</div>
 						<div className="v-scroll">
-							<div>
+							<div className={communityThemeSelected ? "bncm-theme-panel-host" : undefined}>
 								{communityThemeSelected ? (
 									<CommunityThemePanel />
 								) : (
