@@ -100,8 +100,10 @@ struct _cef_keyboard_handler_t* CEF_CALLBACK hook_cef_get_keyboard_handler(struc
 	auto keyboard_handler = CAST_TO(origin_cef_get_keyboard_handler, hook_cef_get_keyboard_handler)(self);
 	if (keyboard_handler) {
 		cef_client = self;
-		origin_cef_on_key_event = keyboard_handler->on_key_event;
-		keyboard_handler->on_key_event = hook_cef_on_key_event;
+		if (keyboard_handler->on_key_event && keyboard_handler->on_key_event != hook_cef_on_key_event) {
+			origin_cef_on_key_event = keyboard_handler->on_key_event;
+			keyboard_handler->on_key_event = hook_cef_on_key_event;
+		}
 	}
 	return keyboard_handler;
 }
@@ -133,8 +135,10 @@ struct _cef_load_handler_t* CEF_CALLBACK hook_cef_load_handler(struct _cef_clien
 	if (load_handler) {
 		cef_client = self;
 		load_handler->on_load_error = hook_cef_on_load_error;
-		origin_cef_on_load_start = load_handler->on_load_start;
-		load_handler->on_load_start = hook_cef_on_load_start;
+		if (load_handler->on_load_start && load_handler->on_load_start != hook_cef_on_load_start) {
+			origin_cef_on_load_start = load_handler->on_load_start;
+			load_handler->on_load_start = hook_cef_on_load_start;
+		}
 	}
 	return load_handler;
 }
@@ -155,9 +159,18 @@ _cef_display_handler_t* CEF_CALLBACK hook_cef_client_get_display_handler(_cef_cl
 
 void prepare_client_hooks(struct _cef_client_t* client) {
 	if (!client) return;
-	if (client->get_keyboard_handler) { origin_cef_get_keyboard_handler = client->get_keyboard_handler; client->get_keyboard_handler = hook_cef_get_keyboard_handler; }
-	if (client->get_load_handler) { origin_cef_load_handler = client->get_load_handler; client->get_load_handler = hook_cef_load_handler; }
-	if (client->get_display_handler) { origin_cef_client_get_display_handler = client->get_display_handler; client->get_display_handler = hook_cef_client_get_display_handler; }
+	if (client->get_keyboard_handler && client->get_keyboard_handler != hook_cef_get_keyboard_handler) {
+		origin_cef_get_keyboard_handler = client->get_keyboard_handler;
+		client->get_keyboard_handler = hook_cef_get_keyboard_handler;
+	}
+	if (client->get_load_handler && client->get_load_handler != hook_cef_load_handler) {
+		origin_cef_load_handler = client->get_load_handler;
+		client->get_load_handler = hook_cef_load_handler;
+	}
+	if (client->get_display_handler && client->get_display_handler != hook_cef_client_get_display_handler) {
+		origin_cef_client_get_display_handler = client->get_display_handler;
+		client->get_display_handler = hook_cef_client_get_display_handler;
+	}
 }
 
 cef_browser_t* hook_cef_browser_host_create_browser_sync(const cef_window_info_t* windowInfo, struct _cef_client_t* client, const cef_string_t* url, const struct _cef_browser_settings_t* settings, struct _cef_dictionary_value_t* extra_info, struct _cef_request_context_t* request_context) {
@@ -268,7 +281,14 @@ std::map<_cef_resource_handler_t*, CefRequestMITMProcess> urlMap;
 
 int CEF_CALLBACK hook_scheme_handler_read(struct _cef_resource_handler_t* self, void* data_out, int bytes_to_read, int* bytes_read, struct _cef_callback_t* callback);
 
-int CEF_CALLBACK hook_scheme_handler_read_modern(struct _cef_resource_handler_t* self, void* data_out, int bytes_to_read, int* bytes_read, struct _cef_resource_read_callback_t* callback) { return hook_scheme_handler_read(self, data_out, bytes_to_read, bytes_read, reinterpret_cast<struct _cef_callback_t*>(callback)); }
+int CEF_CALLBACK hook_scheme_handler_force_legacy(struct _cef_resource_handler_t*, void*, int, int* bytes_read, struct _cef_resource_read_callback_t*) {
+	if (bytes_read) *bytes_read = -1;
+	return 0;
+}
+
+int CEF_CALLBACK hook_scheme_handler_read_modern(struct _cef_resource_handler_t* self, void* data_out, int bytes_to_read, int* bytes_read, struct _cef_resource_read_callback_t* callback) {
+	return hook_scheme_handler_read(self, data_out, bytes_to_read, bytes_read, reinterpret_cast<struct _cef_callback_t*>(callback));
+}
 
 int CEF_CALLBACK hook_scheme_handler_read(struct _cef_resource_handler_t* self,
 	void* data_out,
@@ -312,13 +332,19 @@ _cef_resource_handler_t* CEF_CALLBACK hook_cef_scheme_handler_create(
 			url.ToString()
 	};
 
-	if (ret->read) {
-		origin_scheme_handler_read = ret->read;
-		ret->read = hook_scheme_handler_read_modern;
-	}
-	else if (ret->read_response) {
+	// CEF 91 may expose both read() and the legacy read_response(). Prefer the
+	// legacy callback when available because BetterNCM must buffer the complete
+	// response before applying its HTML/CSS/JS transformer. Returning -1 from
+	// read() asks CEF to fall back to read_response().
+	if (ret->read_response && ret->read_response != hook_scheme_handler_read) {
 		origin_scheme_handler_read = ret->read_response;
 		ret->read_response = hook_scheme_handler_read;
+		if (ret->read && ret->read != hook_scheme_handler_force_legacy)
+			ret->read = hook_scheme_handler_force_legacy;
+	}
+	else if (ret->read && ret->read != hook_scheme_handler_read_modern) {
+		origin_scheme_handler_read = ret->read;
+		ret->read = hook_scheme_handler_read_modern;
 	}
 	return ret;
 }
@@ -354,9 +380,35 @@ int hook_cef_register_scheme_handler_factory(
 
 
 bool EasyCEFHooks::InstallHooks() {
-	static bool installed = false; if (installed) return true; DetourTransactionBegin(); DetourUpdateThread(GetCurrentThread());
-	origin_cef_v8context_get_current_context = DetourFindFunction("libcef.dll", "cef_v8context_get_current_context"); origin_cef_browser_host_create_browser = DetourFindFunction("libcef.dll", "cef_browser_host_create_browser_sync"); origin_cef_browser_host_create_browser_async = DetourFindFunction("libcef.dll", "cef_browser_host_create_browser"); origin_cef_initialize = DetourFindFunction("libcef.dll", "cef_initialize"); origin_cef_execute_process = DetourFindFunction("libcef.dll", "cef_execute_process"); origin_cef_register_scheme_handler_factory = DetourFindFunction("libcef.dll", "cef_register_scheme_handler_factory");
-	if (origin_cef_v8context_get_current_context) DetourAttach(&origin_cef_v8context_get_current_context, hook_cef_v8context_get_current_context); if (origin_cef_browser_host_create_browser) DetourAttach(&origin_cef_browser_host_create_browser, hook_cef_browser_host_create_browser_sync); if (origin_cef_browser_host_create_browser_async) DetourAttach(&origin_cef_browser_host_create_browser_async, hook_cef_browser_host_create_browser); if (origin_cef_register_scheme_handler_factory) DetourAttach(&origin_cef_register_scheme_handler_factory, hook_cef_register_scheme_handler_factory); if (origin_cef_initialize) DetourAttach(&origin_cef_initialize, hook_cef_initialize); if (origin_cef_execute_process) DetourAttach(&origin_cef_execute_process, hook_cef_execute_process); const LONG ret = DetourTransactionCommit(); if (ret == NO_ERROR) installed = true; return ret == NO_ERROR;
+	static bool installed = false;
+	if (installed) return true;
+
+	DetourTransactionBegin();
+	DetourUpdateThread(GetCurrentThread());
+
+	origin_cef_v8context_get_current_context = DetourFindFunction("libcef.dll", "cef_v8context_get_current_context");
+	origin_cef_browser_host_create_browser = DetourFindFunction("libcef.dll", "cef_browser_host_create_browser_sync");
+	origin_cef_browser_host_create_browser_async = DetourFindFunction("libcef.dll", "cef_browser_host_create_browser");
+	origin_cef_initialize = DetourFindFunction("libcef.dll", "cef_initialize");
+	origin_cef_execute_process = DetourFindFunction("libcef.dll", "cef_execute_process");
+	origin_cef_register_scheme_handler_factory = DetourFindFunction("libcef.dll", "cef_register_scheme_handler_factory");
+
+	if (origin_cef_v8context_get_current_context)
+		DetourAttach(&origin_cef_v8context_get_current_context, hook_cef_v8context_get_current_context);
+	if (origin_cef_browser_host_create_browser)
+		DetourAttach(&origin_cef_browser_host_create_browser, hook_cef_browser_host_create_browser_sync);
+	if (origin_cef_browser_host_create_browser_async)
+		DetourAttach(&origin_cef_browser_host_create_browser_async, hook_cef_browser_host_create_browser);
+	if (origin_cef_register_scheme_handler_factory)
+		DetourAttach(&origin_cef_register_scheme_handler_factory, hook_cef_register_scheme_handler_factory);
+	if (origin_cef_initialize)
+		DetourAttach(&origin_cef_initialize, hook_cef_initialize);
+	if (origin_cef_execute_process)
+		DetourAttach(&origin_cef_execute_process, hook_cef_execute_process);
+
+	const LONG ret = DetourTransactionCommit();
+	if (ret == NO_ERROR) installed = true;
+	return ret == NO_ERROR;
 }
 
 bool EasyCEFHooks::UninstallHook() {
