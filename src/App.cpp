@@ -276,14 +276,14 @@ std::thread* App::create_server(const std::string& apiKey) {
 			BNString path = req.get_param_value("path");
 
 			if (path[1] != ':') {
-				auto file = req.get_file_value("file");
+				auto file = req.form.get_file("file");
 				ofstream ofs(datapath + L"/" + path, ios::binary);
 				ofs << file.content;
 
 				res.status = 200;
 			}
 			else {
-				auto file = req.get_file_value("file");
+				auto file = req.form.get_file("file");
 				ofstream ofs(path, ios::binary);
 				ofs << file.content;
 
@@ -421,6 +421,11 @@ std::thread* App::create_server(const std::string& apiKey) {
 		});
 
 
+		svr->Get("/api/internal/framework.css", [&](const httplib::Request& req, httplib::Response& res) {
+			checkApiKey;
+			res.set_content(load_string_resource(L"framework.css"), "text/css");
+		});
+
 		svr->Get("/api/app/open_file_dialog", [&](const httplib::Request& req, httplib::Response& res) {
 			checkApiKey;
 			TCHAR szBuffer[MAX_PATH] = {0};
@@ -442,10 +447,7 @@ std::thread* App::create_server(const std::string& apiKey) {
 		});
 
 		// ���ز������������ʽ�ļ�
-		svr->Get("/api/internal/framework.css", [&](const httplib::Request& req, httplib::Response& res) {
-			checkApiKey;
-			res.set_content(load_string_resource(L"framework.css"), "text/css");
-		});
+
 
 		svr->set_mount_point("/local", datapath.utf8());
 

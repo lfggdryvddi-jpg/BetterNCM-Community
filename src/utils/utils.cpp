@@ -312,7 +312,7 @@ semver::version util::getNCMExecutableVersion() {
 		cached = fallback;
 		return cached.value();
 	}
-	std::vector<std::byte> verData(verSize);
+	std::vector<std::uint8_t> verData(verSize);
 	if (!GetFileVersionInfoW(executable.c_str(), verHandle, verSize, verData.data())) {
 		cached = fallback;
 		return cached.value();

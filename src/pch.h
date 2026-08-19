@@ -18,6 +18,10 @@
 #include <sstream> 
 #include <streambuf>
 #include <stdio.h>
+#if defined(_WIN32) && !defined(_WIN64) && !defined(_SSIZE_T_DEFINED)
+using ssize_t = long;
+#define _SSIZE_T_DEFINED
+#endif
 #include "httplib.h"
 #include "nlohmann/json.hpp"
 #include <ctime>
