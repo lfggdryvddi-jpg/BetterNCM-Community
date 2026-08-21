@@ -314,12 +314,44 @@ html[data-bncm-community-theme="glass"] #g_iframe {
 
 html[data-bncm-community-theme="midnight"] [${SURFACE_ATTRIBUTE}="sidebar"],
 html[data-bncm-community-theme="aurora"] [${SURFACE_ATTRIBUTE}="sidebar"],
-html[data-bncm-community-theme="glass"] [${SURFACE_ATTRIBUTE}="sidebar"] {
+html[data-bncm-community-theme="glass"] [${SURFACE_ATTRIBUTE}="sidebar"],
+html[data-bncm-community-theme="generated"] [${SURFACE_ATTRIBUTE}="sidebar"] {
 	background: var(--bncm-community-sidebar) !important;
 	background-image: none !important;
 	border-color: var(--bncm-community-border) !important;
+	box-shadow: inset -1px 0 0 rgba(255, 255, 255, .06) !important;
 	color: var(--bncm-community-text) !important;
 	backdrop-filter: blur(var(--bncm-community-blur));
+}
+
+/* Keep the sidebar selection visibly owned by the community theme instead of
+ * inheriting the active color block from the currently selected NCM skin. */
+html[data-bncm-community-theme="midnight"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"],
+html[data-bncm-community-theme="aurora"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"],
+html[data-bncm-community-theme="glass"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"],
+html[data-bncm-community-theme="generated"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"] {
+	border-radius: 10px;
+	transition: background .16s ease, box-shadow .16s ease, color .16s ease;
+}
+
+html[data-bncm-community-theme="midnight"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"]:not(.is-selected):not(.selected):hover,
+html[data-bncm-community-theme="aurora"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"]:not(.is-selected):not(.selected):hover,
+html[data-bncm-community-theme="glass"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"]:not(.is-selected):not(.selected):hover,
+html[data-bncm-community-theme="generated"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"]:not(.is-selected):not(.selected):hover {
+	background: rgba(var(--bncm-community-accent-rgb), .1) !important;
+	box-shadow: inset 0 0 0 1px rgba(var(--bncm-community-accent-rgb), .1) !important;
+}
+
+html[data-bncm-community-theme="midnight"] [${SURFACE_ATTRIBUTE}="sidebar"] [data-testid^="tid_navitem_"][class*="ItemContainer_"]:is(.is-selected, .selected),
+html[data-bncm-community-theme="aurora"] [${SURFACE_ATTRIBUTE}="sidebar"] [data-testid^="tid_navitem_"][class*="ItemContainer_"]:is(.is-selected, .selected),
+html[data-bncm-community-theme="glass"] [${SURFACE_ATTRIBUTE}="sidebar"] [data-testid^="tid_navitem_"][class*="ItemContainer_"]:is(.is-selected, .selected),
+html[data-bncm-community-theme="generated"] [${SURFACE_ATTRIBUTE}="sidebar"] [data-testid^="tid_navitem_"][class*="ItemContainer_"]:is(.is-selected, .selected) {
+	background: linear-gradient(90deg, rgba(var(--bncm-community-accent-rgb), .24), rgba(var(--bncm-community-accent-rgb), .08)) !important;
+	box-shadow:
+		inset 3px 0 0 rgba(var(--bncm-community-accent-rgb), 1),
+		inset 0 0 0 1px rgba(var(--bncm-community-accent-rgb), .18),
+		0 6px 18px rgba(0, 0, 0, .1) !important;
+	color: var(--bncm-community-text) !important;
 }
 
 html[data-bncm-community-theme="midnight"] [${SURFACE_ATTRIBUTE}="topbar"],
@@ -451,7 +483,15 @@ function surfaceMatchesViewport(
 ) {
 	switch (surface) {
 		case "sidebar":
-			return rect.left < 16 && rect.width > 120 && rect.width < width * .42 && rect.height > height * .5;
+			// Reject the very tall draggable list content. Applying backdrop-filter
+			// to that 10k+ px layer creates a stale dark edge while pages transition.
+			// The actual LeftScrollContainer is a viewport-sized, clipped scroller.
+			return rect.left < 16 &&
+				rect.top >= 0 && rect.top < height * .2 &&
+				rect.right < width * .45 &&
+				rect.bottom > height * .78 && rect.bottom <= height + 12 &&
+				rect.width > 120 && rect.width < width * .42 &&
+				rect.height > height * .5 && rect.height < height * 1.05;
 		case "topbar":
 			return rect.top < 16 && rect.width > width * .48 && rect.height > 35 && rect.height < height * .28;
 		case "player":
@@ -964,6 +1004,7 @@ html[data-bncm-community-wallpaper="true"] {
 html[data-bncm-community-wallpaper="true"] [${SURFACE_ATTRIBUTE}="sidebar"] {
 	background: linear-gradient(180deg, rgba(${hexToRgb(shellPalette.sidebar)}, var(--bncm-community-sidebar-opacity)), rgba(${hexToRgb(shellPalette.background)}, var(--bncm-community-main-opacity))) !important;
 	border-right: 1px solid rgba(255, 255, 255, .1) !important;
+	box-shadow: inset -1px 0 0 rgba(0, 0, 0, .08) !important;
 	backdrop-filter: blur(var(--bncm-community-blur)) saturate(1.08) !important;
 }
 html[data-bncm-community-wallpaper="true"] [${SURFACE_ATTRIBUTE}="topbar"] {
