@@ -326,34 +326,60 @@ html[data-bncm-community-theme="generated"] [${SURFACE_ATTRIBUTE}="sidebar"] {
 
 /* Keep the sidebar selection visibly owned by the community theme instead of
  * inheriting the active color block from the currently selected NCM skin. */
-html[data-bncm-community-theme="midnight"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"],
-html[data-bncm-community-theme="aurora"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"],
-html[data-bncm-community-theme="glass"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"],
-html[data-bncm-community-theme="generated"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"] {
-	border-radius: 10px;
-	transition: background .16s ease, box-shadow .16s ease, color .16s ease;
-}
-
-html[data-bncm-community-theme="midnight"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"]:not(.is-selected):not(.selected):hover,
-html[data-bncm-community-theme="aurora"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"]:not(.is-selected):not(.selected):hover,
-html[data-bncm-community-theme="glass"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"]:not(.is-selected):not(.selected):hover,
-html[data-bncm-community-theme="generated"] [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"]:not(.is-selected):not(.selected):hover {
-	background: rgba(var(--bncm-community-accent-rgb), .1) !important;
-	box-shadow: inset 0 0 0 1px rgba(var(--bncm-community-accent-rgb), .1) !important;
-}
-
-html[data-bncm-community-theme="midnight"] [${SURFACE_ATTRIBUTE}="sidebar"] [data-testid^="tid_navitem_"][class*="ItemContainer_"]:is(.is-selected, .selected),
-html[data-bncm-community-theme="aurora"] [${SURFACE_ATTRIBUTE}="sidebar"] [data-testid^="tid_navitem_"][class*="ItemContainer_"]:is(.is-selected, .selected),
-html[data-bncm-community-theme="glass"] [${SURFACE_ATTRIBUTE}="sidebar"] [data-testid^="tid_navitem_"][class*="ItemContainer_"]:is(.is-selected, .selected),
-html[data-bncm-community-theme="generated"] [${SURFACE_ATTRIBUTE}="sidebar"] [data-testid^="tid_navitem_"][class*="ItemContainer_"]:is(.is-selected, .selected) {
-	background: linear-gradient(90deg, rgba(var(--bncm-community-accent-rgb), .24), rgba(var(--bncm-community-accent-rgb), .08)) !important;
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [${SURFACE_ATTRIBUTE}="sidebar"] .show-bottom-border.first-group[class*="NavItemContainer_"] {
+	margin: 5px 8px 17px;
+	padding: 6px !important;
+	border: 1px solid rgba(255, 255, 255, .09) !important;
+	border-radius: 16px;
+	background: linear-gradient(160deg, rgba(255, 255, 255, .055), rgba(255, 255, 255, .015)) !important;
 	box-shadow:
-		inset 3px 0 0 rgba(var(--bncm-community-accent-rgb), 1),
-		inset 0 0 0 1px rgba(var(--bncm-community-accent-rgb), .18),
-		0 6px 18px rgba(0, 0, 0, .1) !important;
-	color: var(--bncm-community-text) !important;
+		inset 0 1px 0 rgba(255, 255, 255, .06),
+		0 12px 28px rgba(0, 0, 0, .08) !important;
 }
 
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"] {
+	border-radius: 11px;
+	transition: background .16s ease, box-shadow .16s ease, color .16s ease, transform .16s ease;
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [${SURFACE_ATTRIBUTE}="sidebar"] [class*="ItemContainer_"]:not(.is-selected):not(.selected):hover {
+	background: var(--bncm-community-control-hover) !important;
+	box-shadow: inset 0 0 0 1px rgba(var(--bncm-community-accent-alt-rgb), .12) !important;
+	transform: translateX(2px);
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [${SURFACE_ATTRIBUTE}="sidebar"] [data-testid^="tid_navitem_"][class*="ItemContainer_"]:is(.is-selected, .selected) {
+	background: var(--bncm-community-selection-gradient) !important;
+	box-shadow:
+		inset 2px 0 0 var(--bncm-community-accent-alt),
+		inset 0 0 0 1px rgba(var(--bncm-community-accent-alt-rgb), .18),
+		0 8px 22px rgba(0, 0, 0, .12) !important;
+	color: var(--bncm-community-text) !important;
+	font-weight: 600;
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [${SURFACE_ATTRIBUTE}="sidebar"] [data-testid^="tid_navitem_"]:is(.is-selected, .selected) [class*="IconWrapper_"] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	margin-left: -3px;
+	border-radius: 9px;
+	background: var(--bncm-community-control-gradient) !important;
+	box-shadow: 0 5px 14px rgba(var(--bncm-community-accent-rgb), .2);
+	color: #fff !important;
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [${SURFACE_ATTRIBUTE}="sidebar"]::-webkit-scrollbar {
+	width: 6px;
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [${SURFACE_ATTRIBUTE}="sidebar"]::-webkit-scrollbar-thumb {
+	border: 1px solid transparent;
+	border-radius: 999px;
+	background: linear-gradient(rgba(var(--bncm-community-accent-rgb), .58), rgba(var(--bncm-community-accent-alt-rgb), .48)) padding-box;
+}
 html[data-bncm-community-theme="midnight"] [${SURFACE_ATTRIBUTE}="topbar"],
 html[data-bncm-community-theme="aurora"] [${SURFACE_ATTRIBUTE}="topbar"],
 html[data-bncm-community-theme="glass"] [${SURFACE_ATTRIBUTE}="topbar"],
@@ -412,6 +438,73 @@ html[data-bncm-community-theme="glass"] [class*="DefaultBarWrapper_"]::before,
 html[data-bncm-community-theme="glass"] [class*="DefaultBarWrapper_"]::after {
 	background-image: none !important;
 	border-color: var(--bncm-community-border) !important;
+}
+/* Player controls use a two-tone identity derived from the active community skin. */
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #btn_pc_minibar_play,
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [data-testid="tid_playbar_play_btn"] {
+	background: var(--bncm-community-control-gradient) !important;
+	border: 1px solid rgba(255, 255, 255, .26) !important;
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, .3),
+		0 8px 24px rgba(var(--bncm-community-accent-rgb), .28) !important;
+	color: #fff !important;
+	transition: transform .16s ease, box-shadow .16s ease, filter .16s ease !important;
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #btn_pc_minibar_play:hover,
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [data-testid="tid_playbar_play_btn"]:hover {
+	filter: saturate(1.08) brightness(1.06);
+	transform: translateY(-1px) scale(1.045);
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #btn_pc_minibar_play:active,
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [data-testid="tid_playbar_play_btn"]:active {
+	filter: saturate(.96) brightness(.96);
+	transform: scale(.96);
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar .cmd-button:not(#btn_pc_minibar_play):not([data-testid="tid_playbar_play_btn"]) {
+	border-radius: 10px;
+	transition: background .15s ease, box-shadow .15s ease, color .15s ease, transform .15s ease;
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar .cmd-button:not(#btn_pc_minibar_play):not([data-testid="tid_playbar_play_btn"]):hover {
+	background: var(--bncm-community-control-hover) !important;
+	box-shadow: inset 0 0 0 1px rgba(var(--bncm-community-accent-alt-rgb), .16) !important;
+	color: var(--bncm-community-text) !important;
+	transform: translateY(-1px);
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar .cmd-button:not(#btn_pc_minibar_play):not([data-testid="tid_playbar_play_btn"]):active {
+	transform: scale(.96);
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar [class*="TagStyle_"] {
+	border-color: rgba(var(--bncm-community-accent-alt-rgb), .38) !important;
+	background: linear-gradient(135deg, rgba(var(--bncm-community-accent-rgb), .1), rgba(var(--bncm-community-accent-alt-rgb), .055)) !important;
+	color: var(--bncm-community-muted) !important;
+	transition: border-color .15s ease, background .15s ease, color .15s ease;
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar [class*="TagStyle_"]:hover {
+	border-color: rgba(var(--bncm-community-accent-alt-rgb), .68) !important;
+	background: var(--bncm-community-control-hover) !important;
+	color: var(--bncm-community-text) !important;
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar [aria-label="播放进度调节"] {
+	--track-color: linear-gradient(90deg, var(--bncm-community-accent-alt) 0%, var(--bncm-community-accent) 100%) !important;
+	--smigcsb-3: rgba(var(--bncm-community-accent-rgb), .9) !important;
+	--smigcsb-6: rgba(255, 255, 255, .08) !important;
+	--smigcsb-7: rgba(255, 255, 255, .15) !important;
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar [aria-label="播放进度调节"] > .track {
+	box-shadow: 0 0 9px rgba(var(--bncm-community-accent-rgb), .42);
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar [aria-label="播放进度调节"] > .thumb {
+	filter: drop-shadow(0 0 5px rgba(var(--bncm-community-accent-alt-rgb), .52));
 }
 
 html[data-bncm-community-theme="midnight"] [${SURFACE_ATTRIBUTE}] a,
@@ -898,22 +991,83 @@ export function resetCommunityTheme() {
 	applyCommunityTheme(DEFAULT_SETTINGS);
 }
 
+function parseHexRgb(hex: string) {
+	const normalized = /^#[0-9a-f]{6}$/i.test(hex) ? hex : "#8b5cf6";
+	const value = Number.parseInt(normalized.slice(1), 16);
+	return { r: (value >> 16) & 255, g: (value >> 8) & 255, b: value & 255 };
+}
+
+function rgbToHsl(r: number, g: number, b: number) {
+	const red = r / 255;
+	const green = g / 255;
+	const blue = b / 255;
+	const max = Math.max(red, green, blue);
+	const min = Math.min(red, green, blue);
+	const lightness = (max + min) / 2;
+	if (max === min) return { h: 0, s: 0, l: lightness };
+	const delta = max - min;
+	const saturation = lightness > .5 ? delta / (2 - max - min) : delta / (max + min);
+	let hue = 0;
+	if (max === red) hue = (green - blue) / delta + (green < blue ? 6 : 0);
+	else if (max === green) hue = (blue - red) / delta + 2;
+	else hue = (red - green) / delta + 4;
+	return { h: hue * 60, s: saturation, l: lightness };
+}
+
+function hslToHex(hue: number, saturation: number, lightness: number) {
+	const normalizedHue = ((hue % 360) + 360) % 360 / 360;
+	const hueToChannel = (p: number, q: number, value: number) => {
+		let channel = value;
+		if (channel < 0) channel += 1;
+		if (channel > 1) channel -= 1;
+		if (channel < 1 / 6) return p + (q - p) * 6 * channel;
+		if (channel < 1 / 2) return q;
+		if (channel < 2 / 3) return p + (q - p) * (2 / 3 - channel) * 6;
+		return p;
+	};
+	let red = lightness;
+	let green = lightness;
+	let blue = lightness;
+	if (saturation > 0) {
+		const q = lightness < .5 ? lightness * (1 + saturation) : lightness + saturation - lightness * saturation;
+		const p = 2 * lightness - q;
+		red = hueToChannel(p, q, normalizedHue + 1 / 3);
+		green = hueToChannel(p, q, normalizedHue);
+		blue = hueToChannel(p, q, normalizedHue - 1 / 3);
+	}
+	const channelToHex = (channel: number) => Math.round(clamp(channel, 0, 1) * 255).toString(16).padStart(2, "0");
+	return `#${channelToHex(red)}${channelToHex(green)}${channelToHex(blue)}`;
+}
+
+function deriveAccentAlternative(themeId: CommunityThemeId, accent: string) {
+	const rgb = parseHexRgb(accent);
+	const hsl = rgbToHsl(rgb.r, rgb.g, rgb.b);
+	const hueShift = themeId === "midnight" ? -20 : themeId === "aurora" ? 28 : themeId === "glass" ? -18 : -42;
+	const minimumSaturation = themeId === "generated" ? .56 : .62;
+	const lightness = clamp(hsl.l < .42 ? hsl.l + .12 : hsl.l > .72 ? hsl.l - .1 : hsl.l, .48, .68);
+	return hslToHex(hsl.h + hueShift, Math.max(hsl.s, minimumSaturation), lightness);
+}
+
 function hexToRgb(hex: string) {
-	const value = Number.parseInt(hex.slice(1), 16);
-	return `${(value >> 16) & 255}, ${(value >> 8) & 255}, ${value & 255}`;
+	const { r, g, b } = parseHexRgb(hex);
+	return `${r}, ${g}, ${b}`;
 }
 
 export function applyCommunityTheme(settings: CommunityThemeSettings) {
 	const root = document.documentElement;
+	const palette = settings.palette;
+	const effectiveAccent = settings.themeId === "generated" && palette ? palette.accent : settings.accent;
+	const accentAlternative = deriveAccentAlternative(settings.themeId, effectiveAccent);
+	const accentRgb = hexToRgb(effectiveAccent);
+	const accentAlternativeRgb = hexToRgb(accentAlternative);
 	root.dataset.bncmCommunityTheme = settings.themeId;
 	root.style.setProperty("--bncm-community-opacity", String(settings.intensity / 100));
 	root.style.setProperty("--bncm-community-blur", `${settings.blur}px`);
-	root.style.setProperty("--bncm-community-accent", settings.accent);
-	root.style.setProperty("--bncm-community-accent-rgb", hexToRgb(settings.accent));
-	root.style.setProperty(
-		"--bncm-community-accent-soft",
-		`rgba(${hexToRgb(settings.accent)}, 0.18)`,
-	);
+	root.style.setProperty("--bncm-community-accent", effectiveAccent);
+	root.style.setProperty("--bncm-community-accent-rgb", accentRgb);
+	root.style.setProperty("--bncm-community-accent-alt", accentAlternative);
+	root.style.setProperty("--bncm-community-accent-alt-rgb", accentAlternativeRgb);
+	root.style.setProperty("--bncm-community-accent-soft", `rgba(${accentRgb}, 0.18)`);
 
 	let style = document.getElementById(THEME_STYLE_ID) as HTMLStyleElement | null;
 	if (!style) {
@@ -921,8 +1075,6 @@ export function applyCommunityTheme(settings: CommunityThemeSettings) {
 		style.id = THEME_STYLE_ID;
 		document.head.appendChild(style);
 	}
-	const accentRgb = hexToRgb(settings.accent);
-	const palette = settings.palette;
 	const paletteCss = palette ? `html[data-bncm-community-theme="generated"] {
 		--bncm-generated-background: ${palette.background};
 		--bncm-generated-sidebar: ${palette.sidebar};
@@ -933,15 +1085,21 @@ export function applyCommunityTheme(settings: CommunityThemeSettings) {
 		--bncm-generated-accent: ${palette.accent};
 	}` : "";
 	const normalizedOpacity = clamp(settings.intensity, 20, 100) / 100;
+	const controlAngle = settings.themeId === "aurora" ? "115deg" : settings.themeId === "glass" ? "145deg" : settings.themeId === "midnight" ? "128deg" : "135deg";
 	const runtimeCss = `html[data-bncm-community-theme] {
 		--bncm-community-opacity: ${normalizedOpacity};
 		--bncm-community-main-opacity: ${Math.min(0.62, normalizedOpacity * 0.58)};
 		--bncm-community-sidebar-opacity: ${Math.min(0.78, normalizedOpacity * 0.72)};
 		--bncm-community-card-opacity: ${Math.min(0.6, normalizedOpacity * 0.4)};
 		--bncm-community-blur: ${clamp(settings.blur, 0, 36)}px;
-		--bncm-community-accent: ${settings.accent};
+		--bncm-community-accent: ${effectiveAccent};
 		--bncm-community-accent-rgb: ${accentRgb};
+		--bncm-community-accent-alt: ${accentAlternative};
+		--bncm-community-accent-alt-rgb: ${accentAlternativeRgb};
 		--bncm-community-accent-soft: rgba(${accentRgb}, 0.18);
+		--bncm-community-control-gradient: linear-gradient(${controlAngle}, ${accentAlternative} 0%, ${effectiveAccent} 100%);
+		--bncm-community-control-hover: linear-gradient(135deg, rgba(${accentAlternativeRgb}, .14), rgba(${accentRgb}, .09));
+		--bncm-community-selection-gradient: linear-gradient(100deg, rgba(${accentAlternativeRgb}, .24), rgba(${accentRgb}, .13));
 		--bncm-community-wallpaper-overlay: ${Math.min(0.3, Math.max(0.06, normalizedOpacity * 0.22))};
 	}`;
 	style.textContent = `${runtimeCss}
@@ -971,7 +1129,7 @@ ${THEME_CSS}`;
 		surfaceElevated: "#334155",
 		text: "#f8fafc",
 		muted: "#cbd5e1",
-		accent: settings.accent,
+		accent: effectiveAccent,
 		danger: "#fb7185",
 		success: "#34d399",
 	};
