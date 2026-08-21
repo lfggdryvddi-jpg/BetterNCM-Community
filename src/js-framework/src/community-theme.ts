@@ -567,27 +567,10 @@ html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page
 		0 0 2px rgba(255, 255, 255, .5) !important;
 }
 
+/* Retain NCM's single native hover marker; adding another pseudo-element creates duplicate dots. */
 html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar [aria-label="播放进度调节"] > .thumb {
 	z-index: 3;
-	opacity: 1 !important;
-	visibility: visible !important;
-	filter: none !important;
-}
-
-html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar [aria-label="播放进度调节"] > .thumb::before {
-	content: "";
-	position: absolute;
-	left: -6px;
-	top: -6px;
-	width: 9px;
-	height: 9px;
-	border: 2px solid var(--bncm-community-accent-alt);
-	border-radius: 50%;
-	background: #fff;
-	box-shadow:
-		0 0 0 2px rgba(var(--bncm-community-accent-alt-rgb), .16),
-		0 0 9px rgba(var(--bncm-community-accent-alt-rgb), .58);
-	pointer-events: none;
+	filter: drop-shadow(0 0 5px rgba(var(--bncm-community-accent-alt-rgb), .52));
 }
 
 html[data-bncm-community-theme="midnight"] [${SURFACE_ATTRIBUTE}] a,
