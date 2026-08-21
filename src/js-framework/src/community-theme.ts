@@ -103,6 +103,9 @@ const WALLPAPER_BACKGROUND_ATTRIBUTE = "data-bncm-community-wallpaper-background
 let communityWallpaperObjectUrl = "";
 let communityDynamicWallpaper: { type: CommunityWallpaperType; url: string } | null = null;
 const SURFACE_ATTRIBUTE = "data-bncm-community-surface";
+const COMMUNITY_THEME_SURFACES: CommunityThemeSurface[] = ["sidebar", "topbar", "main", "player"];
+const markedSurfaces: Partial<Record<CommunityThemeSurface, HTMLElement>> = {};
+let markedWallpaperBackgrounds = new Set<HTMLElement>();
 
 const KNOWN_SURFACE_SELECTORS: Record<CommunityThemeSurface, string[]> = {
 	sidebar: [
@@ -440,20 +443,31 @@ function clamp(value: number, min: number, max: number) {
 	return Math.min(max, Math.max(min, value));
 }
 
-function markSurface(element: Element | null, surface: CommunityThemeSurface) {
-	if (!(element instanceof HTMLElement)) return;
-	if (element.closest(".better-ncm-manager")) return;
-	element.setAttribute(SURFACE_ATTRIBUTE, surface);
-}
-
-function clearCommunitySurfaceMarks() {
-	document.querySelectorAll(`[${SURFACE_ATTRIBUTE}]`).forEach((element) =>
-		element.removeAttribute(SURFACE_ATTRIBUTE),
-	);
-}
-
-function hasMarkedSurface(surface: CommunityThemeSurface) {
-	return Boolean(document.querySelector(`[${SURFACE_ATTRIBUTE}="${surface}"]`));
+function surfaceMatchesViewport(
+	surface: CommunityThemeSurface,
+	rect: DOMRect,
+	width: number,
+	height: number,
+) {
+	switch (surface) {
+		case "sidebar":
+			return rect.left < 16 && rect.width > 120 && rect.width < width * .42 && rect.height > height * .5;
+		case "topbar":
+			return rect.top < 16 && rect.width > width * .48 && rect.height > 35 && rect.height < height * .28;
+		case "player":
+			return rect.bottom > height - 12 && rect.width > width * .55 && rect.height > 40 && rect.height < Math.min(240, height * .35);
+		case "main":
+			// Target the stable viewport between the title bar and player. Reject
+			// ReactVirtualized inner content that can be tens of thousands of pixels
+			// high and causes Chromium composition and scrolling glitches.
+			return rect.left > width * .1 &&
+				rect.top > 35 && rect.top < height * .2 &&
+				rect.right > width * .82 &&
+				rect.bottom > height * .82 && rect.bottom <= height + 12 &&
+				rect.width > width * .6 &&
+				rect.height > height * .55 && rect.height < height * 1.05;
+	}
+	return false;
 }
 
 function findNearestMatchingAncestor(
@@ -470,86 +484,109 @@ function findNearestMatchingAncestor(
 	return null;
 }
 
-function markSurfaceAtPoint(
-	surface: CommunityThemeSurface,
+function findSurfaceAtPoint(
 	x: number,
 	y: number,
 	matches: (rect: DOMRect) => boolean,
 ) {
-	markSurface(
-		findNearestMatchingAncestor(document.elementFromPoint(x, y) as HTMLElement | null, matches),
-		surface,
-	);
+	return findNearestMatchingAncestor(document.elementFromPoint(x, y) as HTMLElement | null, matches);
 }
 
-function markSurfaceFromAnchor(
-	surface: CommunityThemeSurface,
+function findSurfaceFromAnchor(
 	selector: string,
 	matches: (rect: DOMRect) => boolean,
 ) {
 	const anchor = document.querySelector(selector) as HTMLElement | null;
-	markSurface(findNearestMatchingAncestor(anchor, matches), surface);
+	return findNearestMatchingAncestor(anchor, matches);
 }
 
-function markKnownSurfaceFallback(
+function findKnownSurfaceFallback(
 	surface: CommunityThemeSurface,
 	matches: (rect: DOMRect) => boolean,
 ) {
-	if (hasMarkedSurface(surface)) return;
 	const candidates = new Set<HTMLElement>();
 	KNOWN_SURFACE_SELECTORS[surface].forEach((selector) => {
 		document.querySelectorAll(selector).forEach((element) => {
 			if (element instanceof HTMLElement && !element.closest(".better-ncm-manager")) candidates.add(element);
 		});
 	});
-	const target = [...candidates]
+	return [...candidates]
 		.map((element) => ({ element, rect: element.getBoundingClientRect() }))
 		.filter(({ rect }) => matches(rect))
-		.sort((a, b) => a.rect.width * a.rect.height - b.rect.width * b.rect.height)[0]?.element;
-	markSurface(target || null, surface);
+		.sort((a, b) => a.rect.width * a.rect.height - b.rect.width * b.rect.height)[0]?.element || null;
+}
+
+function getStableSurfaceTarget(
+	surface: CommunityThemeSurface,
+	matches: (rect: DOMRect) => boolean,
+) {
+	const cached = markedSurfaces[surface];
+	if (cached?.isConnected && matches(cached.getBoundingClientRect())) return cached;
+	const existing = document.querySelector('[' + SURFACE_ATTRIBUTE + '="' + surface + '"]');
+	if (existing instanceof HTMLElement && existing.isConnected && matches(existing.getBoundingClientRect())) {
+		markedSurfaces[surface] = existing;
+		return existing;
+	}
+	return null;
+}
+
+function setSurfaceTarget(surface: CommunityThemeSurface, target: HTMLElement | null) {
+	const previous = markedSurfaces[surface];
+	if (previous && previous !== target && previous.getAttribute(SURFACE_ATTRIBUTE) === surface) {
+		previous.removeAttribute(SURFACE_ATTRIBUTE);
+	}
+	document.querySelectorAll('[' + SURFACE_ATTRIBUTE + '="' + surface + '"]').forEach((element) => {
+		if (element !== target) element.removeAttribute(SURFACE_ATTRIBUTE);
+	});
+	if (target && !target.closest(".better-ncm-manager")) {
+		target.setAttribute(SURFACE_ATTRIBUTE, surface);
+		markedSurfaces[surface] = target;
+	} else {
+		delete markedSurfaces[surface];
+	}
+}
+
+function communitySurfaceTargetsAreStable() {
+	const width = document.documentElement.clientWidth;
+	const height = document.documentElement.clientHeight;
+	if (width < 400 || height < 300) return false;
+	return COMMUNITY_THEME_SURFACES.every((surface) => {
+		const target = markedSurfaces[surface];
+		return Boolean(target?.isConnected && surfaceMatchesViewport(surface, target.getBoundingClientRect(), width, height));
+	});
 }
 
 export function refreshCommunityThemeTargets() {
-	clearCommunitySurfaceMarks();
 	const width = document.documentElement.clientWidth;
 	const height = document.documentElement.clientHeight;
 	if (width < 400 || height < 300) return getCommunityThemeDiagnostics(false);
 
-	markSurfaceAtPoint("sidebar", Math.min(120, width * 0.12), height * 0.48, (rect) =>
-		rect.left < 12 && rect.width > 120 && rect.width < width * 0.42 && rect.height > height * 0.55,
-	);
-	markSurfaceAtPoint("topbar", width * 0.58, Math.min(48, height * 0.08), (rect) =>
-		rect.top < 12 && rect.width > width * 0.48 && rect.height > 35 && rect.height < height * 0.24,
-	);
-	markSurfaceAtPoint("player", width * 0.58, Math.max(1, height - 36), (rect) =>
-		rect.bottom > height - 12 && rect.width > width * 0.55 && rect.height > 45 && rect.height < height * 0.28,
-	);
-	markSurfaceAtPoint("main", width * 0.62, height * 0.48, (rect) =>
-		rect.width > width * 0.42 && rect.height > height * 0.42,
-	);
+	const matches = (surface: CommunityThemeSurface) => (rect: DOMRect) =>
+		surfaceMatchesViewport(surface, rect, width, height);
 
-	markSurfaceFromAnchor("topbar", '.cmd-icon-setting, a[href="#/m/setting/"]', (rect) =>
-		rect.top < 16 && rect.width > width * 0.55 && rect.height > 40 && rect.height < height * 0.28,
-	);
-	markSurfaceFromAnchor("player", '#btn_pc_minibar_play, [id*="minibar_play"]', (rect) =>
-		rect.width > width * 0.58 && rect.height > 40 && rect.height < Math.min(240, height * 0.35),
-	);
-	markSurfaceFromAnchor("sidebar", "#left_nav_myFavoriteMusic", (rect) =>
-		rect.left < 16 && rect.width > 120 && rect.width < width * 0.42 && rect.height > height * 0.5,
-	);
+	const sidebarMatch = matches("sidebar");
+	const topbarMatch = matches("topbar");
+	const playerMatch = matches("player");
+	const mainMatch = matches("main");
 
-	markKnownSurfaceFallback("sidebar", (rect) =>
-		rect.left < 16 && rect.width > 120 && rect.width < width * 0.42 && rect.height > height * 0.5,
-	);
-	markKnownSurfaceFallback("topbar", (rect) =>
-		rect.top < 16 && rect.width > width * 0.48 && rect.height > 35 && rect.height < height * 0.28,
-	);
-	markKnownSurfaceFallback("player", (rect) =>
-		rect.bottom > height - 12 && rect.width > width * 0.55 && rect.height > 40 && rect.height < Math.min(240, height * 0.35),
-	);
-	markKnownSurfaceFallback("main", (rect) =>
-		rect.left > width * 0.12 && rect.width > width * 0.42 && rect.height > height * 0.42,
-	);
+	setSurfaceTarget("sidebar", getStableSurfaceTarget("sidebar", sidebarMatch) ||
+		findSurfaceAtPoint(Math.min(120, width * .12), height * .48, sidebarMatch) ||
+		findSurfaceFromAnchor("#left_nav_myFavoriteMusic", sidebarMatch) ||
+		findKnownSurfaceFallback("sidebar", sidebarMatch));
+
+	setSurfaceTarget("topbar", getStableSurfaceTarget("topbar", topbarMatch) ||
+		findSurfaceAtPoint(width * .58, Math.min(48, height * .08), topbarMatch) ||
+		findSurfaceFromAnchor('.cmd-icon-setting, a[href="#/m/setting/"]', topbarMatch) ||
+		findKnownSurfaceFallback("topbar", topbarMatch));
+
+	setSurfaceTarget("player", getStableSurfaceTarget("player", playerMatch) ||
+		findSurfaceAtPoint(width * .58, Math.max(1, height - 36), playerMatch) ||
+		findSurfaceFromAnchor('#btn_pc_minibar_play, [id*="minibar_play"]', playerMatch) ||
+		findKnownSurfaceFallback("player", playerMatch));
+
+	setSurfaceTarget("main", getStableSurfaceTarget("main", mainMatch) ||
+		findSurfaceAtPoint(width * .62, height * .48, mainMatch) ||
+		findKnownSurfaceFallback("main", mainMatch));
 
 	markCommunityWallpaperBackground();
 	ensureCommunityDynamicWallpaperHost();
@@ -670,16 +707,24 @@ async function loadCommunityWallpaper(path: string) {
 
 function markCommunityWallpaperBackground() {
 	const candidates = [...document.querySelectorAll('[class*="StyledBackground"]')] as HTMLElement[];
-	for (const element of [...document.querySelectorAll(`[${WALLPAPER_BACKGROUND_ATTRIBUTE}]`)]) {
-		(element as HTMLElement).removeAttribute(WALLPAPER_BACKGROUND_ATTRIBUTE);
-	}
 	const width = document.documentElement.clientWidth;
 	const height = document.documentElement.clientHeight;
 	const fullWindowLayers = candidates
 		.map((element) => ({ element, rect: element.getBoundingClientRect() }))
 		.filter(({ rect }) => rect.width > width * .65 && rect.height > height * .65)
 		.sort((a, b) => b.rect.width * b.rect.height - a.rect.width * a.rect.height);
-	fullWindowLayers.forEach(({ element }) => element.setAttribute(WALLPAPER_BACKGROUND_ATTRIBUTE, "true"));
+	const nextTargets = new Set(fullWindowLayers.map(({ element }) => element));
+	markedWallpaperBackgrounds.forEach((element) => {
+		if (!nextTargets.has(element) && element.getAttribute(WALLPAPER_BACKGROUND_ATTRIBUTE) === "true") {
+			element.removeAttribute(WALLPAPER_BACKGROUND_ATTRIBUTE);
+		}
+	});
+	nextTargets.forEach((element) => {
+		if (element.getAttribute(WALLPAPER_BACKGROUND_ATTRIBUTE) !== "true") {
+			element.setAttribute(WALLPAPER_BACKGROUND_ATTRIBUTE, "true");
+		}
+	});
+	markedWallpaperBackgrounds = nextTargets;
 	return fullWindowLayers[0]?.element || null;
 }
 
@@ -934,9 +979,14 @@ html[data-bncm-community-wallpaper="true"] [${SURFACE_ATTRIBUTE}="player"] {
 }
 html[data-bncm-community-wallpaper="true"] [${SURFACE_ATTRIBUTE}="main"] {
 	background: linear-gradient(180deg, rgba(${hexToRgb(shellPalette.background)}, var(--bncm-community-main-opacity)), rgba(${hexToRgb(shellPalette.background)}, .12)) !important;
-	backdrop-filter: blur(var(--bncm-community-blur)) saturate(1.04) !important;
+	backdrop-filter: none !important;
+	filter: none !important;
 }
-html[data-bncm-community-wallpaper="true"] .m-table,
+html[data-bncm-community-wallpaper="true"] .m-table {
+	background-color: rgba(${hexToRgb(shellPalette.surface)}, var(--bncm-community-card-opacity)) !important;
+	backdrop-filter: none !important;
+	filter: none !important;
+}
 html[data-bncm-community-wallpaper="true"] .bncm-mgr {
 	background-color: rgba(${hexToRgb(shellPalette.surface)}, var(--bncm-community-card-opacity)) !important;
 	backdrop-filter: blur(var(--bncm-community-blur));
@@ -958,16 +1008,18 @@ html[data-bncm-community-wallpaper="true"] [${SURFACE_ATTRIBUTE}="main"] canvas 
 let surfaceRefreshTimer = 0;
 let surfaceObserver: MutationObserver | null = null;
 
-function scheduleCommunityThemeTargetRefresh() {
+function scheduleCommunityThemeTargetRefresh(force = false) {
+	const wallpaperTargetsAreStable = [...markedWallpaperBackgrounds].every((element) => element.isConnected);
+	if (!force && communitySurfaceTargetsAreStable() && wallpaperTargetsAreStable) return;
 	window.clearTimeout(surfaceRefreshTimer);
 	surfaceRefreshTimer = window.setTimeout(() => {
 		refreshCommunityThemeTargets();
-	}, 120);
+	}, 450);
 }
 
 function observeCommunityThemeTargets() {
 	if (surfaceObserver || !document.body) return;
-	surfaceObserver = new MutationObserver(scheduleCommunityThemeTargetRefresh);
+	surfaceObserver = new MutationObserver(() => scheduleCommunityThemeTargetRefresh(false));
 	surfaceObserver.observe(document.body, {
 		childList: true,
 		subtree: true,
@@ -1003,7 +1055,7 @@ function initializeCommunityTheme() {
 	setTimeout(refreshCommunityThemeTargets, 800);
 	setTimeout(refreshCommunityThemeTargets, 2000);
 	observeCommunityThemeTargets();
-	window.addEventListener("resize", scheduleCommunityThemeTargetRefresh);
+	window.addEventListener("resize", () => scheduleCommunityThemeTargetRefresh(true));
 }
 
 if (document.readyState === "loading") {

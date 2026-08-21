@@ -328,8 +328,16 @@ _cef_resource_handler_t* CEF_CALLBACK hook_cef_scheme_handler_create(
 		self, browser, frame, scheme_name, request);
 	if (!ret) return nullptr;
 	CefString url = util::cefFromCEFUserFreeTakeOwnership(request->get_url(request));
+	const auto requestUrl = url.ToString();
+
+	// Do not wrap native cache/media scheme handlers unless BetterNCM actually
+	// needs to transform the response. NCM 3.x uses a separate orpheus://cache
+	// handler for artwork; replacing its read callbacks breaks playlist and album
+	// covers even though the resource is unrelated to plugin injection.
+	if (!EasyCEFHooks::onHijackRequest(requestUrl)) return ret;
+
 	urlMap[ret] = CefRequestMITMProcess{
-			url.ToString()
+			requestUrl
 	};
 
 	// CEF 91 may expose both read() and the legacy read_response(). Prefer the
