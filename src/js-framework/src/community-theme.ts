@@ -358,6 +358,15 @@ html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [${SU
 	font-weight: 600;
 }
 
+/* Playlist rows render their skin color on a dedicated .background child. */
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [${SURFACE_ATTRIBUTE}="sidebar"] .selected > .background {
+	background: var(--bncm-community-selection-gradient) !important;
+	box-shadow:
+		inset 2px 0 0 var(--bncm-community-accent-alt),
+		inset 0 0 0 1px rgba(var(--bncm-community-accent-alt-rgb), .18),
+		0 7px 18px rgba(0, 0, 0, .12) !important;
+}
+
 html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [${SURFACE_ATTRIBUTE}="sidebar"] [data-testid^="tid_navitem_"]:is(.is-selected, .selected) [class*="IconWrapper_"] {
 	display: flex;
 	align-items: center;
@@ -439,6 +448,46 @@ html[data-bncm-community-theme="glass"] [class*="DefaultBarWrapper_"]::after {
 	background-image: none !important;
 	border-color: var(--bncm-community-border) !important;
 }
+/* Primary content actions and active tabs should not fall back to the NCM skin accent. */
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [data-testid="tid_playlist_playall_btn"] {
+	background: var(--bncm-community-control-gradient) !important;
+	border: 1px solid rgba(255, 255, 255, .24) !important;
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, .28),
+		0 8px 22px rgba(var(--bncm-community-accent-alt-rgb), .24) !important;
+	color: #fff !important;
+	transition: filter .16s ease, transform .16s ease, box-shadow .16s ease !important;
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [data-testid="tid_playlist_playall_btn"]:hover {
+	filter: saturate(1.06) brightness(1.06);
+	transform: translateY(-1px);
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [data-testid="tid_playlist_playall_btn"]:active {
+	filter: saturate(.96) brightness(.96);
+	transform: scale(.98);
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) .cmd-tabs-tab-active {
+	position: relative;
+	color: var(--bncm-community-text) !important;
+	font-weight: 650;
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) .cmd-tabs-tab-active::after {
+	content: "";
+	position: absolute;
+	left: 14%;
+	right: 14%;
+	bottom: -6px;
+	height: 3px;
+	border-radius: 999px;
+	background: var(--bncm-community-control-gradient) !important;
+	box-shadow: 0 0 7px rgba(var(--bncm-community-accent-alt-rgb), .38);
+	pointer-events: none;
+}
+
 /* Player controls use a two-tone identity derived from the active community skin. */
 html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #btn_pc_minibar_play,
 html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [data-testid="tid_playbar_play_btn"] {
@@ -495,16 +544,50 @@ html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page
 html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar [aria-label="播放进度调节"] {
 	--track-color: linear-gradient(90deg, var(--bncm-community-accent-alt) 0%, var(--bncm-community-accent) 100%) !important;
 	--smigcsb-3: rgba(var(--bncm-community-accent-rgb), .9) !important;
-	--smigcsb-6: rgba(255, 255, 255, .08) !important;
-	--smigcsb-7: rgba(255, 255, 255, .15) !important;
+	--smigcsb-6: rgba(10, 14, 22, .5) !important;
+	--smigcsb-7: rgba(10, 14, 22, .5) !important;
+}
+
+/* Separate elapsed and remaining time even when NCM reports the whole track as cached. */
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar [aria-label="播放进度调节"] > .cache {
+	height: 4px !important;
+	border-radius: 999px;
+	background: rgba(10, 14, 22, .5) !important;
+	box-shadow:
+		inset 0 1px 0 rgba(255, 255, 255, .09),
+		0 0 0 1px rgba(0, 0, 0, .12) !important;
 }
 
 html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar [aria-label="播放进度调节"] > .track {
-	box-shadow: 0 0 9px rgba(var(--bncm-community-accent-rgb), .42);
+	height: 4px !important;
+	border-radius: 999px;
+	background: var(--bncm-community-control-gradient) !important;
+	box-shadow:
+		0 0 7px rgba(var(--bncm-community-accent-alt-rgb), .46),
+		0 0 2px rgba(255, 255, 255, .5) !important;
 }
 
 html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar [aria-label="播放进度调节"] > .thumb {
-	filter: drop-shadow(0 0 5px rgba(var(--bncm-community-accent-alt-rgb), .52));
+	z-index: 3;
+	opacity: 1 !important;
+	visibility: visible !important;
+	filter: none !important;
+}
+
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_pc_mini_bar [aria-label="播放进度调节"] > .thumb::before {
+	content: "";
+	position: absolute;
+	left: -6px;
+	top: -6px;
+	width: 9px;
+	height: 9px;
+	border: 2px solid var(--bncm-community-accent-alt);
+	border-radius: 50%;
+	background: #fff;
+	box-shadow:
+		0 0 0 2px rgba(var(--bncm-community-accent-alt-rgb), .16),
+		0 0 9px rgba(var(--bncm-community-accent-alt-rgb), .58);
+	pointer-events: none;
 }
 
 html[data-bncm-community-theme="midnight"] [${SURFACE_ATTRIBUTE}] a,
