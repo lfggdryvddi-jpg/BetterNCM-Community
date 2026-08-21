@@ -1,0 +1,42 @@
+{
+  "sourceKey": "785216588:preview.jpg",
+  "id": "wallpaper-785216588",
+  "name": "FEZ Day and Night · 暮色绅士",
+  "description": "基于 Wallpaper Engine 壁纸《FEZ Day and Night》设计。深色主题，暖调暮光，界面流畅，适配网易云音乐桌面端。",
+  "tags": [
+    "dark",
+    "music",
+    "minimal",
+    "game",
+    "nature",
+    "multi-monitor-optimized"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#666368",
+    "sidebar": "#565357",
+    "surface": "#78767a",
+    "surfaceElevated": "#858286",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#babf7e",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "785216588",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "FEZ Day and Night"
+  },
+  "wallpaperTitle": "FEZ Day and Night",
+  "generatedThemeName": "暮色绅士"
+}

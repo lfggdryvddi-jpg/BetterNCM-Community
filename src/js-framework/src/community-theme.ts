@@ -2,6 +2,7 @@ import { fs as BetterNCMFs } from "./betterncm-api/fs";
 
 export type CommunityThemeId = "default" | "midnight" | "aurora" | "glass" | "generated";
 export type CommunityThemeSurface = "sidebar" | "topbar" | "main" | "player";
+export type CommunityWallpaperType = "image" | "video" | "web" | "scene" | "unknown";
 
 export interface CommunityThemeSettings {
 	version: number;
@@ -13,6 +14,8 @@ export interface CommunityThemeSettings {
 	customCssName: string;
 	wallpaperPath: string;
 	wallpaperName: string;
+	wallpaperType: CommunityWallpaperType;
+	wallpaperMediaPath: string;
 	palette?: CommunityThemePalette;
 }
 
@@ -44,7 +47,7 @@ export interface CommunityThemeDiagnostics {
 }
 
 export const COMMUNITY_THEME_STORAGE_KEY = "betterncm.community.theme";
-export const COMMUNITY_THEME_SETTINGS_VERSION = 3;
+export const COMMUNITY_THEME_SETTINGS_VERSION = 4;
 export const COMMUNITY_CSS_MAX_BYTES = 512 * 1024;
 
 export const COMMUNITY_THEME_PRESETS: CommunityThemePreset[] = [
@@ -88,10 +91,17 @@ const DEFAULT_SETTINGS: CommunityThemeSettings = {
 	customCssName: "",
 	wallpaperPath: "",
 	wallpaperName: "",
+	wallpaperType: "unknown",
+	wallpaperMediaPath: "",
 };
 
 const THEME_STYLE_ID = "betterncm-community-theme-style";
 const CUSTOM_THEME_STYLE_ID = "betterncm-community-custom-theme-style";
+const WALLPAPER_THEME_STYLE_ID = "betterncm-community-wallpaper-style";
+const DYNAMIC_WALLPAPER_HOST_ID = "betterncm-community-dynamic-wallpaper";
+const WALLPAPER_BACKGROUND_ATTRIBUTE = "data-bncm-community-wallpaper-background";
+let communityWallpaperObjectUrl = "";
+let communityDynamicWallpaper: { type: CommunityWallpaperType; url: string } | null = null;
 const SURFACE_ATTRIBUTE = "data-bncm-community-surface";
 
 const KNOWN_SURFACE_SELECTORS: Record<CommunityThemeSurface, string[]> = {
@@ -143,7 +153,8 @@ const KNOWN_SURFACE_SELECTORS: Record<CommunityThemeSurface, string[]> = {
 const THEME_CSS = `
 html[data-bncm-community-theme="midnight"],
 html[data-bncm-community-theme="aurora"],
-html[data-bncm-community-theme="glass"] {
+html[data-bncm-community-theme="glass"],
+html[data-bncm-community-theme="generated"] {
 	--bncm-community-text: #f8fafc;
 	--bncm-community-muted: #cbd5e1;
 	--bncm-community-border: rgba(255, 255, 255, 0.14);
@@ -241,10 +252,47 @@ html[data-bncm-community-theme="generated"] {
 html[data-bncm-community-wallpaper="true"] body,
 html[data-bncm-community-wallpaper="true"] #app,
 html[data-bncm-community-wallpaper="true"] #g_iframe {
-	background-image: linear-gradient(rgba(0, 0, 0, var(--bncm-community-wallpaper-overlay)), var(--bncm-community-wallpaper), var(--bncm-community-background-gradient)) !important;
-	background-size: cover, cover, cover !important;
-	background-position: center, center, center !important;
-	background-attachment: fixed !important;
+	background-color: transparent !important;
+	background-image: none !important;
+}
+/* QQ Music and NCM official skins both keep artwork in one dedicated background layer.
+ * Clear every full-window native skin layer and render our media only once inside it. */
+html[data-bncm-community-wallpaper="true"] [data-bncm-community-wallpaper-background="true"] {
+	background: transparent !important;
+	filter: none !important;
+	opacity: 1 !important;
+}
+
+#${DYNAMIC_WALLPAPER_HOST_ID} {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	overflow: hidden;
+	pointer-events: none;
+	background: var(--bncm-community-background, #111827);
+}
+#${DYNAMIC_WALLPAPER_HOST_ID} img,
+#${DYNAMIC_WALLPAPER_HOST_ID} video,
+#${DYNAMIC_WALLPAPER_HOST_ID} iframe {
+	position: absolute;
+	inset: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	object-fit: cover;
+	object-position: center;
+	background: transparent;
+}
+#${DYNAMIC_WALLPAPER_HOST_ID}::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(90deg, rgba(0, 0, 0, .24), transparent 34%),
+		linear-gradient(180deg, rgba(0, 0, 0, .14), transparent 24%, transparent 68%, rgba(0, 0, 0, .28)),
+		linear-gradient(rgba(0, 0, 0, var(--bncm-community-wallpaper-overlay)), rgba(0, 0, 0, var(--bncm-community-wallpaper-overlay)));
+	pointer-events: none;
 }
 
 html[data-bncm-community-theme="midnight"] body,
@@ -398,31 +446,28 @@ function markSurface(element: Element | null, surface: CommunityThemeSurface) {
 	element.setAttribute(SURFACE_ATTRIBUTE, surface);
 }
 
-function markKnownSurfaces() {
-	(Object.keys(KNOWN_SURFACE_SELECTORS) as CommunityThemeSurface[]).forEach(
-		(surface) => {
-			KNOWN_SURFACE_SELECTORS[surface].forEach((selector) => {
-				document.querySelectorAll(selector).forEach((element) =>
-					markSurface(element, surface),
-				);
-			});
-		},
+function clearCommunitySurfaceMarks() {
+	document.querySelectorAll(`[${SURFACE_ATTRIBUTE}]`).forEach((element) =>
+		element.removeAttribute(SURFACE_ATTRIBUTE),
 	);
 }
 
-function findLargestMatchingAncestor(
+function hasMarkedSurface(surface: CommunityThemeSurface) {
+	return Boolean(document.querySelector(`[${SURFACE_ATTRIBUTE}="${surface}"]`));
+}
+
+function findNearestMatchingAncestor(
 	start: HTMLElement | null,
 	matches: (rect: DOMRect) => boolean,
 ) {
 	let current = start;
-	let candidate: HTMLElement | null = null;
 	while (current && current !== document.body && current !== document.documentElement) {
 		if (!current.closest(".better-ncm-manager") && matches(current.getBoundingClientRect())) {
-			candidate = current;
+			return current;
 		}
 		current = current.parentElement;
 	}
-	return candidate;
+	return null;
 }
 
 function markSurfaceAtPoint(
@@ -432,7 +477,7 @@ function markSurfaceAtPoint(
 	matches: (rect: DOMRect) => boolean,
 ) {
 	markSurface(
-		findLargestMatchingAncestor(document.elementFromPoint(x, y) as HTMLElement | null, matches),
+		findNearestMatchingAncestor(document.elementFromPoint(x, y) as HTMLElement | null, matches),
 		surface,
 	);
 }
@@ -443,11 +488,29 @@ function markSurfaceFromAnchor(
 	matches: (rect: DOMRect) => boolean,
 ) {
 	const anchor = document.querySelector(selector) as HTMLElement | null;
-	markSurface(findLargestMatchingAncestor(anchor, matches), surface);
+	markSurface(findNearestMatchingAncestor(anchor, matches), surface);
+}
+
+function markKnownSurfaceFallback(
+	surface: CommunityThemeSurface,
+	matches: (rect: DOMRect) => boolean,
+) {
+	if (hasMarkedSurface(surface)) return;
+	const candidates = new Set<HTMLElement>();
+	KNOWN_SURFACE_SELECTORS[surface].forEach((selector) => {
+		document.querySelectorAll(selector).forEach((element) => {
+			if (element instanceof HTMLElement && !element.closest(".better-ncm-manager")) candidates.add(element);
+		});
+	});
+	const target = [...candidates]
+		.map((element) => ({ element, rect: element.getBoundingClientRect() }))
+		.filter(({ rect }) => matches(rect))
+		.sort((a, b) => a.rect.width * a.rect.height - b.rect.width * b.rect.height)[0]?.element;
+	markSurface(target || null, surface);
 }
 
 export function refreshCommunityThemeTargets() {
-	markKnownSurfaces();
+	clearCommunitySurfaceMarks();
 	const width = document.documentElement.clientWidth;
 	const height = document.documentElement.clientHeight;
 	if (width < 400 || height < 300) return getCommunityThemeDiagnostics(false);
@@ -475,11 +538,26 @@ export function refreshCommunityThemeTargets() {
 		rect.left < 16 && rect.width > 120 && rect.width < width * 0.42 && rect.height > height * 0.5,
 	);
 
+	markKnownSurfaceFallback("sidebar", (rect) =>
+		rect.left < 16 && rect.width > 120 && rect.width < width * 0.42 && rect.height > height * 0.5,
+	);
+	markKnownSurfaceFallback("topbar", (rect) =>
+		rect.top < 16 && rect.width > width * 0.48 && rect.height > 35 && rect.height < height * 0.28,
+	);
+	markKnownSurfaceFallback("player", (rect) =>
+		rect.bottom > height - 12 && rect.width > width * 0.55 && rect.height > 40 && rect.height < Math.min(240, height * 0.35),
+	);
+	markKnownSurfaceFallback("main", (rect) =>
+		rect.left > width * 0.12 && rect.width > width * 0.42 && rect.height > height * 0.42,
+	);
+
+	markCommunityWallpaperBackground();
+	ensureCommunityDynamicWallpaperHost();
 	return getCommunityThemeDiagnostics(false);
 }
 
 export function getCommunityThemeDiagnostics(refresh = true): CommunityThemeDiagnostics {
-	if (refresh) markKnownSurfaces();
+	if (refresh) refreshCommunityThemeTargets();
 	return {
 		sidebar: document.querySelectorAll(`[${SURFACE_ATTRIBUTE}="sidebar"]`).length,
 		topbar: document.querySelectorAll(`[${SURFACE_ATTRIBUTE}="topbar"]`).length,
@@ -533,10 +611,12 @@ export function getCommunityThemeSettings(): CommunityThemeSettings {
 			intensity: clamp(Number(stored.intensity ?? DEFAULT_SETTINGS.intensity), 20, 100),
 			blur: clamp(Number(stored.blur ?? DEFAULT_SETTINGS.blur), 0, 36),
 			accent,
-			customCss: typeof stored.customCss === "string" ? stored.customCss : "",
+			customCss: typeof stored.customCss === "string" && !(themeId === "generated" && /BetterNCM Community generated skin:/i.test(stored.customCss)) ? stored.customCss : "",
 			customCssName: typeof stored.customCssName === "string" ? stored.customCssName : "",
 			wallpaperPath: typeof stored.wallpaperPath === "string" ? stored.wallpaperPath : "",
 			wallpaperName: typeof stored.wallpaperName === "string" ? stored.wallpaperName : "",
+			wallpaperType: stored.wallpaperType === "video" || stored.wallpaperType === "web" || stored.wallpaperType === "scene" || stored.wallpaperType === "image" ? stored.wallpaperType : "unknown",
+			wallpaperMediaPath: typeof stored.wallpaperMediaPath === "string" ? stored.wallpaperMediaPath : "",
 			palette: isValidPalette(stored.palette) ? stored.palette : undefined,
 		};
 	} catch {
@@ -552,25 +632,183 @@ export function saveCommunityThemeSettings(settings: CommunityThemeSettings) {
 
 export function setCommunityWallpaperUrl(url: string) {
 	const root = document.documentElement;
-	if (url) root.style.setProperty("--bncm-community-wallpaper", `url(${JSON.stringify(url)})`);
-	else root.style.removeProperty("--bncm-community-wallpaper");
+	const normalizedUrl = url.trim();
+	if (normalizedUrl) {
+		root.style.setProperty("--bncm-community-wallpaper", `url(${JSON.stringify(normalizedUrl)})`);
+		root.dataset.bncmCommunityWallpaper = "true";
+	} else {
+		root.style.removeProperty("--bncm-community-wallpaper");
+		delete root.dataset.bncmCommunityWallpaper;
+	}
 }
 
-export async function useCommunityWallpaper(path: string, name: string) {
-	const url = await BetterNCMFs.mountFile(path);
+async function loadCommunityWallpaper(path: string) {
+	const blob = await BetterNCMFs.readFile(path);
+	if (!blob.size) throw new Error("壁纸文件为空或无法读取。");
+	const url = URL.createObjectURL(blob);
+	try {
+		const image = new Image();
+		image.decoding = "async";
+		image.src = url;
+		await new Promise<void>((resolve, reject) => {
+			image.onload = () => resolve();
+			image.onerror = () => reject(new Error("壁纸图片无法解码。"));
+		});
+	} catch (error) {
+		URL.revokeObjectURL(url);
+		throw error;
+	}
+	const previousUrl = communityWallpaperObjectUrl;
+	communityWallpaperObjectUrl = url;
 	setCommunityWallpaperUrl(url);
+	communityDynamicWallpaper = { type: "image", url };
+	document.documentElement.dataset.bncmCommunityWallpaperDynamic = "image";
+	ensureCommunityDynamicWallpaperHost();
+	if (previousUrl) URL.revokeObjectURL(previousUrl);
+	return url;
+}
+
+function markCommunityWallpaperBackground() {
+	const candidates = [...document.querySelectorAll('[class*="StyledBackground"]')] as HTMLElement[];
+	for (const element of [...document.querySelectorAll(`[${WALLPAPER_BACKGROUND_ATTRIBUTE}]`)]) {
+		(element as HTMLElement).removeAttribute(WALLPAPER_BACKGROUND_ATTRIBUTE);
+	}
+	const width = document.documentElement.clientWidth;
+	const height = document.documentElement.clientHeight;
+	const fullWindowLayers = candidates
+		.map((element) => ({ element, rect: element.getBoundingClientRect() }))
+		.filter(({ rect }) => rect.width > width * .65 && rect.height > height * .65)
+		.sort((a, b) => b.rect.width * b.rect.height - a.rect.width * a.rect.height);
+	fullWindowLayers.forEach(({ element }) => element.setAttribute(WALLPAPER_BACKGROUND_ATTRIBUTE, "true"));
+	return fullWindowLayers[0]?.element || null;
+}
+
+function removeCommunityDynamicWallpaper() {
+	document.getElementById(DYNAMIC_WALLPAPER_HOST_ID)?.remove();
+	communityDynamicWallpaper = null;
+	delete document.documentElement.dataset.bncmCommunityWallpaperDynamic;
+}
+
+function ensureCommunityDynamicWallpaperHost() {
+	if (!communityDynamicWallpaper) return;
+	const target = markCommunityWallpaperBackground();
+	if (!target) return;
+	let host = document.getElementById(DYNAMIC_WALLPAPER_HOST_ID) as HTMLDivElement | null;
+	if (host && host.parentElement !== target) host.remove();
+	if (!host) {
+		host = document.createElement("div");
+		host.id = DYNAMIC_WALLPAPER_HOST_ID;
+		target.appendChild(host);
+	}
+	if (host.dataset.source === communityDynamicWallpaper.url && host.dataset.type === communityDynamicWallpaper.type) return;
+	host.replaceChildren();
+	host.dataset.source = communityDynamicWallpaper.url;
+	host.dataset.type = communityDynamicWallpaper.type;
+	if (communityDynamicWallpaper.type === "video") {
+		const video = document.createElement("video");
+		video.src = communityDynamicWallpaper.url;
+		video.autoplay = true;
+		video.loop = true;
+		video.muted = true;
+		video.playsInline = true;
+		video.preload = "auto";
+		host.appendChild(video);
+		void video.play().catch(() => undefined);
+	} else if (communityDynamicWallpaper.type === "web") {
+		const frame = document.createElement("iframe");
+		frame.src = communityDynamicWallpaper.url;
+		frame.title = "Wallpaper Engine Web background";
+		frame.referrerPolicy = "no-referrer";
+		frame.setAttribute("sandbox", "allow-scripts");
+		frame.tabIndex = -1;
+		host.appendChild(frame);
+	} else {
+		const image = document.createElement("img");
+		image.src = communityDynamicWallpaper.url;
+		image.alt = "";
+		image.decoding = "async";
+		host.appendChild(image);
+	}
+}
+
+function relativePath(root: string, target: string) {
+	const normalizedRoot = root.replace(/[\\/]+$/, "");
+	return target.toLowerCase().startsWith(normalizedRoot.toLowerCase()) ? target.slice(normalizedRoot.length).replace(/^[\\/]+/, "") : target.split(/[\\/]/).pop() || "";
+}
+
+async function detectCommunityWallpaperMedia(previewPath: string) {
+	const projectRoot = previewPath.replace(/[\\/][^\\/]+$/, "");
+	try {
+		const metadata = JSON.parse(await BetterNCMFs.readFileText(`${projectRoot}\\project.json`)) as { type?: string; file?: string };
+		const normalized = String(metadata.type || "").trim().toLowerCase();
+		const type: CommunityWallpaperType = normalized === "video" || normalized === "web" || normalized === "scene" || normalized === "image" ? normalized : "unknown";
+		return { type, mediaPath: metadata.file?.trim() ? `${projectRoot}\\${metadata.file.trim()}` : "" };
+	} catch {
+		return { type: "unknown" as CommunityWallpaperType, mediaPath: "" };
+	}
+}
+
+async function mountCommunityDynamicWallpaper(previewPath: string, type: CommunityWallpaperType, mediaPath: string) {
+	if (!mediaPath || (type !== "video" && type !== "web")) {
+		if (communityDynamicWallpaper) {
+			communityDynamicWallpaper.type = type === "scene" ? "scene" : "image";
+			document.documentElement.dataset.bncmCommunityWallpaperDynamic = communityDynamicWallpaper.type;
+			ensureCommunityDynamicWallpaperHost();
+		}
+		return;
+	}
+	let url = "";
+	if (type === "video") {
+		url = await BetterNCMFs.mountFile(mediaPath);
+	} else {
+		const projectRoot = previewPath.replace(/[\\/][^\\/]+$/, "");
+		const mountedRoot = (await BetterNCMFs.mountDir(projectRoot)).replace(/[\\/]+$/, "");
+		const entry = relativePath(projectRoot, mediaPath).split(/[\\/]/).map(encodeURIComponent).join("/");
+		url = `${mountedRoot}/${entry}`;
+	}
+	removeCommunityDynamicWallpaper();
+	communityDynamicWallpaper = { type, url };
+	document.documentElement.dataset.bncmCommunityWallpaperDynamic = type;
+	ensureCommunityDynamicWallpaperHost();
+}
+
+export async function useCommunityWallpaper(
+	path: string,
+	name: string,
+	options: { type?: CommunityWallpaperType; mediaPath?: string } = {},
+) {
+	const url = await loadCommunityWallpaper(path);
 	const settings = getCommunityThemeSettings();
-	saveCommunityThemeSettings({ ...settings, wallpaperPath: path, wallpaperName: name });
+	let wallpaperType = options.type || settings.wallpaperType || "unknown";
+	let wallpaperMediaPath = options.mediaPath || settings.wallpaperMediaPath || "";
+	if (wallpaperType === "unknown" || !wallpaperMediaPath) {
+		const detected = await detectCommunityWallpaperMedia(path);
+		if (wallpaperType === "unknown") wallpaperType = detected.type;
+		if (!wallpaperMediaPath) wallpaperMediaPath = detected.mediaPath;
+	}
+	saveCommunityThemeSettings({ ...settings, wallpaperPath: path, wallpaperName: name, wallpaperType, wallpaperMediaPath });
+	try {
+		await mountCommunityDynamicWallpaper(path, wallpaperType, wallpaperMediaPath);
+	} catch {
+		removeCommunityDynamicWallpaper();
+	}
 	return url;
 }
 
 export function clearCommunityWallpaper() {
 	const settings = getCommunityThemeSettings();
 	setCommunityWallpaperUrl("");
-	saveCommunityThemeSettings({ ...settings, wallpaperPath: "", wallpaperName: "" });
+	removeCommunityDynamicWallpaper();
+	if (communityWallpaperObjectUrl) URL.revokeObjectURL(communityWallpaperObjectUrl);
+	communityWallpaperObjectUrl = "";
+	saveCommunityThemeSettings({ ...settings, wallpaperPath: "", wallpaperName: "", wallpaperType: "unknown", wallpaperMediaPath: "" });
 }
 
 export function resetCommunityTheme() {
+	setCommunityWallpaperUrl("");
+	removeCommunityDynamicWallpaper();
+	if (communityWallpaperObjectUrl) URL.revokeObjectURL(communityWallpaperObjectUrl);
+	communityWallpaperObjectUrl = "";
 	localStorage.removeItem(COMMUNITY_THEME_STORAGE_KEY);
 	applyCommunityTheme(DEFAULT_SETTINGS);
 }
@@ -609,15 +847,20 @@ export function applyCommunityTheme(settings: CommunityThemeSettings) {
 		--bncm-generated-muted: ${palette.muted};
 		--bncm-generated-accent: ${palette.accent};
 	}` : "";
+	const normalizedOpacity = clamp(settings.intensity, 20, 100) / 100;
 	const runtimeCss = `html[data-bncm-community-theme] {
-		--bncm-community-opacity: ${clamp(settings.intensity, 20, 100) / 100};
+		--bncm-community-opacity: ${normalizedOpacity};
+		--bncm-community-main-opacity: ${Math.min(0.62, normalizedOpacity * 0.58)};
+		--bncm-community-sidebar-opacity: ${Math.min(0.78, normalizedOpacity * 0.72)};
+		--bncm-community-card-opacity: ${Math.min(0.6, normalizedOpacity * 0.4)};
 		--bncm-community-blur: ${clamp(settings.blur, 0, 36)}px;
 		--bncm-community-accent: ${settings.accent};
 		--bncm-community-accent-rgb: ${accentRgb};
 		--bncm-community-accent-soft: rgba(${accentRgb}, 0.18);
-		--bncm-community-wallpaper-overlay: ${Math.max(0.12, 0.62 - settings.intensity / 220)};
+		--bncm-community-wallpaper-overlay: ${Math.min(0.3, Math.max(0.06, normalizedOpacity * 0.22))};
 	}`;
 	style.textContent = `${runtimeCss}
+${paletteCss}
 ${THEME_CSS}`;
 
 	let customStyle = document.getElementById(
@@ -628,7 +871,86 @@ ${THEME_CSS}`;
 		customStyle.id = CUSTOM_THEME_STYLE_ID;
 		document.head.appendChild(customStyle);
 	}
-	customStyle.textContent = settings.customCss;
+	customStyle.textContent = settings.themeId === "generated" && /BetterNCM Community generated skin:/i.test(settings.customCss) ? "" : settings.customCss;
+
+	let wallpaperStyle = document.getElementById(WALLPAPER_THEME_STYLE_ID) as HTMLStyleElement | null;
+	if (!wallpaperStyle) {
+		wallpaperStyle = document.createElement("style");
+		wallpaperStyle.id = WALLPAPER_THEME_STYLE_ID;
+		document.head.appendChild(wallpaperStyle);
+	}
+	const shellPalette = palette || {
+		background: "#111827",
+		sidebar: "#0f172a",
+		surface: "#1f2937",
+		surfaceElevated: "#334155",
+		text: "#f8fafc",
+		muted: "#cbd5e1",
+		accent: settings.accent,
+		danger: "#fb7185",
+		success: "#34d399",
+	};
+	wallpaperStyle.textContent = `
+html[data-bncm-community-wallpaper="true"] {
+	--colorBlack1: rgba(248, 250, 252, 1) !important;
+	--colorBlack2: rgba(248, 250, 252, .92) !important;
+	--colorBlack3: rgba(248, 250, 252, .84) !important;
+	--colorBlack4: rgba(248, 250, 252, .74) !important;
+	--colorBlack5: rgba(226, 232, 240, .64) !important;
+	--colorBlack6: rgba(226, 232, 240, .54) !important;
+	--colorBlack7: rgba(203, 213, 225, .44) !important;
+	--colorBlack8: rgba(203, 213, 225, .34) !important;
+	--colorBlack9: rgba(203, 213, 225, .26) !important;
+	--colorBlack10: rgba(255, 255, 255, .14) !important;
+	--colorBlack11: rgba(255, 255, 255, .09) !important;
+	--colorBlack12: rgba(255, 255, 255, .05) !important;
+	--colorSidebar1: rgba(248, 250, 252, 1) !important;
+	--colorSidebar2: rgba(248, 250, 252, .78) !important;
+	--colorSidebar3: rgba(226, 232, 240, .68) !important;
+	--colorSidebar4: rgba(203, 213, 225, .5) !important;
+	--colorSidebar5: rgba(255, 255, 255, .12) !important;
+	--colorSidebar6: rgba(255, 255, 255, .07) !important;
+	--colorBackground: transparent !important;
+	--colorBackgroundWhite: transparent !important;
+	--colorFunction1: rgba(226, 232, 240, .62) !important;
+	--colorFunction2: rgba(255, 255, 255, .08) !important;
+	color-scheme: dark;
+}
+html[data-bncm-community-wallpaper="true"] [${SURFACE_ATTRIBUTE}="sidebar"] {
+	background: linear-gradient(180deg, rgba(${hexToRgb(shellPalette.sidebar)}, var(--bncm-community-sidebar-opacity)), rgba(${hexToRgb(shellPalette.background)}, var(--bncm-community-main-opacity))) !important;
+	border-right: 1px solid rgba(255, 255, 255, .1) !important;
+	backdrop-filter: blur(var(--bncm-community-blur)) saturate(1.08) !important;
+}
+html[data-bncm-community-wallpaper="true"] [${SURFACE_ATTRIBUTE}="topbar"] {
+	background: linear-gradient(180deg, rgba(${hexToRgb(shellPalette.surface)}, var(--bncm-community-sidebar-opacity)), rgba(${hexToRgb(shellPalette.background)}, var(--bncm-community-main-opacity))) !important;
+	border-bottom: 1px solid rgba(255, 255, 255, .1) !important;
+	backdrop-filter: blur(var(--bncm-community-blur)) saturate(1.08) !important;
+}
+html[data-bncm-community-wallpaper="true"] [${SURFACE_ATTRIBUTE}="player"] {
+	background: linear-gradient(180deg, rgba(${hexToRgb(shellPalette.surface)}, var(--bncm-community-main-opacity)), rgba(${hexToRgb(shellPalette.sidebar)}, var(--bncm-community-sidebar-opacity))) !important;
+	border-top: 1px solid rgba(255, 255, 255, .12) !important;
+	box-shadow: 0 -12px 30px rgba(0, 0, 0, .12) !important;
+	backdrop-filter: blur(var(--bncm-community-blur)) saturate(1.08) !important;
+}
+html[data-bncm-community-wallpaper="true"] [${SURFACE_ATTRIBUTE}="main"] {
+	background: linear-gradient(180deg, rgba(${hexToRgb(shellPalette.background)}, var(--bncm-community-main-opacity)), rgba(${hexToRgb(shellPalette.background)}, .12)) !important;
+	backdrop-filter: blur(var(--bncm-community-blur)) saturate(1.04) !important;
+}
+html[data-bncm-community-wallpaper="true"] .m-table,
+html[data-bncm-community-wallpaper="true"] .bncm-mgr {
+	background-color: rgba(${hexToRgb(shellPalette.surface)}, var(--bncm-community-card-opacity)) !important;
+	backdrop-filter: blur(var(--bncm-community-blur));
+}
+html[data-bncm-community-wallpaper="true"] [${SURFACE_ATTRIBUTE}="main"] img,
+html[data-bncm-community-wallpaper="true"] [${SURFACE_ATTRIBUTE}="main"] picture,
+html[data-bncm-community-wallpaper="true"] [${SURFACE_ATTRIBUTE}="main"] video,
+html[data-bncm-community-wallpaper="true"] [${SURFACE_ATTRIBUTE}="main"] canvas {
+	opacity: 1 !important;
+	visibility: visible !important;
+	filter: none !important;
+	mix-blend-mode: normal !important;
+}
+`;
 
 	requestAnimationFrame(() => refreshCommunityThemeTargets());
 }
@@ -656,9 +978,21 @@ async function restoreCommunityWallpaper() {
 	const settings = getCommunityThemeSettings();
 	if (!settings.wallpaperPath) return;
 	try {
-		setCommunityWallpaperUrl(await BetterNCMFs.mountFile(settings.wallpaperPath));
+		await loadCommunityWallpaper(settings.wallpaperPath);
+		let wallpaperType = settings.wallpaperType;
+		let wallpaperMediaPath = settings.wallpaperMediaPath;
+		if (wallpaperType === "unknown" || !wallpaperMediaPath) {
+			const detected = await detectCommunityWallpaperMedia(settings.wallpaperPath);
+			if (wallpaperType === "unknown") wallpaperType = detected.type;
+			if (!wallpaperMediaPath) wallpaperMediaPath = detected.mediaPath;
+			if (wallpaperType !== settings.wallpaperType || wallpaperMediaPath !== settings.wallpaperMediaPath) {
+				localStorage.setItem(COMMUNITY_THEME_STORAGE_KEY, JSON.stringify({ ...settings, version: COMMUNITY_THEME_SETTINGS_VERSION, wallpaperType, wallpaperMediaPath }));
+			}
+		}
+		await mountCommunityDynamicWallpaper(settings.wallpaperPath, wallpaperType, wallpaperMediaPath);
 	} catch {
 		setCommunityWallpaperUrl("");
+		removeCommunityDynamicWallpaper();
 	}
 }
 

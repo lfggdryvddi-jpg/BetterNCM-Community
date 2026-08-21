@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1714950222:preview.jpg",
+  "id": "wallpaper-1714950222",
+  "name": "（优化版）樱花飘落sakura(with music) （60fps） · 星光云寻",
+  "description": "基于 Wallpaper Engine 壁纸《（优化版）樱花飘落sakura(with music) （60fps）》设计。基于 BetterNCM Community 定制的网易云音乐深色主题，兼容桌面端 3.x，提供流畅音乐与视觉体验。",
+  "tags": [
+    "net",
+    "ncm",
+    "dark",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#856576",
+    "sidebar": "#705563",
+    "surface": "#947786",
+    "surfaceElevated": "#9d8491",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#e7dbdd",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 8,
+    "radius": 10,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1714950222",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "（优化版）樱花飘落sakura(with music) （60fps）"
+  },
+  "wallpaperTitle": "（优化版）樱花飘落sakura(with music) （60fps）",
+  "generatedThemeName": "星光云寻"
+}

@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2305119719:preview.jpg",
+  "id": "wallpaper-2305119719",
+  "name": "电锯人 · 幽光流转",
+  "description": "基于 Wallpaper Engine 壁纸《电锯人》设计。深紫配色，灵动渐变，适合夜间聆听。",
+  "tags": [
+    "night",
+    "purple",
+    "smooth",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#844176",
+    "sidebar": "#6f3763",
+    "surface": "#935886",
+    "surfaceElevated": "#9d6791",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#f8b46b",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2305119719",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "电锯人"
+  },
+  "wallpaperTitle": "电锯人",
+  "generatedThemeName": "幽光流转"
+}

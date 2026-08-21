@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1426835832:preview.jpg",
+  "id": "wallpaper-1426835832",
+  "name": "小树林 · 暮色森林",
+  "description": "基于 Wallpaper Engine 壁纸《小树林》设计。暗绿配色，模拟森林夜幕氛围，视觉层次分明。",
+  "tags": [
+    "forest",
+    "mystic",
+    "nature",
+    "landscape"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#163d4c",
+    "sidebar": "#123340",
+    "surface": "#325461",
+    "surfaceElevated": "#456470",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#7ebd8c",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 8,
+    "radius": 10,
+    "overlay": 0.48
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1426835832",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "小树林"
+  },
+  "wallpaperTitle": "小树林",
+  "generatedThemeName": "暮色森林"
+}

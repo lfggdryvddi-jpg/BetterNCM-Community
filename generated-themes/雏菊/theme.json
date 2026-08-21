@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2950247086:preview.jpg",
+  "id": "wallpaper-2950247086",
+  "name": "雏菊 · 夜云计划",
+  "description": "基于 Wallpaper Engine 壁纸《雏菊》设计。BetterNCM Community 网易云音乐深色主题，舒适视觉与动态壁纸预览。",
+  "tags": [
+    "music",
+    "dark",
+    "theme",
+    "nature"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#615d5b",
+    "sidebar": "#514e4c",
+    "surface": "#74706f",
+    "surfaceElevated": "#817d7c",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#cfb481",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2950247086",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "雏菊"
+  },
+  "wallpaperTitle": "雏菊",
+  "generatedThemeName": "夜云计划"
+}

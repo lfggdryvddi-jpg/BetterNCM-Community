@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3337895063:preview.jpg",
+  "id": "wallpaper-3337895063",
+  "name": "Azur Lane · 夜色",
+  "description": "基于 Wallpaper Engine 壁纸《Azur Lane》设计。基于网易云音乐深色界面设计的社区主题，注重可读性与视觉舒适度，支持深色模式与自定义配色。",
+  "tags": [
+    "music",
+    "dark",
+    "theme",
+    "game"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#0c0b0e",
+    "sidebar": "#0a090c",
+    "surface": "#29282b",
+    "surfaceElevated": "#3d3c3e",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#0c0b0e",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 6,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3337895063",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Azur Lane"
+  },
+  "wallpaperTitle": "Azur Lane",
+  "generatedThemeName": "夜色"
+}

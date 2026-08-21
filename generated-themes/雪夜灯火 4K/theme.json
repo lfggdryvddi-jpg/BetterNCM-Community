@@ -1,0 +1,41 @@
+{
+  "sourceKey": "3082872571:preview.jpg",
+  "id": "wallpaper-3082872571",
+  "name": "雪夜灯火 4K · 星光伴侣",
+  "description": "基于 Wallpaper Engine 壁纸《雪夜灯火 4K》设计。深色主题，专为网易云音乐设计，界面简洁流畅，夜间聆听更舒适",
+  "tags": [
+    "dark",
+    "music",
+    "ncm",
+    "wallpaper",
+    "landscape"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#342e52",
+    "sidebar": "#2c2745",
+    "surface": "#4c4767",
+    "surfaceElevated": "#5d5875",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#e397a3",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3082872571",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "雪夜灯火 4K"
+  },
+  "wallpaperTitle": "雪夜灯火 4K",
+  "generatedThemeName": "星光伴侣"
+}

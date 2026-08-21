@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3022080536:preview.jpg",
+  "id": "wallpaper-3022080536",
+  "name": "赛博color-宣纸国画-紫罗兰永恒花园 · 夜云",
+  "description": "基于 Wallpaper Engine 壁纸《赛博color-宣纸国画-紫罗兰永恒花园》设计。专为网易云音乐桌面端深色模式设计的 BetterNCM Community 主题，兼容 Wallpaper Engine 预览。",
+  "tags": [
+    "music",
+    "dark",
+    "ncm",
+    "girls"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#736a5f",
+    "sidebar": "#615950",
+    "surface": "#847c72",
+    "surfaceElevated": "#8f887f",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#9e9789",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 14,
+    "radius": 12,
+    "overlay": 0.48
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3022080536",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "赛博color-宣纸国画-紫罗兰永恒花园"
+  },
+  "wallpaperTitle": "赛博color-宣纸国画-紫罗兰永恒花园",
+  "generatedThemeName": "夜云"
+}

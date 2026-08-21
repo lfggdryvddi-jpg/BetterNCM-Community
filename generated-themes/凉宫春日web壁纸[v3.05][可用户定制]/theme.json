@@ -1,0 +1,40 @@
+{
+  "sourceKey": "823495832:preview.jpg",
+  "id": "wallpaper-823495832",
+  "name": "凉宫春日web壁纸[v3.05][可用户定制] · 星尘暗夜",
+  "description": "基于 Wallpaper Engine 壁纸《凉宫春日web壁纸[v3.05][可用户定制]》设计。星空暗夜，音乐陪伴，界面细腻易读。",
+  "tags": [
+    "dark",
+    "retro",
+    "warm",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#694e55",
+    "sidebar": "#584247",
+    "surface": "#7b6369",
+    "surfaceElevated": "#877177",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#fab84a",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 80,
+    "blur": 14,
+    "radius": 10,
+    "overlay": 0.55
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "823495832",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "凉宫春日web壁纸[v3.05][可用户定制]"
+  },
+  "wallpaperTitle": "凉宫春日web壁纸[v3.05][可用户定制]",
+  "generatedThemeName": "星尘暗夜"
+}

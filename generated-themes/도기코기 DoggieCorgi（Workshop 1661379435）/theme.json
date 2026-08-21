@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1661379435:preview.jpg",
+  "id": "wallpaper-1661379435",
+  "name": "도기코기 DoggieCorgi · 余烬",
+  "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCorgi》设计。橙色余烬点亮黑暗，激发创作灵感的火焰。",
+  "tags": [
+    "flame",
+    "warm",
+    "focus",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#8c2d0b",
+    "sidebar": "#762609",
+    "surface": "#9a4628",
+    "surfaceElevated": "#a3573c",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#c2d70e",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 78,
+    "blur": 6,
+    "radius": 16,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1661379435",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "도기코기 DoggieCorgi"
+  },
+  "wallpaperTitle": "도기코기 DoggieCorgi",
+  "generatedThemeName": "余烬"
+}

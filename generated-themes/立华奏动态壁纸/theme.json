@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1682358029:preview.jpg",
+  "id": "wallpaper-1682358029",
+  "name": "立华奏动态壁纸 · 星尘灰度",
+  "description": "基于 Wallpaper Engine 壁纸《立华奏动态壁纸》设计。冷调灰系配色，界面沉静，突出专辑封面与歌名，适合专注聆听。",
+  "tags": [
+    "cool",
+    "monochrome",
+    "focus",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#8483a4",
+    "sidebar": "#6f6e8a",
+    "surface": "#9392af",
+    "surfaceElevated": "#9d9cb6",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#d8a995",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 94,
+    "blur": 14,
+    "radius": 16,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1682358029",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "立华奏动态壁纸"
+  },
+  "wallpaperTitle": "立华奏动态壁纸",
+  "generatedThemeName": "星尘灰度"
+}

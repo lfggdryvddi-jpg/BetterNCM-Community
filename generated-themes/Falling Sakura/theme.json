@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2030321061:preview.jpg",
+  "id": "wallpaper-2030321061",
+  "name": "Falling Sakura · 暖光配色",
+  "description": "基于 Wallpaper Engine 壁纸《Falling Sakura》设计。暖橙色调，舒适视觉，适合午间休息。",
+  "tags": [
+    "warm",
+    "retro",
+    "soft",
+    "landscape"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#b97e89",
+    "sidebar": "#9b6a73",
+    "surface": "#c18d97",
+    "surfaceElevated": "#c798a1",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#de848c",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 82,
+    "blur": 15,
+    "radius": 14,
+    "overlay": 0.55
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2030321061",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Falling Sakura"
+  },
+  "wallpaperTitle": "Falling Sakura",
+  "generatedThemeName": "暖光配色"
+}

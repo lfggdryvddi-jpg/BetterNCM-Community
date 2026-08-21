@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "wallpaper-2803130830",
+  "name": "碧蓝档案 古关忧 4k · 夜云音乐",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《碧蓝档案 古关忧 4k》设计。基于 BetterNCM Community 的深色主题设计，界面简洁注重文字可读性与色彩统一。",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "cloud",
+    "music",
+    "dark",
+    "theme",
+    "anime"
+  ]
+}

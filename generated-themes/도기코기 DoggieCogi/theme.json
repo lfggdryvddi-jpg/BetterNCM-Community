@@ -1,0 +1,42 @@
+{
+  "sourceKey": "2595673940:preview.jpg",
+  "id": "wallpaper-2595673940",
+  "name": "도기코기 DoggieCogi · 云音乐深色主题",
+  "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCogi》设计。致力于为网易云音乐桌面端打造深色主题，提升视觉舒适度与个性化体验。",
+  "tags": [
+    "netease",
+    "music",
+    "bencm",
+    "wallpaper",
+    "theme",
+    "animal"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#1a1b1f",
+    "sidebar": "#24252a",
+    "surface": "#2a2b30",
+    "surfaceElevated": "#303136",
+    "text": "#e0e0e0",
+    "muted": "#6b6b80",
+    "accent": "#c4a73c",
+    "danger": "#ff5f57",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.48
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2595673940",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "도기코기 DoggieCogi"
+  },
+  "wallpaperTitle": "도기코기 DoggieCogi",
+  "generatedThemeName": "云音乐深色主题"
+}

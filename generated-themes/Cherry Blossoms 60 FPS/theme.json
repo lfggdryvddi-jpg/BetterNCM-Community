@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1139418455:preview.jpg",
+  "id": "wallpaper-1139418455",
+  "name": "Cherry Blossoms 60 FPS · 极夜协同",
+  "description": "基于 Wallpaper Engine 壁纸《Cherry Blossoms 60 FPS》设计。深邃夜色下的音乐体验，界面层次分明，护眼舒适。",
+  "tags": [
+    "night",
+    "minimal",
+    "smooth",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#3a404b",
+    "sidebar": "#31363f",
+    "surface": "#525761",
+    "surfaceElevated": "#61666f",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#c4b484",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 8,
+    "radius": 14,
+    "overlay": 0.55
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1139418455",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Cherry Blossoms 60 FPS"
+  },
+  "wallpaperTitle": "Cherry Blossoms 60 FPS",
+  "generatedThemeName": "极夜协同"
+}

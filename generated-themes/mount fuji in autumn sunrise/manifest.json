@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "wallpaper-1334736987",
+  "name": "mount fuji in autumn sunrise · 深海余灰",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《mount fuji in autumn sunrise》设计。深色配色，灵感源自海底岩石纹理，界面沉静低调。",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "night",
+    "deep",
+    "minimal",
+    "landscape"
+  ]
+}

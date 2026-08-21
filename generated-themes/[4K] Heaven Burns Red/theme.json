@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2696254052:preview.jpg",
+  "id": "wallpaper-2696254052",
+  "name": "[4K] Heaven Burns Red · 星光音乐",
+  "description": "基于 Wallpaper Engine 壁纸《[4K] Heaven Burns Red》设计。基于 BetterNCM Community 网易云音乐桌面端深色主题，配色柔和，注重文字可读性与视觉舒适度。",
+  "tags": [
+    "dark",
+    "music",
+    "theme",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#3c9d9e",
+    "sidebar": "#328485",
+    "surface": "#53a9aa",
+    "surfaceElevated": "#63b1b1",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#69a0d1",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2696254052",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "[4K] Heaven Burns Red"
+  },
+  "wallpaperTitle": "[4K] Heaven Burns Red",
+  "generatedThemeName": "星光音乐"
+}

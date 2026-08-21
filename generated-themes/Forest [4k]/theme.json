@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2111495079:preview.jpg",
+  "id": "wallpaper-2111495079",
+  "name": "Forest [4k] · 深海音浪",
+  "description": "基于 Wallpaper Engine 壁纸《Forest [4k]》设计。以海蓝色系为基调，营造宁静的音乐沉浸感。",
+  "tags": [
+    "music",
+    "night",
+    "ocean",
+    "nature"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#1c3b3e",
+    "sidebar": "#183234",
+    "surface": "#375355",
+    "surfaceElevated": "#496265",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#78b68d",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 6,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2111495079",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Forest [4k]"
+  },
+  "wallpaperTitle": "Forest [4k]",
+  "generatedThemeName": "深海音浪"
+}

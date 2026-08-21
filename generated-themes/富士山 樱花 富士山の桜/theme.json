@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2205252119:preview.jpg",
+  "id": "wallpaper-2205252119",
+  "name": "富士山 樱花 富士山の桜 · 海蓝调",
+  "description": "基于 Wallpaper Engine 壁纸《富士山 樱花 富士山の桜》设计。清新蓝调深色主题，界面清爽，适合长时间听音乐",
+  "tags": [
+    "blue",
+    "fresh",
+    "clean",
+    "landscape"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#4197cf",
+    "sidebar": "#377fae",
+    "surface": "#58a3d5",
+    "surfaceElevated": "#67acd9",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#5dabd8",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 80,
+    "blur": 6,
+    "radius": 8,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2205252119",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "富士山 樱花 富士山の桜"
+  },
+  "wallpaperTitle": "富士山 樱花 富士山の桜",
+  "generatedThemeName": "海蓝调"
+}

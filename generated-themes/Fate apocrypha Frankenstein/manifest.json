@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "wallpaper-1133508068",
+  "name": "Fate apocrypha Frankenstein · 星光岁月",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《Fate apocrypha Frankenstein》设计。基于暖调复古色调的网易云音乐深色主题，兼容 BetterNCM Community。",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "retro",
+    "warm",
+    "dark",
+    "anime"
+  ]
+}

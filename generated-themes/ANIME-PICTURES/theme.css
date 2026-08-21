@@ -1,0 +1,38 @@
+/* BetterNCM Community generated skin: 云音乐深色主题 */
+/* Source image remains local; this package contains no third-party image bytes. */
+:root {
+  --bncm-generated-background: #6a79ba;
+  --bncm-generated-sidebar: #59669c;
+  --bncm-generated-surface: #7c89c2;
+  --bncm-generated-surface-elevated: #8894c8;
+  --bncm-generated-text: #f8fafc;
+  --bncm-generated-muted: #cbd5e1;
+  --bncm-generated-accent: #6a79ba;
+  --bncm-generated-accent-rgb: 106, 121, 186;
+  --bncm-generated-opacity: 0.85;
+  --bncm-generated-blur: 6px;
+  --bncm-generated-radius: 12px;
+}
+html[data-bncm-community-theme], html[data-bncm-community-theme] body { color: #f8fafc !important; background-color: #6a79ba !important; }
+html[data-bncm-community-theme] #app,
+html[data-bncm-community-theme] #g_iframe { background-color: #6a79ba !important; }
+html[data-bncm-community-theme] .g-sd,
+html[data-bncm-community-theme] [data-bncm-community-surface="sidebar"] { background: #59669c !important; }
+html[data-bncm-community-theme] .m-top,
+html[data-bncm-community-theme] [data-bncm-community-surface="topbar"],
+html[data-bncm-community-theme] .m-playbar,
+html[data-bncm-community-theme] [data-bncm-community-surface="player"] { background: #7c89c2 !important; backdrop-filter: blur(var(--bncm-generated-blur)); }
+html[data-bncm-community-theme] [data-bncm-community-surface="main"],
+html[data-bncm-community-theme] .m-table,
+html[data-bncm-community-theme] [class*="Card_"] { background: #7c89c2 !important; border-radius: var(--bncm-generated-radius); }
+html[data-bncm-community-theme] a:hover,
+html[data-bncm-community-theme] [aria-selected="true"],
+html[data-bncm-community-theme] [aria-current="page"] { color: #6a79ba !important; }
+html[data-bncm-community-theme] button:hover,
+html[data-bncm-community-theme] input[type="range"] { accent-color: #6a79ba; }
+html[data-bncm-community-theme] .m-table th,
+html[data-bncm-community-theme] .m-table td { color: #f8fafc !important; border-color: color-mix(in srgb, #f8fafc 12%, transparent) !important; }
+html[data-bncm-community-theme] .m-table .sub,
+html[data-bncm-community-theme] .u-hide { color: #cbd5e1 !important; }
+html[data-bncm-community-theme] .m-playbar::before,
+html[data-bncm-community-theme] [class*="DefaultBarWrapper_"]::before { background: linear-gradient(90deg, transparent, rgba(106, 121, 186, .48), transparent) !important; }

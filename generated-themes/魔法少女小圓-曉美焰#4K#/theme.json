@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2811662119:preview.jpg",
+  "id": "wallpaper-2811662119",
+  "name": "魔法少女小圓-曉美焰#4K# · 云端粉黛",
+  "description": "基于 Wallpaper Engine 壁纸《魔法少女小圓-曉美焰#4K#》设计。基于网易云音乐深色界面的粉色系主题，兼容BetterNCM Community，预览图使用本地壁纸。",
+  "tags": [
+    "music",
+    "netease",
+    "dark",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#b060a0",
+    "sidebar": "#945186",
+    "surface": "#b973ab",
+    "surfaceElevated": "#c080b3",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#b060a0",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 14,
+    "overlay": 0.48
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2811662119",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "魔法少女小圓-曉美焰#4K#"
+  },
+  "wallpaperTitle": "魔法少女小圓-曉美焰#4K#",
+  "generatedThemeName": "云端粉黛"
+}

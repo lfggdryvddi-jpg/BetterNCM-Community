@@ -1,0 +1,41 @@
+{
+  "sourceKey": "3391355116:preview.jpg",
+  "id": "wallpaper-3391355116",
+  "name": "Asuka Langley Soryu 明日香 · 星光云间",
+  "description": "基于 Wallpaper Engine 壁纸《Asuka Langley Soryu 明日香》设计。基于深色界面的网易云音乐主题，兼容 BetterNCM Community，提供流畅的视觉体验。",
+  "tags": [
+    "nc",
+    "music",
+    "dark",
+    "ncm",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#4c736a",
+    "sidebar": "#406159",
+    "surface": "#61847c",
+    "surfaceElevated": "#708f88",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#c85e9d",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3391355116",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Asuka Langley Soryu 明日香"
+  },
+  "wallpaperTitle": "Asuka Langley Soryu 明日香",
+  "generatedThemeName": "星光云间"
+}

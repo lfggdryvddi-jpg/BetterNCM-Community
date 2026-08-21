@@ -108,7 +108,7 @@ export const CommunityThemePanel: React.FC = () => {
 
 			<h3>细节调整</h3>
 			<label style={labelStyle}>
-				<span>面板透明度</span>
+				<span>面板不透明度（越低越能看清壁纸）</span>
 				<output>{settings.intensity}%</output>
 			</label>
 			<input

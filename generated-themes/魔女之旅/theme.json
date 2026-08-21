@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2398417456:preview.jpg",
+  "id": "wallpaper-2398417456",
+  "name": "魔女之旅 · 墨香四溢",
+  "description": "基于 Wallpaper Engine 壁纸《魔女之旅》设计。复古棕调，静谧陪伴，每一次打开皆是温暖。",
+  "tags": [
+    "retro",
+    "warm",
+    "minimal",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#40332e",
+    "sidebar": "#362b27",
+    "surface": "#574b47",
+    "surfaceElevated": "#665c58",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#c4b184",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 82,
+    "blur": 8,
+    "radius": 14,
+    "overlay": 0.55
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2398417456",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "魔女之旅"
+  },
+  "wallpaperTitle": "魔女之旅",
+  "generatedThemeName": "墨香四溢"
+}

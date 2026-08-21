@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1551961057:preview.jpg",
+  "id": "wallpaper-1551961057",
+  "name": "哔哩哔哩音频响应壁纸 · 薄暮紫藤",
+  "description": "基于 Wallpaper Engine 壁纸《哔哩哔哩音频响应壁纸》设计。紫色系配色，营造神秘深邃的音乐体验，深色背景下粉色点缀彰显个性。",
+  "tags": [
+    "purple",
+    "mystic",
+    "vibrant",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#4c607f",
+    "sidebar": "#40516b",
+    "surface": "#61738e",
+    "surfaceElevated": "#708099",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#f56a9a",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 10,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1551961057",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "哔哩哔哩音频响应壁纸"
+  },
+  "wallpaperTitle": "哔哩哔哩音频响应壁纸",
+  "generatedThemeName": "薄暮紫藤"
+}

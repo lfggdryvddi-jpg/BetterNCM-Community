@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2624215601:preview.jpg",
+  "id": "wallpaper-2624215601",
+  "name": "About MC · 星光电台",
+  "description": "基于 Wallpaper Engine 壁纸《About MC》设计。适配网易云音乐深色模式，提供统一的视觉风格与流畅交互体验。",
+  "tags": [
+    "music",
+    "dark",
+    "cyber",
+    "unspecified"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#4e382c",
+    "sidebar": "#422f25",
+    "surface": "#635045",
+    "surfaceElevated": "#716056",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#79c879",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2624215601",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "About MC"
+  },
+  "wallpaperTitle": "About MC",
+  "generatedThemeName": "星光电台"
+}

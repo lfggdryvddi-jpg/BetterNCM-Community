@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3270040168:preview.jpg",
+  "id": "wallpaper-3270040168",
+  "name": "今年もよろしくお願いします · 云端暗色",
+  "description": "基于 Wallpaper Engine 壁纸《今年もよろしくお願いします》设计。适配网易云音乐桌面端的深色主题，界面简洁，对比度高，阅读舒适。",
+  "tags": [
+    "music",
+    "theme",
+    "ncm",
+    "girls"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#666475",
+    "sidebar": "#565462",
+    "surface": "#787786",
+    "surfaceElevated": "#858391",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#666475",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3270040168",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "今年もよろしくお願いします"
+  },
+  "wallpaperTitle": "今年もよろしくお願いします",
+  "generatedThemeName": "云端暗色"
+}

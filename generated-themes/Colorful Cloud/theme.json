@@ -1,0 +1,41 @@
+{
+  "sourceKey": "3178766389:preview.jpg",
+  "id": "wallpaper-3178766389",
+  "name": "Colorful Cloud · 深海蔚蓝",
+  "description": "基于 Wallpaper Engine 壁纸《Colorful Cloud》设计。网易云音乐深色主题，专为桌面端设计，提供舒适视觉体验。",
+  "tags": [
+    "deep",
+    "music",
+    "night",
+    "cloud",
+    "landscape"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#295074",
+    "sidebar": "#224361",
+    "surface": "#436585",
+    "surfaceElevated": "#547390",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#4ab0c9",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3178766389",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Colorful Cloud"
+  },
+  "wallpaperTitle": "Colorful Cloud",
+  "generatedThemeName": "深海蔚蓝"
+}

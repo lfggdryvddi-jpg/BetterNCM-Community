@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3358710380:preview.jpg",
+  "id": "wallpaper-3358710380",
+  "name": "祥子 · 夜曲",
+  "description": "基于 Wallpaper Engine 壁纸《祥子》设计。深色配色，专为夜间聆听网易云音乐而设，界面简洁且舒适。",
+  "tags": [
+    "music",
+    "dark",
+    "netease",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#2c3e78",
+    "sidebar": "#253465",
+    "surface": "#455588",
+    "surfaceElevated": "#566593",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#507196",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3358710380",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "祥子"
+  },
+  "wallpaperTitle": "祥子",
+  "generatedThemeName": "夜曲"
+}

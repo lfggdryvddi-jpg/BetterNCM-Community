@@ -1,0 +1,42 @@
+{
+  "sourceKey": "2810642767:preview.jpg",
+  "id": "wallpaper-2810642767",
+  "name": "柴郡 · 夜曲",
+  "description": "基于 Wallpaper Engine 壁纸《柴郡》设计。深色主题，舒适阅读，网易云音乐风格。",
+  "tags": [
+    "ncm",
+    "betterncm",
+    "music",
+    "theme",
+    "dark",
+    "game"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#936e99",
+    "sidebar": "#7b5c81",
+    "surface": "#a07fa5",
+    "surfaceElevated": "#a98bad",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#f2cbb8",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 92,
+    "blur": 5,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2810642767",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "柴郡"
+  },
+  "wallpaperTitle": "柴郡",
+  "generatedThemeName": "夜曲"
+}

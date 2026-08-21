@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "wallpaper-2939232695",
+  "name": "Heaven Burns Red 红烧天堂Angel Beats联动 · 星曜",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《Heaven Burns Red 红烧天堂Angel Beats联动》设计。基于 BetterNCM Community 的深色主题，提供舒适的视觉体验与丰富的自定义选项。",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "netease",
+    "betterncm",
+    "dark",
+    "music",
+    "anime"
+  ]
+}

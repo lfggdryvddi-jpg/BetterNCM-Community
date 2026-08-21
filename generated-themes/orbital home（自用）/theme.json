@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3254571754:preview.jpg",
+  "id": "wallpaper-3254571754",
+  "name": "orbital home（自用） · 星光伴行",
+  "description": "基于 Wallpaper Engine 壁纸《orbital home（自用）》设计。深色配色，柔和余光，专注音乐体验",
+  "tags": [
+    "dark",
+    "music",
+    "neo",
+    "technology"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#536d7a",
+    "sidebar": "#465c66",
+    "surface": "#687f8a",
+    "surfaceElevated": "#758a95",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#6a9eb6",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3254571754",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "orbital home（自用）"
+  },
+  "wallpaperTitle": "orbital home（自用）",
+  "generatedThemeName": "星光伴行"
+}

@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2910568926:preview.jpg",
+  "id": "wallpaper-2910568926",
+  "name": "Tokyo City Streets · 夜曲模式",
+  "description": "基于 Wallpaper Engine 壁纸《Tokyo City Streets》设计。网易云音乐深色主题，舒适视觉与个性化色彩搭配。",
+  "tags": [
+    "dark",
+    "music",
+    "ncim",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#60829b",
+    "sidebar": "#516d82",
+    "surface": "#7391a7",
+    "surfaceElevated": "#809baf",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#60829b",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2910568926",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Tokyo City Streets"
+  },
+  "wallpaperTitle": "Tokyo City Streets",
+  "generatedThemeName": "夜曲模式"
+}

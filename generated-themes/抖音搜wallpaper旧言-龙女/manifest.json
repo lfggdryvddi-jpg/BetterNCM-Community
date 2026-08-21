@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "wallpaper-3048159108",
+  "name": "抖音搜wallpaper旧言-龙女 · 星光逐浪",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《抖音搜wallpaper旧言-龙女》设计。基于深色界面的网易云音乐主题，配色柔和，阅读舒适，支持 BetterNCM Community 扩展。",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "dark",
+    "music",
+    "ncms",
+    "cloud",
+    "anime"
+  ]
+}

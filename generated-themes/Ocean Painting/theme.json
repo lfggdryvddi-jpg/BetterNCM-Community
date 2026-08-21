@@ -1,0 +1,39 @@
+{
+  "sourceKey": "1883906261:preview.jpg",
+  "id": "wallpaper-1883906261",
+  "name": "Ocean Painting · 星光",
+  "description": "基于 Wallpaper Engine 壁纸《Ocean Painting》设计。基于深色界面的网易云音乐主题，提供舒适的视觉体验。",
+  "tags": [
+    "music",
+    "dark",
+    "landscape"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#665866",
+    "sidebar": "#564a56",
+    "surface": "#786c78",
+    "surfaceElevated": "#857985",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#a6d7f6",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 6,
+    "radius": 12,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1883906261",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Ocean Painting"
+  },
+  "wallpaperTitle": "Ocean Painting",
+  "generatedThemeName": "星光"
+}

@@ -1,0 +1,40 @@
+{
+  "sourceKey": "838289251:preview.jpg",
+  "id": "wallpaper-838289251",
+  "name": "更新WEB播放器-东方Project-灵梦&魔理沙-精细动态壁纸 · 暖阳配色",
+  "description": "基于 Wallpaper Engine 壁纸《更新WEB播放器-东方Project-灵梦&魔理沙-精细动态壁纸》设计。温暖橙调，活力十足的音乐主题",
+  "tags": [
+    "warm",
+    "orange",
+    "vibrant",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#d25a48",
+    "sidebar": "#b04c3c",
+    "surface": "#d76e5e",
+    "surfaceElevated": "#db7b6d",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#d25a48",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 82,
+    "blur": 15,
+    "radius": 16,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "838289251",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "更新WEB播放器-东方Project-灵梦&魔理沙-精细动态壁纸"
+  },
+  "wallpaperTitle": "更新WEB播放器-东方Project-灵梦&魔理沙-精细动态壁纸",
+  "generatedThemeName": "暖阳配色"
+}

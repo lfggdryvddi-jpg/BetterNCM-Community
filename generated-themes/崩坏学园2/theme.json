@@ -1,0 +1,41 @@
+{
+  "sourceKey": "838533010:preview.jpg",
+  "id": "wallpaper-838533010",
+  "name": "崩坏学园2 · 星夜音浪",
+  "description": "基于 Wallpaper Engine 壁纸《崩坏学园2》设计。深色主题，以蔚蓝紫色调，营造夜间音乐氛围。",
+  "tags": [
+    "music",
+    "dark",
+    "netease",
+    "cartoon",
+    "game"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#578eb4",
+    "sidebar": "#497797",
+    "surface": "#6b9cbd",
+    "surfaceElevated": "#79a5c3",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#578eb4",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 12,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "838533010",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "崩坏学园2"
+  },
+  "wallpaperTitle": "崩坏学园2",
+  "generatedThemeName": "星夜音浪"
+}

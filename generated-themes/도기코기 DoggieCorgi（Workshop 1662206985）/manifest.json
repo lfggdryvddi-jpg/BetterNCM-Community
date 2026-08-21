@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "wallpaper-1662206985",
+  "name": "도기코기 DoggieCorgi · 樱粉轻醇",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCorgi》设计。温暖的粉调配色，搭配网易云音乐的歌词背景，营造舒适的音乐氛围。",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "warm",
+    "pastel",
+    "soft",
+    "anime"
+  ]
+}

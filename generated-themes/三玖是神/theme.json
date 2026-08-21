@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2869409186:preview.jpg",
+  "id": "wallpaper-2869409186",
+  "name": "三玖是神 · 夜色云音乐",
+  "description": "基于 Wallpaper Engine 壁纸《三玖是神》设计。网易云音乐深色主题，提供沉浸式视觉与流畅操作。",
+  "tags": [
+    "netease",
+    "dark",
+    "music",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#626262",
+    "sidebar": "#525252",
+    "surface": "#757575",
+    "surfaceElevated": "#818181",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#be84b6",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 14,
+    "radius": 10,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2869409186",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "三玖是神"
+  },
+  "wallpaperTitle": "三玖是神",
+  "generatedThemeName": "夜色云音乐"
+}

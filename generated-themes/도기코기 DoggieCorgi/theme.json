@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1661369948:preview.jpg",
+  "id": "wallpaper-1661369948",
+  "name": "도기코기 DoggieCorgi · 暮光",
+  "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCorgi》设计。温暖橙调，唤醒对音乐的热爱",
+  "tags": [
+    "music",
+    "warm",
+    "sunset",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#dd6907",
+    "sidebar": "#ba5806",
+    "surface": "#e17b25",
+    "surfaceElevated": "#e48739",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#45bdbd",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 8,
+    "radius": 14,
+    "overlay": 0.55
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1661369948",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "도기코기 DoggieCorgi"
+  },
+  "wallpaperTitle": "도기코기 DoggieCorgi",
+  "generatedThemeName": "暮光"
+}

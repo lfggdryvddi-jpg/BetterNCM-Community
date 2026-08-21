@@ -1,0 +1,41 @@
+{
+  "sourceKey": "3262923557:preview.jpg",
+  "id": "wallpaper-3262923557",
+  "name": "wall · 夜色云音乐",
+  "description": "基于 Wallpaper Engine 壁纸《wall》设计。基于 BetterNCM Community 的深色主题，专为网易云音乐桌面端 3.x 设计，提供沉浸式音乐体验。",
+  "tags": [
+    "ncm",
+    "music",
+    "dark",
+    "community",
+    "unspecified"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#5c6261",
+    "sidebar": "#4d5251",
+    "surface": "#707574",
+    "surfaceElevated": "#7d8181",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#bdb684",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3262923557",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "wall"
+  },
+  "wallpaperTitle": "wall",
+  "generatedThemeName": "夜色云音乐"
+}

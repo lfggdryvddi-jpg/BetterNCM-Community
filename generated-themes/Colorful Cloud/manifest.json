@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "wallpaper-3178766389",
+  "name": "Colorful Cloud · 深海蔚蓝",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《Colorful Cloud》设计。网易云音乐深色主题，专为桌面端设计，提供舒适视觉体验。",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "deep",
+    "music",
+    "night",
+    "cloud",
+    "landscape"
+  ]
+}

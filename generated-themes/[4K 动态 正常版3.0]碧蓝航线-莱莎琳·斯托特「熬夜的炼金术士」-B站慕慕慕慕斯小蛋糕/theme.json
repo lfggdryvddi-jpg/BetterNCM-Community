@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2894968698:preview.jpg",
+  "id": "wallpaper-2894968698",
+  "name": "[4K 动态 正常版3.0]碧蓝航线-莱莎琳·斯托特「熬夜的炼金术士」-B站慕慕慕慕斯小蛋糕 · 星尘小站",
+  "description": "基于 Wallpaper Engine 壁纸《[4K 动态 正常版3.0]碧蓝航线-莱莎琳·斯托特「熬夜的炼金术士」-B站慕慕慕慕斯小蛋糕》设计。基于网易云音乐深色基调的 BetterNCM Community 主题，提供沉浸式音乐体验。",
+  "tags": [
+    "nc",
+    "music",
+    "dark",
+    "game"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#3c2c24",
+    "sidebar": "#32251e",
+    "surface": "#53453e",
+    "surfaceElevated": "#635650",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#ce933c",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2894968698",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "[4K 动态 正常版3.0]碧蓝航线-莱莎琳·斯托特「熬夜的炼金术士」-B站慕慕慕慕斯小蛋糕"
+  },
+  "wallpaperTitle": "[4K 动态 正常版3.0]碧蓝航线-莱莎琳·斯托特「熬夜的炼金术士」-B站慕慕慕慕斯小蛋糕",
+  "generatedThemeName": "星尘小站"
+}

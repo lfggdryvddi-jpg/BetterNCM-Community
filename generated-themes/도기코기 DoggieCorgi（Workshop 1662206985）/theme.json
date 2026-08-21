@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1662206985:preview.jpg",
+  "id": "wallpaper-1662206985",
+  "name": "도기코기 DoggieCorgi · 樱粉轻醇",
+  "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCorgi》设计。温暖的粉调配色，搭配网易云音乐的歌词背景，营造舒适的音乐氛围。",
+  "tags": [
+    "warm",
+    "pastel",
+    "soft",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#4e4338",
+    "sidebar": "#42382f",
+    "surface": "#635a50",
+    "surfaceElevated": "#716960",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#ebdeb2",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 8,
+    "radius": 10,
+    "overlay": 0.55
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1662206985",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "도기코기 DoggieCorgi"
+  },
+  "wallpaperTitle": "도기코기 DoggieCorgi",
+  "generatedThemeName": "樱粉轻醇"
+}

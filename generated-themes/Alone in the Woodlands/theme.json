@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2431970333:preview.jpg",
+  "id": "wallpaper-2431970333",
+  "name": "Alone in the Woodlands · 暮光森林",
+  "description": "基于 Wallpaper Engine 壁纸《Alone in the Woodlands》设计。深绿与暖橙的复古交响，唤醒听觉与视觉的双重共鸣",
+  "tags": [
+    "retro",
+    "forest",
+    "warm",
+    "landscape"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#ac702c",
+    "sidebar": "#905e25",
+    "surface": "#b68145",
+    "surfaceElevated": "#bd8d56",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#ac702c",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.48
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2431970333",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Alone in the Woodlands"
+  },
+  "wallpaperTitle": "Alone in the Woodlands",
+  "generatedThemeName": "暮光森林"
+}

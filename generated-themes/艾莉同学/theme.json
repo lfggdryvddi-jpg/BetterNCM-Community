@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3288280659:preview.jpg",
+  "id": "wallpaper-3288280659",
+  "name": "艾莉同学 · 夜色动听",
+  "description": "基于 Wallpaper Engine 壁纸《艾莉同学》设计。基于 BetterNCM Community 的深色主题，界面简洁，配色温润，兼顾阅读舒适度与视觉层次。",
+  "tags": [
+    "music",
+    "dark",
+    "theme",
+    "animal"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#324f71",
+    "sidebar": "#2a425f",
+    "surface": "#4b6482",
+    "surfaceElevated": "#5b728d",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#a14e52",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3288280659",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "艾莉同学"
+  },
+  "wallpaperTitle": "艾莉同学",
+  "generatedThemeName": "夜色动听"
+}

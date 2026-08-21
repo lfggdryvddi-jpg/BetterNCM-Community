@@ -1,0 +1,41 @@
+{
+  "sourceKey": "3323778314:preview.jpg",
+  "id": "wallpaper-3323778314",
+  "name": "【雪晴】金枝玉叶-03 · 夜曲",
+  "description": "基于 Wallpaper Engine 壁纸《【雪晴】金枝玉叶-03》设计。一款适配 BetterNCM Community 的网易云音乐深色主题，界面设计简洁，文字与背景对比度清晰，提供舒适的使用体验。",
+  "tags": [
+    "netecm",
+    "cloud",
+    "dark",
+    "music",
+    "girls"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#b35036",
+    "sidebar": "#96432d",
+    "surface": "#bc654e",
+    "surfaceElevated": "#c2735e",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#b35036",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3323778314",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "【雪晴】金枝玉叶-03"
+  },
+  "wallpaperTitle": "【雪晴】金枝玉叶-03",
+  "generatedThemeName": "夜曲"
+}

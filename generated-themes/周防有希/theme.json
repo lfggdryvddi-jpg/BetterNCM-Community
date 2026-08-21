@@ -1,0 +1,42 @@
+{
+  "sourceKey": "3289056733:preview.jpg",
+  "id": "wallpaper-3289056733",
+  "name": "周防有希 · 网易夜色",
+  "description": "基于 Wallpaper Engine 壁纸《周防有希》设计。网易云音乐深色主题，流畅视觉与优雅配色。",
+  "tags": [
+    "netease",
+    "music",
+    "theme",
+    "dark",
+    "custom",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#121212",
+    "sidebar": "#1e1e24",
+    "surface": "#25252a",
+    "surfaceElevated": "#2d2d37",
+    "text": "#f0f0f0",
+    "muted": "#8888a0",
+    "accent": "#c792ea",
+    "danger": "#ff7878",
+    "success": "#44e1b1"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 8,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3289056733",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "周防有希"
+  },
+  "wallpaperTitle": "周防有希",
+  "generatedThemeName": "网易夜色"
+}

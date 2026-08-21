@@ -12,10 +12,17 @@ export interface CommunityThemePalette {
 	success: string;
 }
 
+export type WallpaperResourceType = "image" | "video" | "web" | "scene" | "unknown";
+
 export interface WallpaperResource {
 	path: string;
 	name: string;
 	extension: string;
+	title?: string;
+	projectId?: string;
+	tags?: string[];
+	mediaType?: WallpaperResourceType;
+	contentPath?: string;
 }
 
 const IMAGE_EXTENSIONS = new Set([".png", ".jpg", ".jpeg", ".webp", ".bmp"]);
@@ -147,6 +154,15 @@ export async function extractPalette(blob: Blob): Promise<CommunityThemePalette>
 	}
 }
 
+function normalizeWallpaperType(value: unknown): WallpaperResourceType {
+	const type = String(value || "").trim().toLowerCase();
+	if (type === "video") return "video";
+	if (type === "web") return "web";
+	if (type === "scene") return "scene";
+	if (type === "image") return "image";
+	return "unknown";
+}
+
 function extensionOf(path: string) {
 	const match = path.match(/\.[^\\/.]+$/);
 	return match ? match[0].toLowerCase() : "";
@@ -159,45 +175,74 @@ function baseName(path: string) {
 export async function scanWallpaperEngine(rootPath: string): Promise<WallpaperResource[]> {
 	const root = rootPath.trim().replace(/[\\/]$/, "");
 	if (!root) throw new Error("请先填写 Wallpaper Engine Workshop 路径。");
-	const result: WallpaperResource[] = [];
-	const queue: Array<{ path: string; depth: number }> = [];
 	const normalizedRoot = root.toLowerCase();
 
-	// Workshop 根目录可能包含数千个项目，直接 readDir 会让旧版 CEF 的 JSON 响应过大。
-	// 优先读取 Steam 的 appworkshop 清单，再逐个读取项目目录。
+	// Steam Workshop 路径：每个项目只返回 project.json 指定的代表预览图，
+	// 并使用壁纸真实标题，避免一个项目的内部纹理占满整个列表。
 	if (normalizedRoot.endsWith("\\workshop\\content\\431960") || normalizedRoot.endsWith("/workshop/content/431960")) {
 		const workshopManifest = root.replace(/[\\/]content[\\/]431960$/i, "") + "\\appworkshop_431960.acf";
+		let ids: string[] = [];
 		try {
 			const manifest = await BetterNCM.fs.readFileText(workshopManifest);
-			const ids = [...manifest.matchAll(/^\s*"(\d{8,})"\s*$/gim)].map((match) => match[1]);
-			for (const id of ids.slice(0, 240)) queue.push({ path: `${root}\\${id}`, depth: 0 });
+			ids = [...manifest.matchAll(/^\s*"(\d{8,})"\s*$/gim)].map((match) => match[1]).slice(0, 240);
 		} catch {
-			throw new Error("无法读取 Steam Workshop 清单。请确认路径为 Steam\\steamapps\\workshop\\content\\431960，且网易云有权限访问。");
+			throw new Error("无法读取 Steam Workshop 清单。请确认路径和网易云文件访问权限。");
 		}
-	} else {
-		queue.push({ path: root, depth: 0 });
+		const result: WallpaperResource[] = [];
+		for (const id of ids) {
+			if (result.length >= MAX_SCAN_RESULTS) break;
+			const projectPath = `${root}\\${id}`;
+			let title = `Wallpaper ${id}`;
+			let preview = "preview.jpg";
+			let tags: string[] = [];
+			let mediaType: WallpaperResourceType = "unknown";
+			let contentPath = "";
+			try {
+				const metadata = JSON.parse(await BetterNCM.fs.readFileText(`${projectPath}\\project.json`)) as {
+					title?: string;
+					preview?: string;
+					tags?: string[];
+					type?: string;
+					file?: string;
+				};
+				title = metadata.title?.trim() || title;
+				preview = metadata.preview?.trim() || preview;
+				tags = Array.isArray(metadata.tags) ? metadata.tags : [];
+				mediaType = normalizeWallpaperType(metadata.type);
+				contentPath = metadata.file?.trim() ? `${projectPath}\\${metadata.file.trim()}` : "";
+			} catch { /* Older projects may not expose valid UTF-8 metadata. */ }
+			const extension = extensionOf(preview);
+			if (!IMAGE_EXTENSIONS.has(extension)) continue;
+			result.push({
+				path: `${projectPath}\\${preview}`,
+				name: baseName(preview),
+				extension,
+				title,
+				projectId: id,
+				tags,
+				mediaType,
+				contentPath,
+			});
+		}
+		return result;
 	}
 
+	const result: WallpaperResource[] = [];
+	const queue: Array<{ path: string; depth: number }> = [{ path: root, depth: 0 }];
 	while (queue.length && result.length < MAX_SCAN_RESULTS) {
 		const current = queue.shift()!;
 		let entries: string[];
-		try {
-			entries = await BetterNCM.fs.readDir(current.path);
-		} catch {
-			continue;
-		}
+		try { entries = await BetterNCM.fs.readDir(current.path); } catch { continue; }
 		for (const entry of entries) {
 			const filePath = entry.includes("\\") || entry.includes("/") ? entry : `${current.path}\\${entry}`;
 			const extension = extensionOf(filePath);
 			if (IMAGE_EXTENSIONS.has(extension)) {
-				result.push({ path: filePath, name: baseName(filePath), extension });
+				result.push({ path: filePath, name: baseName(filePath), extension, title: baseName(filePath), mediaType: "image", contentPath: filePath });
 				if (result.length >= MAX_SCAN_RESULTS) break;
-				continue;
+			} else if (current.depth < MAX_SCAN_DEPTH && !extension) {
+				queue.push({ path: filePath, depth: current.depth + 1 });
 			}
-			if (current.depth < MAX_SCAN_DEPTH && !extension) queue.push({ path: filePath, depth: current.depth + 1 });
 		}
 	}
 	return result;
 }
-
-

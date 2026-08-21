@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "wallpaper-1551961057",
+  "name": "哔哩哔哩音频响应壁纸 · 薄暮紫藤",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《哔哩哔哩音频响应壁纸》设计。紫色系配色，营造神秘深邃的音乐体验，深色背景下粉色点缀彰显个性。",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "purple",
+    "mystic",
+    "vibrant",
+    "anime"
+  ]
+}

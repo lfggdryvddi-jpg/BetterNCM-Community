@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3258032485:preview.jpg",
+  "id": "wallpaper-3258032485",
+  "name": "Ayanami Rei-凌波丽『night』 · 夜曲",
+  "description": "基于 Wallpaper Engine 壁纸《Ayanami Rei-凌波丽『night』》设计。基于网易云音乐深色界面的 BetterNCM Community 主题，兼容 Wallpaper Engine 预览，提供统一的视觉体验。",
+  "tags": [
+    "music",
+    "dark",
+    "ncm",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#085d9c",
+    "sidebar": "#074e83",
+    "surface": "#2670a8",
+    "surfaceElevated": "#397db0",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#68a6d8",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3258032485",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Ayanami Rei-凌波丽『night』"
+  },
+  "wallpaperTitle": "Ayanami Rei-凌波丽『night』",
+  "generatedThemeName": "夜曲"
+}

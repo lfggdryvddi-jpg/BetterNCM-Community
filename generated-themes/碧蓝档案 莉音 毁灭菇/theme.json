@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3293783173:preview.jpg",
+  "id": "wallpaper-3293783173",
+  "name": "碧蓝档案 莉音 毁灭菇 · 星光云主题",
+  "description": "基于 Wallpaper Engine 壁纸《碧蓝档案 莉音 毁灭菇》设计。适配网易云音乐桌面端 3.x 的深色主题，社区兼容，文字背景对比度高，动效流畅。",
+  "tags": [
+    "dark",
+    "music",
+    "ncm",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#de3c3c",
+    "sidebar": "#ba3232",
+    "surface": "#e25353",
+    "surfaceElevated": "#e56363",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#de3c3c",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 92,
+    "blur": 6,
+    "radius": 12,
+    "overlay": 0.48
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3293783173",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "碧蓝档案 莉音 毁灭菇"
+  },
+  "wallpaperTitle": "碧蓝档案 莉音 毁灭菇",
+  "generatedThemeName": "星光云主题"
+}

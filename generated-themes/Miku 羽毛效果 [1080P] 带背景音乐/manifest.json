@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "wallpaper-831513771",
+  "name": "Miku 羽毛效果 [1080P] 带背景音乐 · 星光云端",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《Miku 羽毛效果 [1080P] 带背景音乐》设计。深色配色，网易云音乐 BetterNCM 社区主题预览",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "music",
+    "night",
+    "cyber",
+    "anime"
+  ]
+}

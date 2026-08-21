@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1661380704:preview.jpg",
+  "id": "wallpaper-1661380704",
+  "name": "DoggieCorgi(도기코기) · 暗夜流光",
+  "description": "基于 Wallpaper Engine 壁纸《DoggieCorgi(도기코기)》设计。以深色为基调，突出音乐播放界面的流畅体验，适合夜间聆听。",
+  "tags": [
+    "dark",
+    "music",
+    "minimal",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#56443c",
+    "sidebar": "#483932",
+    "surface": "#6a5a53",
+    "surfaceElevated": "#786963",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#46bdc9",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 92,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1661380704",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "DoggieCorgi(도기코기)"
+  },
+  "wallpaperTitle": "DoggieCorgi(도기코기)",
+  "generatedThemeName": "暗夜流光"
+}

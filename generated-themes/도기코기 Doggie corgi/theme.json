@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2044597236:preview.jpg",
+  "id": "wallpaper-2044597236",
+  "name": "도기코기 Doggie corgi · 暗夜配色",
+  "description": "基于 Wallpaper Engine 壁纸《도기코기 Doggie corgi》设计。深棕色系，质感丰富，适合沉浸模式。",
+  "tags": [
+    "earth",
+    "deep",
+    "rich",
+    "relaxing"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#663a3b",
+    "sidebar": "#563132",
+    "surface": "#785253",
+    "surfaceElevated": "#856162",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#c4bb82",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 8,
+    "radius": 9,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2044597236",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "도기코기 Doggie corgi"
+  },
+  "wallpaperTitle": "도기코기 Doggie corgi",
+  "generatedThemeName": "暗夜配色"
+}

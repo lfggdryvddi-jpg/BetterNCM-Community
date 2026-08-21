@@ -1,0 +1,39 @@
+{
+  "sourceKey": "1944660134:preview.jpg",
+  "id": "wallpaper-1944660134",
+  "name": "LoFi Chill - Walk in spring · 绿野",
+  "description": "基于 Wallpaper Engine 壁纸《LoFi Chill - Walk in spring》设计。自然绿调的网易云音乐主题，深色背景搭配清新文字。",
+  "tags": [
+    "nature",
+    "green",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#6c953b",
+    "sidebar": "#5b7d32",
+    "surface": "#7ea253",
+    "surfaceElevated": "#89aa62",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#a7c279",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 80,
+    "blur": 4,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1944660134",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "LoFi Chill - Walk in spring"
+  },
+  "wallpaperTitle": "LoFi Chill - Walk in spring",
+  "generatedThemeName": "绿野"
+}

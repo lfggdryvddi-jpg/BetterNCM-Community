@@ -1,0 +1,41 @@
+{
+  "sourceKey": "3322411291:preview.jpg",
+  "id": "wallpaper-3322411291",
+  "name": "【4K】不時輕聲地以俄語遮羞的鄰座艾莉同學｜時々ボソッとロシア語でデレる隣のアーリャさん · 星光云听",
+  "description": "基于 Wallpaper Engine 壁纸《【4K】不時輕聲地以俄語遮羞的鄰座艾莉同學｜時々ボソッとロシア語でデレる隣のアーリャさん》设计。基于网易云音乐深色界面设计，兼容 BetterNCM Community，提供舒适的视觉体验。",
+  "tags": [
+    "ncmm",
+    "netease",
+    "music",
+    "dark",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#352d2d",
+    "sidebar": "#2d2626",
+    "surface": "#4d4646",
+    "surfaceElevated": "#5d5757",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#f2cab8",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 8,
+    "radius": 12,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3322411291",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "【4K】不時輕聲地以俄語遮羞的鄰座艾莉同學｜時々ボソッとロシア語でデレる隣のアーリャさん"
+  },
+  "wallpaperTitle": "【4K】不時輕聲地以俄語遮羞的鄰座艾莉同學｜時々ボソッとロシア語でデレる隣のアーリャさん",
+  "generatedThemeName": "星光云听"
+}

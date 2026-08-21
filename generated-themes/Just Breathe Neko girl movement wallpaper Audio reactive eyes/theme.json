@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2217475859:preview.jpg",
+  "id": "wallpaper-2217475859",
+  "name": "Just Breathe Neko girl movement wallpaper Audio reactive eyes · 暮光",
+  "description": "基于 Wallpaper Engine 壁纸《Just Breathe Neko girl movement wallpaper Audio reactive eyes》设计。暖色流转，陪你入睡。",
+  "tags": [
+    "music",
+    "warm",
+    "minimal",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#6b6a72",
+    "sidebar": "#5a5960",
+    "surface": "#7d7c83",
+    "surfaceElevated": "#89888e",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#d5ac95",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 14,
+    "radius": 15,
+    "overlay": 0.55
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2217475859",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Just Breathe Neko girl movement wallpaper Audio reactive eyes"
+  },
+  "wallpaperTitle": "Just Breathe Neko girl movement wallpaper Audio reactive eyes",
+  "generatedThemeName": "暮光"
+}

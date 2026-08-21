@@ -1,0 +1,41 @@
+{
+  "sourceKey": "2928367620:preview.jpg",
+  "id": "wallpaper-2928367620",
+  "name": "放課後の女生徒 · 流动的音符",
+  "description": "基于 Wallpaper Engine 壁纸《放課後の女生徒》设计。专为网易云音乐桌面端深色主题设计，界面简洁流畅，提升听觉与视觉的双重享受。",
+  "tags": [
+    "netease",
+    "ncim",
+    "dark",
+    "music",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#23353b",
+    "sidebar": "#1d2d32",
+    "surface": "#3d4d53",
+    "surfaceElevated": "#4f5d62",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#4c9d9c",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2928367620",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "放課後の女生徒"
+  },
+  "wallpaperTitle": "放課後の女生徒",
+  "generatedThemeName": "流动的音符"
+}

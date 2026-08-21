@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "wallpaper-2950247086",
+  "name": "雏菊 · 夜云计划",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《雏菊》设计。BetterNCM Community 网易云音乐深色主题，舒适视觉与动态壁纸预览。",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "music",
+    "dark",
+    "theme",
+    "nature"
+  ]
+}

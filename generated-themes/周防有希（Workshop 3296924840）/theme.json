@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3296924840:preview.jpg",
+  "id": "wallpaper-3296924840",
+  "name": "周防有希 · 星光漫步",
+  "description": "基于 Wallpaper Engine 壁纸《周防有希》设计。深色配色，专注音乐体验，界面流畅简洁，支持深色模式下的舒适阅读。",
+  "tags": [
+    "music",
+    "dark",
+    "minimal",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#586b73",
+    "sidebar": "#4a5a61",
+    "surface": "#6c7d84",
+    "surfaceElevated": "#79898f",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#c49d5a",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3296924840",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "周防有希"
+  },
+  "wallpaperTitle": "周防有希",
+  "generatedThemeName": "星光漫步"
+}

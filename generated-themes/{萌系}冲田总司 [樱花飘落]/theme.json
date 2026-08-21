@@ -1,0 +1,40 @@
+{
+  "sourceKey": "845587216:preview.jpg",
+  "id": "wallpaper-845587216",
+  "name": "{萌系}冲田总司 [樱花飘落] · 暮光绛红",
+  "description": "基于 Wallpaper Engine 壁纸《{萌系}冲田总司 [樱花飘落]》设计。以深紫与绛红为主调，营造复古音乐氛围。",
+  "tags": [
+    "deep",
+    "purple",
+    "crimson",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#8d6c93",
+    "sidebar": "#765b7b",
+    "surface": "#9b7ea0",
+    "surfaceElevated": "#a489a9",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#6499ab",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "845587216",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "{萌系}冲田总司 [樱花飘落]"
+  },
+  "wallpaperTitle": "{萌系}冲田总司 [樱花飘落]",
+  "generatedThemeName": "暮光绛红"
+}

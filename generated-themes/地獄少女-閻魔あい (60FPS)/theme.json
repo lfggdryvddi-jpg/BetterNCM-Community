@@ -1,0 +1,40 @@
+{
+  "sourceKey": "974555519:preview.jpg",
+  "id": "wallpaper-974555519",
+  "name": "地獄少女-閻魔あい (60FPS) · 余光绽放",
+  "description": "基于 Wallpaper Engine 壁纸《地獄少女-閻魔あい (60FPS)》设计。温暖的红橙色系，激发活力与热情的音乐体验。",
+  "tags": [
+    "vibrant",
+    "fiery",
+    "dynamic",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#c22b28",
+    "sidebar": "#a32422",
+    "surface": "#c94442",
+    "surfaceElevated": "#ce5553",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#c22b28",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 4,
+    "radius": 10,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "974555519",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "地獄少女-閻魔あい (60FPS)"
+  },
+  "wallpaperTitle": "地獄少女-閻魔あい (60FPS)",
+  "generatedThemeName": "余光绽放"
+}

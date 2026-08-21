@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2232932173:preview.jpg",
+  "id": "wallpaper-2232932173",
+  "name": "Water World (水の世界) · 繁星",
+  "description": "基于 Wallpaper Engine 壁纸《Water World (水の世界)》设计。紫意浮生，听雨吟香。",
+  "tags": [
+    "music",
+    "purple",
+    "elegant",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#986b9c",
+    "sidebar": "#805a83",
+    "surface": "#a47da8",
+    "surfaceElevated": "#ad89b0",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#386bb3",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 82,
+    "blur": 8,
+    "radius": 10,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2232932173",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Water World (水の世界)"
+  },
+  "wallpaperTitle": "Water World (水の世界)",
+  "generatedThemeName": "繁星"
+}

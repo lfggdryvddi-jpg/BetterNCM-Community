@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3046994131:preview.jpg",
+  "id": "wallpaper-3046994131",
+  "name": "葬送的芙莉莲 · 柚子音乐",
+  "description": "基于 Wallpaper Engine 壁纸《葬送的芙莉莲》设计。BetterNCM Community 协作主题，深色界面设计，专为网易云音乐桌面端 3.x 优化，提供统一配色与流畅体验。",
+  "tags": [
+    "nc",
+    "music",
+    "dark",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#7a685a",
+    "sidebar": "#66574c",
+    "surface": "#8a7a6e",
+    "surfaceElevated": "#95867b",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#4766b7",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3046994131",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "葬送的芙莉莲"
+  },
+  "wallpaperTitle": "葬送的芙莉莲",
+  "generatedThemeName": "柚子音乐"
+}

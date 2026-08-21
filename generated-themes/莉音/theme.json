@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2984914872:preview.jpg",
+  "id": "wallpaper-2984914872",
+  "name": "莉音 · 夜色云音乐",
+  "description": "基于 Wallpaper Engine 壁纸《莉音》设计。网易云音乐深色主题，BetterNCM Community 设计。",
+  "tags": [
+    "music",
+    "netease",
+    "dark",
+    "game"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#2c3d64",
+    "sidebar": "#253354",
+    "surface": "#455477",
+    "surfaceElevated": "#566483",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#c1677d",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 8,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2984914872",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "莉音"
+  },
+  "wallpaperTitle": "莉音",
+  "generatedThemeName": "夜色云音乐"
+}

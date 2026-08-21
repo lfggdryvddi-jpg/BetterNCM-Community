@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3416251890:preview.jpg",
+  "id": "wallpaper-3416251890",
+  "name": "Kurumi's Sweaty Feet · 夜色音乐",
+  "description": "基于 Wallpaper Engine 壁纸《Kurumi's Sweaty Feet》设计。基于网易云音乐深色模式的精心配色主题，兼容 BetterNCM Community，提供统一的视觉体验。",
+  "tags": [
+    "dark",
+    "red",
+    "music",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#5a140a",
+    "sidebar": "#4c1108",
+    "surface": "#6e3027",
+    "surfaceElevated": "#7b433b",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#d8524d",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3416251890",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Kurumi's Sweaty Feet"
+  },
+  "wallpaperTitle": "Kurumi's Sweaty Feet",
+  "generatedThemeName": "夜色音乐"
+}

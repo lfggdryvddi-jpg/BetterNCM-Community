@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "wallpaper-838289251",
+  "name": "更新WEB播放器-东方Project-灵梦&魔理沙-精细动态壁纸 · 暖阳配色",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《更新WEB播放器-东方Project-灵梦&魔理沙-精细动态壁纸》设计。温暖橙调，活力十足的音乐主题",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "warm",
+    "orange",
+    "vibrant",
+    "anime"
+  ]
+}

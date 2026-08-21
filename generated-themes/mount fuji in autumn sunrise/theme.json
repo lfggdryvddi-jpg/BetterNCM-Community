@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1334736987:preview.jpg",
+  "id": "wallpaper-1334736987",
+  "name": "mount fuji in autumn sunrise · 深海余灰",
+  "description": "基于 Wallpaper Engine 壁纸《mount fuji in autumn sunrise》设计。深色配色，灵感源自海底岩石纹理，界面沉静低调。",
+  "tags": [
+    "night",
+    "deep",
+    "minimal",
+    "landscape"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#5f2a1a",
+    "sidebar": "#502316",
+    "surface": "#724435",
+    "surfaceElevated": "#7f5548",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#88724e",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1334736987",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "mount fuji in autumn sunrise"
+  },
+  "wallpaperTitle": "mount fuji in autumn sunrise",
+  "generatedThemeName": "深海余灰"
+}

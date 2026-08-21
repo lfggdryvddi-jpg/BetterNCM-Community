@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3325597728:preview.jpg",
+  "id": "wallpaper-3325597728",
+  "name": "丰川祥子 mygo mujica · 星光云间",
+  "description": "基于 Wallpaper Engine 壁纸《丰川祥子 mygo mujica》设计。深色基调的网易云音乐主题，界面简洁明亮，操作体验流畅。",
+  "tags": [
+    "dark",
+    "music",
+    "neo",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#776369",
+    "sidebar": "#645358",
+    "surface": "#87767b",
+    "surfaceElevated": "#928287",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#6184a0",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.48
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3325597728",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "丰川祥子 mygo mujica"
+  },
+  "wallpaperTitle": "丰川祥子 mygo mujica",
+  "generatedThemeName": "星光云间"
+}

@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2206476428:preview.jpg",
+  "id": "wallpaper-2206476428",
+  "name": "紫罗兰永恒花园 16 9 4K · 星云",
+  "description": "基于 Wallpaper Engine 壁纸《紫罗兰永恒花园 16 9 4K》设计。夜色绮境，音乐流转。",
+  "tags": [
+    "music",
+    "dark",
+    "neon",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#3e4e72",
+    "sidebar": "#344260",
+    "surface": "#556383",
+    "surfaceElevated": "#65718e",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#a0c3f8",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2206476428",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "紫罗兰永恒花园 16 9 4K"
+  },
+  "wallpaperTitle": "紫罗兰永恒花园 16 9 4K",
+  "generatedThemeName": "星云"
+}

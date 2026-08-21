@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1612833314:preview.jpg",
+  "id": "wallpaper-1612833314",
+  "name": "Dreaming · 夜雾",
+  "description": "基于 Wallpaper Engine 壁纸《Dreaming》设计。深色配色，音乐与氛围的交融",
+  "tags": [
+    "music",
+    "dark",
+    "ambient",
+    "abstract"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#684c42",
+    "sidebar": "#574037",
+    "surface": "#7a6159",
+    "surfaceElevated": "#867068",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#418183",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.48
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1612833314",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Dreaming"
+  },
+  "wallpaperTitle": "Dreaming",
+  "generatedThemeName": "夜雾"
+}

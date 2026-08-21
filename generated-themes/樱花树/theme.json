@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1418948530:preview.jpg",
+  "id": "wallpaper-1418948530",
+  "name": "樱花树 · 星光协奏",
+  "description": "基于 Wallpaper Engine 壁纸《樱花树》设计。蓝色系深色主题，界面清新，操作体验流畅。",
+  "tags": [
+    "cyber",
+    "blue",
+    "smooth",
+    "landscape"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#3f61bb",
+    "sidebar": "#35519d",
+    "surface": "#5674c3",
+    "surfaceElevated": "#6581c9",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#3f61bb",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 14,
+    "radius": 16,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1418948530",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "樱花树"
+  },
+  "wallpaperTitle": "樱花树",
+  "generatedThemeName": "星光协奏"
+}

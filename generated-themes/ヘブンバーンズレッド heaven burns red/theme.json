@@ -1,0 +1,41 @@
+{
+  "sourceKey": "2759086620:preview.jpg",
+  "id": "wallpaper-2759086620",
+  "name": "ヘブンバーンズレッド heaven burns red · 暗夜星尘",
+  "description": "基于 Wallpaper Engine 壁纸《ヘブンバーンズレッド heaven burns red》设计。BetterNCM Community 网易云音乐桌面端深色主题，兼顾视觉舒适度与动态壁纸预览。",
+  "tags": [
+    "nc",
+    "music",
+    "dark",
+    "ncm",
+    "game"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#645960",
+    "sidebar": "#544b51",
+    "surface": "#776d73",
+    "surfaceElevated": "#837a80",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#cbb28f",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 14,
+    "radius": 12,
+    "overlay": 0.48
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2759086620",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "ヘブンバーンズレッド heaven burns red"
+  },
+  "wallpaperTitle": "ヘブンバーンズレッド heaven burns red",
+  "generatedThemeName": "暗夜星尘"
+}

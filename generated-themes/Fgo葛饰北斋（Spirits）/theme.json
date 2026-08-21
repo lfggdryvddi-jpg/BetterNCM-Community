@@ -1,0 +1,41 @@
+{
+  "sourceKey": "2841088594:preview.jpg",
+  "id": "wallpaper-2841088594",
+  "name": "Fgo葛饰北斋（Spirits） · 星悦",
+  "description": "基于 Wallpaper Engine 壁纸《Fgo葛饰北斋（Spirits）》设计。深色配色的网易云音乐主题，界面简洁，对比清晰，致力于提供舒适的音乐聆听体验。",
+  "tags": [
+    "music",
+    "dark",
+    "ncm",
+    "theme",
+    "game"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#a34b55",
+    "sidebar": "#893f47",
+    "surface": "#ae6169",
+    "surfaceElevated": "#b56f77",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#c8b08c",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 12,
+    "radius": 12,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2841088594",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Fgo葛饰北斋（Spirits）"
+  },
+  "wallpaperTitle": "Fgo葛饰北斋（Spirits）",
+  "generatedThemeName": "星悦"
+}

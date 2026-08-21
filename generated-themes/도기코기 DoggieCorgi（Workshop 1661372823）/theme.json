@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1661372823:preview.jpg",
+  "id": "wallpaper-1661372823",
+  "name": "도기코기 DoggieCorgi · 星海",
+  "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCorgi》设计。青绿配色，如同流动的海洋",
+  "tags": [
+    "music",
+    "cyan",
+    "ocean",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#117b78",
+    "sidebar": "#0e6765",
+    "surface": "#2e8b88",
+    "surfaceElevated": "#419593",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#1bc7c2",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 16,
+    "radius": 12,
+    "overlay": 0.38
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1661372823",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "도기코기 DoggieCorgi"
+  },
+  "wallpaperTitle": "도기코기 DoggieCorgi",
+  "generatedThemeName": "星海"
+}

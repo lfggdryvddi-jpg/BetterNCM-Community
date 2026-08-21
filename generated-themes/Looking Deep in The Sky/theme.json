@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1308734162:preview.jpg",
+  "id": "wallpaper-1308734162",
+  "name": "Looking Deep in The Sky · 海岸蓝调",
+  "description": "基于 Wallpaper Engine 壁纸《Looking Deep in The Sky》设计。以海蓝色系为主的深色主题，营造宁静的音乐聆听氛围。",
+  "tags": [
+    "ocean",
+    "blue",
+    "calm",
+    "landscape"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#3e6fb0",
+    "sidebar": "#345d94",
+    "surface": "#5580b9",
+    "surfaceElevated": "#658cc0",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#3e6fb0",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 8,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1308734162",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Looking Deep in The Sky"
+  },
+  "wallpaperTitle": "Looking Deep in The Sky",
+  "generatedThemeName": "海岸蓝调"
+}

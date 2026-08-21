@@ -1,0 +1,41 @@
+{
+  "sourceKey": "2782447433:preview.jpg",
+  "id": "wallpaper-2782447433",
+  "name": "【4K 60fps】明日香纯净版 · 夜阑听雨",
+  "description": "基于 Wallpaper Engine 壁纸《【4K 60fps】明日香纯净版》设计。本主题专为网易云音乐桌面端设计，结合社区风格，提供深色界面与柔和配色，确保深夜使用的视觉舒适度与界面美观。",
+  "tags": [
+    "netease",
+    "music",
+    "dark",
+    "ncm",
+    "cartoon"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#bd4437",
+    "sidebar": "#9f392e",
+    "surface": "#c55a4f",
+    "surfaceElevated": "#ca695f",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#c2867b",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 92,
+    "blur": 12,
+    "radius": 14,
+    "overlay": 0.38
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2782447433",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "【4K 60fps】明日香纯净版"
+  },
+  "wallpaperTitle": "【4K 60fps】明日香纯净版",
+  "generatedThemeName": "夜阑听雨"
+}

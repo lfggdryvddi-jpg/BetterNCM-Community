@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "id": "wallpaper-3262923557",
+  "name": "wall · 夜色云音乐",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《wall》设计。基于 BetterNCM Community 的深色主题，专为网易云音乐桌面端 3.x 设计，提供沉浸式音乐体验。",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "ncm",
+    "music",
+    "dark",
+    "community",
+    "unspecified"
+  ]
+}

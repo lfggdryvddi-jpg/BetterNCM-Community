@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1866502789:preview.jpg",
+  "id": "wallpaper-1866502789",
+  "name": "Fantasy World · 深海听风",
+  "description": "基于 Wallpaper Engine 壁纸《Fantasy World》设计。深色系网易云音乐 BetterNCM 主题，冷调配色与柔和对比，专注音乐内容与舒适视觉界面。",
+  "tags": [
+    "music",
+    "focus",
+    "dark",
+    "nature"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#4f6570",
+    "sidebar": "#42555e",
+    "surface": "#647781",
+    "surfaceElevated": "#72848d",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#919887",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 78,
+    "blur": 6,
+    "radius": 8,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1866502789",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Fantasy World"
+  },
+  "wallpaperTitle": "Fantasy World",
+  "generatedThemeName": "深海听风"
+}

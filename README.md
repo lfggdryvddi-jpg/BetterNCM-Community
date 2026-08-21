@@ -75,3 +75,46 @@ Ninja:   D:\A软件安装\Ninja
 本仓库是 BetterNCM / chromatic 的派生作品。技术维护、更新渠道和发布流程已经独立，但 GPL-3.0 许可证、原作者版权信息和 Git 历史必须保留；“独立维护”不等于删除法定署名。
 
 详细来源说明见 [NOTICE.md](NOTICE.md)，许可证全文见 [LICENSE](LICENSE)。
+
+## 本地 Wallpaper Engine 批量主题生成
+
+仓库提供了一个**本地优先**的批量生成器：它扫描本机 Wallpaper Engine Workshop 预览图，在本地提取调色板，再把“文件名 + Workshop 项目 ID + 调色板”发送给 OpenCode Zen，请模型生成主题名称、描述、标签、配色和视觉参数。原图、动态壁纸和绝对路径不会上传到 API；输出包也不复制第三方原图。
+
+工具文件：
+
+- `tools/extract-wallpaper-palettes.ps1`：Windows 本地扫描与取色；
+- `tools/generate-themes-with-api.mjs`：批量调用 OpenCode Zen 并生成主题包。
+
+首次使用时请先撤销聊天中曾经暴露的旧 API Key，并在**当前 PowerShell 窗口**设置新 Key（不要写入脚本、`.env` 或 Git）：
+
+```powershell
+$env:OPENCODE_API_KEY = "新生成的密钥"
+# 如果套餐要求指定模型，可额外设置：
+$env:OPENCODE_MODEL = "模型名"
+```
+
+建议先做 3 张本地取色测试，不消耗 API 额度：
+
+```powershell
+Set-Location '<BetterNCM-Community 仓库目录>'
+node tools\generate-themes-with-api.mjs --dry-run --limit 3
+```
+
+确认扫描结果后，再调用 API 生成 3 个主题：
+
+```powershell
+node tools\generate-themes-with-api.mjs `
+  --wallpaper-root '<Steam目录>\steamapps\workshop\content\431960' `
+  --limit 3 `
+  --batch-size 3
+```
+
+批量扩大到 20 张时，建议先保守测试并观察套餐用量：
+
+```powershell
+node tools\generate-themes-with-api.mjs --limit 20 --batch-size 4
+```
+
+输出在 `generated-themes/`：每个主题包含 `manifest.json`、`theme.json`、`theme.css` 和 `CREDITS.md`。主题目录和显示名称优先读取 Wallpaper Engine 项目 `project.json` 的 `title` 字段，并采用“壁纸真实标题 · 主题风格名”的形式；只有无法读取元数据时才使用兜底名称。`local-settings.json` 仅用于本机记录壁纸绝对路径，已被 Git 忽略；不要把 Wallpaper Engine 原图、视频或未经许可的预览图提交到 GitHub。`theme.css` 可在 BetterNCM Community 管理页作为本地 CSS 导入。
+
+脚本默认每次最多处理 3 张，支持 `--no-resume` 重新生成；API Key 只从 `OPENCODE_API_KEY` 读取，命令行参数中不会出现密钥。

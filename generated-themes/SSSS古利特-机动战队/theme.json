@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2239265849:preview.jpg",
+  "id": "wallpaper-2239265849",
+  "name": "SSSS古利特-机动战队 · 星尘夜歌",
+  "description": "基于 Wallpaper Engine 壁纸《SSSS古利特-机动战队》设计。深色主题，柔和的星空配色，适合夜间听歌。",
+  "tags": [
+    "night",
+    "soft",
+    "music",
+    "game"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#2a3346",
+    "sidebar": "#232b3b",
+    "surface": "#444b5c",
+    "surfaceElevated": "#555c6b",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#ceb08c",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2239265849",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "SSSS古利特-机动战队"
+  },
+  "wallpaperTitle": "SSSS古利特-机动战队",
+  "generatedThemeName": "星尘夜歌"
+}

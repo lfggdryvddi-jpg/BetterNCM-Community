@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2505351195:preview.jpg",
+  "id": "wallpaper-2505351195",
+  "name": "Nier Automata +21 NSFW & SFW · 金色黎明",
+  "description": "基于 Wallpaper Engine 壁纸《Nier Automata +21 NSFW & SFW》设计。温暖的琥珀与摩卡棕的融合，点亮创意与灵感的每一刻",
+  "tags": [
+    "gold",
+    "warm",
+    "focus",
+    "game"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#6d6d01",
+    "sidebar": "#5c5c01",
+    "surface": "#7f7f1f",
+    "surfaceElevated": "#8a8a34",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#6d6d01",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 6,
+    "radius": 16,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2505351195",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Nier Automata +21 NSFW & SFW"
+  },
+  "wallpaperTitle": "Nier Automata +21 NSFW & SFW",
+  "generatedThemeName": "金色黎明"
+}

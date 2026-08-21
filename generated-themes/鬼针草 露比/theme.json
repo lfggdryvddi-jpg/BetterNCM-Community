@@ -1,0 +1,42 @@
+{
+  "sourceKey": "2933348761:preview.jpg",
+  "id": "wallpaper-2933348761",
+  "name": "鬼针草 露比 · 星光云间",
+  "description": "基于 Wallpaper Engine 壁纸《鬼针草 露比》设计。基于网易云音乐桌面端深色界面设计，搭配 BetterNCM Community 优化，提供舒适的视觉体验与丰富的自定义选项。界面暗色基调，关键文字与背景保证足够对比度，符合深色使用习惯。",
+  "tags": [
+    "music",
+    "dark",
+    "ncm",
+    "theme",
+    "cloud",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#887e84",
+    "sidebar": "#726a6f",
+    "surface": "#968d93",
+    "surfaceElevated": "#a0989d",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#e8f0f6",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2933348761",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "鬼针草 露比"
+  },
+  "wallpaperTitle": "鬼针草 露比",
+  "generatedThemeName": "星光云间"
+}

@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3105940427:preview.jpg",
+  "id": "betterncm",
+  "name": "蓝色花海 4K · BetterNCM 深色主题",
+  "description": "基于 Wallpaper Engine 壁纸《蓝色花海 4K》设计。网易云音乐桌面深色主题，优化视觉层级与交互体验",
+  "tags": [
+    "nc",
+    "music",
+    "theme",
+    "landscape"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#3e4648",
+    "sidebar": "#343b3c",
+    "surface": "#555c5e",
+    "surfaceElevated": "#656b6d",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#c9b189",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 12,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3105940427",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "蓝色花海 4K"
+  },
+  "wallpaperTitle": "蓝色花海 4K",
+  "generatedThemeName": "BetterNCM 深色主题"
+}

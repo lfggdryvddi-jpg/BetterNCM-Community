@@ -1,0 +1,41 @@
+{
+  "sourceKey": "3323760774:preview.jpg",
+  "id": "wallpaper-3323760774",
+  "name": "【雪晴】金枝玉叶-02 · 夜光音乐",
+  "description": "基于 Wallpaper Engine 壁纸《【雪晴】金枝玉叶-02》设计。基于社区的网易云音乐深色主题，界面简洁，护眼舒适，提供流畅的音乐体验。",
+  "tags": [
+    "net",
+    "music",
+    "dark",
+    "theme",
+    "girls"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#675b5a",
+    "sidebar": "#574c4c",
+    "surface": "#796f6e",
+    "surfaceElevated": "#857c7b",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#f97150",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 8,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3323760774",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "【雪晴】金枝玉叶-02"
+  },
+  "wallpaperTitle": "【雪晴】金枝玉叶-02",
+  "generatedThemeName": "夜光音乐"
+}

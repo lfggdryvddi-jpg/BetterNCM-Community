@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2258238193:preview.jpg",
+  "id": "wallpaper-2258238193",
+  "name": "深度强袭高达（高达系列1） · 森林黎明",
+  "description": "基于 Wallpaper Engine 壁纸《深度强袭高达（高达系列1）》设计。大地色系主题，清新自然，提升听歌体验。",
+  "tags": [
+    "nature",
+    "fresh",
+    "forest",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#39342b",
+    "sidebar": "#302c24",
+    "surface": "#514c44",
+    "surfaceElevated": "#615d55",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#a4e6d6",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 80,
+    "blur": 15,
+    "radius": 9,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2258238193",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "深度强袭高达（高达系列1）"
+  },
+  "wallpaperTitle": "深度强袭高达（高达系列1）",
+  "generatedThemeName": "森林黎明"
+}

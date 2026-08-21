@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "wallpaper-2205252119",
+  "name": "富士山 樱花 富士山の桜 · 海蓝调",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《富士山 樱花 富士山の桜》设计。清新蓝调深色主题，界面清爽，适合长时间听音乐",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "blue",
+    "fresh",
+    "clean",
+    "landscape"
+  ]
+}

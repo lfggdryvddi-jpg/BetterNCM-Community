@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3427326987:preview.jpg",
+  "id": "wallpaper-3427326987",
+  "name": "Blue Archive丨蔚蓝档案丨调月莉音丨Tsukatsuki Rio · 夜曲音乐",
+  "description": "基于 Wallpaper Engine 壁纸《Blue Archive丨蔚蓝档案丨调月莉音丨Tsukatsuki Rio》设计。BetterNCM Community 定制的深色音乐主题，界面简洁流畅，提供舒适的使用体验。",
+  "tags": [
+    "ncml",
+    "dark",
+    "custom",
+    "game"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#615862",
+    "sidebar": "#514a52",
+    "surface": "#746c75",
+    "surfaceElevated": "#817981",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#8cd3fe",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 10,
+    "radius": 14,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3427326987",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Blue Archive丨蔚蓝档案丨调月莉音丨Tsukatsuki Rio"
+  },
+  "wallpaperTitle": "Blue Archive丨蔚蓝档案丨调月莉音丨Tsukatsuki Rio",
+  "generatedThemeName": "夜曲音乐"
+}

@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3002654423:preview.jpg",
+  "id": "wallpaper-3002654423",
+  "name": "女仆 · 夜曲",
+  "description": "基于 Wallpaper Engine 壁纸《女仆》设计。深色主题，专为网易云音乐桌面端设计。",
+  "tags": [
+    "ncm",
+    "netease",
+    "music",
+    "girls"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#636b74",
+    "sidebar": "#535a61",
+    "surface": "#767d85",
+    "surfaceElevated": "#828990",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#b48e6c",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3002654423",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "女仆"
+  },
+  "wallpaperTitle": "女仆",
+  "generatedThemeName": "夜曲"
+}

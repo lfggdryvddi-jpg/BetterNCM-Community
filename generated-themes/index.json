@@ -1,0 +1,3761 @@
+{
+  "generatedAt": "2026-08-20T06:04:17.803Z",
+  "model": "nemotron-3.5-lightning-free",
+  "count": 120,
+  "themes": [
+    {
+      "directory": "Fate apocrypha Frankenstein",
+      "sourceKey": "1133508068:preview.jpg",
+      "name": "Fate apocrypha Frankenstein · 星光岁月",
+      "description": "基于 Wallpaper Engine 壁纸《Fate apocrypha Frankenstein》设计。基于暖调复古色调的网易云音乐深色主题，兼容 BetterNCM Community。",
+      "tags": [
+        "retro",
+        "warm",
+        "dark",
+        "anime"
+      ],
+      "palette": {
+        "background": "#805a4a",
+        "sidebar": "#6c4c3e",
+        "surface": "#8f6e60",
+        "surfaceElevated": "#997b6e",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#9a495e",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "Fate apocrypha Frankenstein",
+      "generatedThemeName": "星光岁月"
+    },
+    {
+      "directory": "Cherry Blossoms 60 FPS",
+      "sourceKey": "1139418455:preview.jpg",
+      "name": "Cherry Blossoms 60 FPS · 极夜协同",
+      "description": "基于 Wallpaper Engine 壁纸《Cherry Blossoms 60 FPS》设计。深邃夜色下的音乐体验，界面层次分明，护眼舒适。",
+      "tags": [
+        "night",
+        "minimal",
+        "smooth",
+        "anime"
+      ],
+      "palette": {
+        "background": "#3a404b",
+        "sidebar": "#31363f",
+        "surface": "#525761",
+        "surfaceElevated": "#61666f",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#c4b484",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 8,
+        "radius": 14,
+        "overlay": 0.55
+      },
+      "wallpaperTitle": "Cherry Blossoms 60 FPS",
+      "generatedThemeName": "极夜协同"
+    },
+    {
+      "directory": "Kanade Tachibana",
+      "sourceKey": "1199203934:preview.jpg",
+      "name": "Kanade Tachibana · 星海漫步",
+      "description": "基于 Wallpaper Engine 壁纸《Kanade Tachibana》设计。星空蓝调主题，柔和对比，营造沉浸式音乐氛围。",
+      "tags": [
+        "neon",
+        "space",
+        "calm",
+        "anime"
+      ],
+      "palette": {
+        "background": "#616ab7",
+        "sidebar": "#51599a",
+        "surface": "#747cc0",
+        "surfaceElevated": "#8188c5",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#649fe8",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 16,
+        "radius": 12,
+        "overlay": 0.38
+      },
+      "wallpaperTitle": "Kanade Tachibana",
+      "generatedThemeName": "星海漫步"
+    },
+    {
+      "directory": "Fantasy Forest",
+      "sourceKey": "1245412789:preview.jpg",
+      "name": "Fantasy Forest · 暮色森林",
+      "description": "基于 Wallpaper Engine 壁纸《Fantasy Forest》设计。深色主题，灵感来源于静谧的森林夜景，界面沉静且易阅读。",
+      "tags": [
+        "deep",
+        "forest",
+        "night",
+        "fantasy"
+      ],
+      "palette": {
+        "background": "#5e443b",
+        "sidebar": "#4f3932",
+        "surface": "#715a53",
+        "surfaceElevated": "#7e6962",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#f18d36",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 6,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "Fantasy Forest",
+      "generatedThemeName": "暮色森林"
+    },
+    {
+      "directory": "Looking Deep in The Sky",
+      "sourceKey": "1308734162:preview.jpg",
+      "name": "Looking Deep in The Sky · 海岸蓝调",
+      "description": "基于 Wallpaper Engine 壁纸《Looking Deep in The Sky》设计。以海蓝色系为主的深色主题，营造宁静的音乐聆听氛围。",
+      "tags": [
+        "ocean",
+        "blue",
+        "calm",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#3e6fb0",
+        "sidebar": "#345d94",
+        "surface": "#5580b9",
+        "surfaceElevated": "#658cc0",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#3e6fb0",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 8,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "Looking Deep in The Sky",
+      "generatedThemeName": "海岸蓝调"
+    },
+    {
+      "directory": "Winter Forest",
+      "sourceKey": "1311534675:preview.jpg",
+      "name": "Winter Forest · 幽暗深渊",
+      "description": "基于 Wallpaper Engine 壁纸《Winter Forest》设计。深沉的深色界面，适合夜间聆听，界面元素清晰突出。",
+      "tags": [
+        "deep",
+        "void",
+        "night",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#162327",
+        "sidebar": "#121d21",
+        "surface": "#323d41",
+        "surfaceElevated": "#454f52",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#101b1f",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 4,
+        "radius": 14,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "Winter Forest",
+      "generatedThemeName": "幽暗深渊"
+    },
+    {
+      "directory": "mount fuji in autumn sunrise",
+      "sourceKey": "1334736987:preview.jpg",
+      "name": "mount fuji in autumn sunrise · 深海余灰",
+      "description": "基于 Wallpaper Engine 壁纸《mount fuji in autumn sunrise》设计。深色配色，灵感源自海底岩石纹理，界面沉静低调。",
+      "tags": [
+        "night",
+        "deep",
+        "minimal",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#5f2a1a",
+        "sidebar": "#502316",
+        "surface": "#724435",
+        "surfaceElevated": "#7f5548",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#88724e",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "mount fuji in autumn sunrise",
+      "generatedThemeName": "深海余灰"
+    },
+    {
+      "directory": "樱花树",
+      "sourceKey": "1418948530:preview.jpg",
+      "name": "樱花树 · 星光协奏",
+      "description": "基于 Wallpaper Engine 壁纸《樱花树》设计。蓝色系深色主题，界面清新，操作体验流畅。",
+      "tags": [
+        "cyber",
+        "blue",
+        "smooth",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#3f61bb",
+        "sidebar": "#35519d",
+        "surface": "#5674c3",
+        "surfaceElevated": "#6581c9",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#3f61bb",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 14,
+        "radius": 16,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "樱花树",
+      "generatedThemeName": "星光协奏"
+    },
+    {
+      "directory": "小树林",
+      "sourceKey": "1426835832:preview.jpg",
+      "name": "小树林 · 暮色森林",
+      "description": "基于 Wallpaper Engine 壁纸《小树林》设计。暗绿配色，模拟森林夜幕氛围，视觉层次分明。",
+      "tags": [
+        "forest",
+        "mystic",
+        "nature",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#163d4c",
+        "sidebar": "#123340",
+        "surface": "#325461",
+        "surfaceElevated": "#456470",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#7ebd8c",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 8,
+        "radius": 10,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "小树林",
+      "generatedThemeName": "暮色森林"
+    },
+    {
+      "directory": "水波草地(紫罗兰永恒花园)",
+      "sourceKey": "1497574828:preview.jpg",
+      "name": "水波草地(紫罗兰永恒花园) · 海蓝清爽",
+      "description": "基于 Wallpaper Engine 壁纸《水波草地(紫罗兰永恒花园)》设计。以深蓝为基调，搭配清新青色点缀，界面沉静又不失活力。",
+      "tags": [
+        "deep",
+        "cool",
+        "refresh",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#394347",
+        "sidebar": "#30383c",
+        "surface": "#515a5d",
+        "surfaceElevated": "#61696c",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#ade0f6",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 8,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "水波草地(紫罗兰永恒花园)",
+      "generatedThemeName": "海蓝清爽"
+    },
+    {
+      "directory": "哔哩哔哩音频响应壁纸",
+      "sourceKey": "1551961057:preview.jpg",
+      "name": "哔哩哔哩音频响应壁纸 · 薄暮紫藤",
+      "description": "基于 Wallpaper Engine 壁纸《哔哩哔哩音频响应壁纸》设计。紫色系配色，营造神秘深邃的音乐体验，深色背景下粉色点缀彰显个性。",
+      "tags": [
+        "purple",
+        "mystic",
+        "vibrant",
+        "anime"
+      ],
+      "palette": {
+        "background": "#4c607f",
+        "sidebar": "#40516b",
+        "surface": "#61738e",
+        "surfaceElevated": "#708099",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#f56a9a",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 10,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "哔哩哔哩音频响应壁纸",
+      "generatedThemeName": "薄暮紫藤"
+    },
+    {
+      "directory": "太空 地球 earth outer space 4K分辨率",
+      "sourceKey": "1573769316:preview.jpg",
+      "name": "太空 地球 earth outer space 4K分辨率 · 云端之蓝",
+      "description": "基于 Wallpaper Engine 壁纸《太空 地球 earth outer space 4K分辨率》设计。以天空蓝为核心，界面通透开阔，配合温暖点缀带来舒适的听感体验。",
+      "tags": [
+        "blue",
+        "clean",
+        "airy",
+        "nature"
+      ],
+      "palette": {
+        "background": "#3b8ad1",
+        "sidebar": "#3274b0",
+        "surface": "#5398d7",
+        "surfaceElevated": "#62a1da",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#3b8ad1",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 6,
+        "radius": 18,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "太空 地球 earth outer space 4K分辨率",
+      "generatedThemeName": "云端之蓝"
+    },
+    {
+      "directory": "Dreaming",
+      "sourceKey": "1612833314:preview.jpg",
+      "name": "Dreaming · 夜雾",
+      "description": "基于 Wallpaper Engine 壁纸《Dreaming》设计。深色配色，音乐与氛围的交融",
+      "tags": [
+        "music",
+        "dark",
+        "ambient",
+        "abstract"
+      ],
+      "palette": {
+        "background": "#684c42",
+        "sidebar": "#574037",
+        "surface": "#7a6159",
+        "surfaceElevated": "#867068",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#418183",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "Dreaming",
+      "generatedThemeName": "夜雾"
+    },
+    {
+      "directory": "도기코기 DoggieCorgi",
+      "sourceKey": "1661369948:preview.jpg",
+      "name": "도기코기 DoggieCorgi · 暮光",
+      "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCorgi》设计。温暖橙调，唤醒对音乐的热爱",
+      "tags": [
+        "music",
+        "warm",
+        "sunset",
+        "anime"
+      ],
+      "palette": {
+        "background": "#dd6907",
+        "sidebar": "#ba5806",
+        "surface": "#e17b25",
+        "surfaceElevated": "#e48739",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#45bdbd",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 8,
+        "radius": 14,
+        "overlay": 0.55
+      },
+      "wallpaperTitle": "도기코기 DoggieCorgi",
+      "generatedThemeName": "暮光"
+    },
+    {
+      "directory": "도기코기 DoggieCorgi（Workshop 1661372823）",
+      "sourceKey": "1661372823:preview.jpg",
+      "name": "도기코기 DoggieCorgi · 星海",
+      "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCorgi》设计。青绿配色，如同流动的海洋",
+      "tags": [
+        "music",
+        "cyan",
+        "ocean",
+        "anime"
+      ],
+      "palette": {
+        "background": "#117b78",
+        "sidebar": "#0e6765",
+        "surface": "#2e8b88",
+        "surfaceElevated": "#419593",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#1bc7c2",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 16,
+        "radius": 12,
+        "overlay": 0.38
+      },
+      "wallpaperTitle": "도기코기 DoggieCorgi",
+      "generatedThemeName": "星海"
+    },
+    {
+      "directory": "도기코기 DoggieCorgi（Workshop 1661375057）",
+      "sourceKey": "1661375057:preview.jpg",
+      "name": "도기코기 DoggieCorgi · 暮光",
+      "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCorgi》设计。深邃的夜色与温暖的复古交织，带来沉浸式音乐体验。",
+      "tags": [
+        "retro",
+        "warm",
+        "dark",
+        "anime"
+      ],
+      "palette": {
+        "background": "#675308",
+        "sidebar": "#574607",
+        "surface": "#796826",
+        "surfaceElevated": "#857539",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#fa754e",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 82,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "도기코기 DoggieCorgi",
+      "generatedThemeName": "暮光"
+    },
+    {
+      "directory": "도기코기 DoggieCorgi（Workshop 1661377897）",
+      "sourceKey": "1661377897:preview.jpg",
+      "name": "도기코기 DoggieCorgi · 森系",
+      "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCorgi》设计。自然的绿意与音乐的节奏在暗色界面上和谐共鸣。",
+      "tags": [
+        "nature",
+        "fresh",
+        "minimal",
+        "anime"
+      ],
+      "palette": {
+        "background": "#654539",
+        "sidebar": "#553a30",
+        "surface": "#775b51",
+        "surfaceElevated": "#846a61",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#cbb287",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 14,
+        "radius": 8,
+        "overlay": 0.55
+      },
+      "wallpaperTitle": "도기코기 DoggieCorgi",
+      "generatedThemeName": "森系"
+    },
+    {
+      "directory": "도기코기 DoggieCorgi（Workshop 1661379435）",
+      "sourceKey": "1661379435:preview.jpg",
+      "name": "도기코기 DoggieCorgi · 余烬",
+      "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCorgi》设计。橙色余烬点亮黑暗，激发创作灵感的火焰。",
+      "tags": [
+        "flame",
+        "warm",
+        "focus",
+        "anime"
+      ],
+      "palette": {
+        "background": "#8c2d0b",
+        "sidebar": "#762609",
+        "surface": "#9a4628",
+        "surfaceElevated": "#a3573c",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#c2d70e",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 78,
+        "blur": 6,
+        "radius": 16,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "도기코기 DoggieCorgi",
+      "generatedThemeName": "余烬"
+    },
+    {
+      "directory": "DoggieCorgi(도기코기)",
+      "sourceKey": "1661380704:preview.jpg",
+      "name": "DoggieCorgi(도기코기) · 暗夜流光",
+      "description": "基于 Wallpaper Engine 壁纸《DoggieCorgi(도기코기)》设计。以深色为基调，突出音乐播放界面的流畅体验，适合夜间聆听。",
+      "tags": [
+        "dark",
+        "music",
+        "minimal",
+        "anime"
+      ],
+      "palette": {
+        "background": "#56443c",
+        "sidebar": "#483932",
+        "surface": "#6a5a53",
+        "surfaceElevated": "#786963",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#46bdc9",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 92,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "DoggieCorgi(도기코기)",
+      "generatedThemeName": "暗夜流光"
+    },
+    {
+      "directory": "도기코기 DoggieCorgi（Workshop 1662206985）",
+      "sourceKey": "1662206985:preview.jpg",
+      "name": "도기코기 DoggieCorgi · 樱粉轻醇",
+      "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCorgi》设计。温暖的粉调配色，搭配网易云音乐的歌词背景，营造舒适的音乐氛围。",
+      "tags": [
+        "warm",
+        "pastel",
+        "soft",
+        "anime"
+      ],
+      "palette": {
+        "background": "#4e4338",
+        "sidebar": "#42382f",
+        "surface": "#635a50",
+        "surfaceElevated": "#716960",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#ebdeb2",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 8,
+        "radius": 10,
+        "overlay": 0.55
+      },
+      "wallpaperTitle": "도기코기 DoggieCorgi",
+      "generatedThemeName": "樱粉轻醇"
+    },
+    {
+      "directory": "立华奏动态壁纸",
+      "sourceKey": "1682358029:preview.jpg",
+      "name": "立华奏动态壁纸 · 星尘灰度",
+      "description": "基于 Wallpaper Engine 壁纸《立华奏动态壁纸》设计。冷调灰系配色，界面沉静，突出专辑封面与歌名，适合专注聆听。",
+      "tags": [
+        "cool",
+        "monochrome",
+        "focus",
+        "anime"
+      ],
+      "palette": {
+        "background": "#8483a4",
+        "sidebar": "#6f6e8a",
+        "surface": "#9392af",
+        "surfaceElevated": "#9d9cb6",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#d8a995",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 94,
+        "blur": 14,
+        "radius": 16,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "立华奏动态壁纸",
+      "generatedThemeName": "星尘灰度"
+    },
+    {
+      "directory": "（优化版）樱花飘落sakura(with music) （60fps）",
+      "sourceKey": "1714950222:preview.jpg",
+      "name": "（优化版）樱花飘落sakura(with music) （60fps） · 星光云寻",
+      "description": "基于 Wallpaper Engine 壁纸《（优化版）樱花飘落sakura(with music) （60fps）》设计。基于 BetterNCM Community 定制的网易云音乐深色主题，兼容桌面端 3.x，提供流畅音乐与视觉体验。",
+      "tags": [
+        "net",
+        "ncm",
+        "dark",
+        "anime"
+      ],
+      "palette": {
+        "background": "#856576",
+        "sidebar": "#705563",
+        "surface": "#947786",
+        "surfaceElevated": "#9d8491",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#e7dbdd",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 8,
+        "radius": 10,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "（优化版）樱花飘落sakura(with music) （60fps）",
+      "generatedThemeName": "星光云寻"
+    },
+    {
+      "directory": "Anime flower girl",
+      "sourceKey": "1734341404:preview.jpg",
+      "name": "Anime flower girl · 夜曲绅士",
+      "description": "基于 Wallpaper Engine 壁纸《Anime flower girl》设计。网易云音乐 BetterNCM 深色主题，深夜模式下的音乐陪伴，界面简洁与温暖色彩搭配。",
+      "tags": [
+        "cloud",
+        "music",
+        "style",
+        "anime"
+      ],
+      "palette": {
+        "background": "#886c74",
+        "sidebar": "#725b61",
+        "surface": "#967e85",
+        "surfaceElevated": "#a08990",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#cebf8a",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 12,
+        "radius": 15,
+        "overlay": 0.55
+      },
+      "wallpaperTitle": "Anime flower girl",
+      "generatedThemeName": "夜曲绅士"
+    },
+    {
+      "directory": "Fantasy World",
+      "sourceKey": "1866502789:preview.jpg",
+      "name": "Fantasy World · 深海听风",
+      "description": "基于 Wallpaper Engine 壁纸《Fantasy World》设计。深色系网易云音乐 BetterNCM 主题，冷调配色与柔和对比，专注音乐内容与舒适视觉界面。",
+      "tags": [
+        "music",
+        "focus",
+        "dark",
+        "nature"
+      ],
+      "palette": {
+        "background": "#4f6570",
+        "sidebar": "#42555e",
+        "surface": "#647781",
+        "surfaceElevated": "#72848d",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#919887",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 78,
+        "blur": 6,
+        "radius": 8,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "Fantasy World",
+      "generatedThemeName": "深海听风"
+    },
+    {
+      "directory": "FEZ Day and Night",
+      "sourceKey": "785216588:preview.jpg",
+      "name": "FEZ Day and Night · 暮色绅士",
+      "description": "基于 Wallpaper Engine 壁纸《FEZ Day and Night》设计。深色主题，暖调暮光，界面流畅，适配网易云音乐桌面端。",
+      "tags": [
+        "dark",
+        "music",
+        "minimal",
+        "game",
+        "nature",
+        "multi-monitor-optimized"
+      ],
+      "palette": {
+        "background": "#666368",
+        "sidebar": "#565357",
+        "surface": "#78767a",
+        "surfaceElevated": "#858286",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#babf7e",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "FEZ Day and Night",
+      "generatedThemeName": "暮色绅士"
+    },
+    {
+      "directory": "凉宫春日web壁纸[v3.05][可用户定制]",
+      "sourceKey": "823495832:preview.jpg",
+      "name": "凉宫春日web壁纸[v3.05][可用户定制] · 星尘暗夜",
+      "description": "基于 Wallpaper Engine 壁纸《凉宫春日web壁纸[v3.05][可用户定制]》设计。星空暗夜，音乐陪伴，界面细腻易读。",
+      "tags": [
+        "dark",
+        "retro",
+        "warm",
+        "anime"
+      ],
+      "palette": {
+        "background": "#694e55",
+        "sidebar": "#584247",
+        "surface": "#7b6369",
+        "surfaceElevated": "#877177",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#fab84a",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 80,
+        "blur": 14,
+        "radius": 10,
+        "overlay": 0.55
+      },
+      "wallpaperTitle": "凉宫春日web壁纸[v3.05][可用户定制]",
+      "generatedThemeName": "星尘暗夜"
+    },
+    {
+      "directory": "Miku-可自定义-雪花散落的冬季 v1.31",
+      "sourceKey": "827982449:preview.jpg",
+      "name": "Miku-可自定义-雪花散落的冬季 v1.31 · 深海余烬",
+      "description": "基于 Wallpaper Engine 壁纸《Miku-可自定义-雪花散落的冬季 v1.31》设计。深海余烬，界面宁静，适合深夜聆听。",
+      "tags": [
+        "dark",
+        "ocean",
+        "calm",
+        "anime",
+        "fantasy"
+      ],
+      "palette": {
+        "background": "#423940",
+        "sidebar": "#373036",
+        "surface": "#595157",
+        "surfaceElevated": "#686166",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#649edb",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 8,
+        "radius": 15,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "Miku-可自定义-雪花散落的冬季 v1.31",
+      "generatedThemeName": "深海余烬"
+    },
+    {
+      "directory": "Miku 羽毛效果 [1080P] 带背景音乐",
+      "sourceKey": "831513771:preview.jpg",
+      "name": "Miku 羽毛效果 [1080P] 带背景音乐 · 星光云端",
+      "description": "基于 Wallpaper Engine 壁纸《Miku 羽毛效果 [1080P] 带背景音乐》设计。深色配色，网易云音乐 BetterNCM 社区主题预览",
+      "tags": [
+        "music",
+        "night",
+        "cyber",
+        "anime"
+      ],
+      "palette": {
+        "background": "#5b87a5",
+        "sidebar": "#4c718b",
+        "surface": "#6f95b0",
+        "surfaceElevated": "#7c9fb7",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#5b87a5",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "Miku 羽毛效果 [1080P] 带背景音乐",
+      "generatedThemeName": "星光云端"
+    },
+    {
+      "directory": "sky",
+      "sourceKey": "835888996:preview.jpg",
+      "name": "sky · 深红之夜",
+      "description": "基于 Wallpaper Engine 壁纸《sky》设计。深红配色，营造沉浸式音乐体验",
+      "tags": [
+        "deep",
+        "red",
+        "neon"
+      ],
+      "palette": {
+        "background": "#5e2022",
+        "sidebar": "#4f1b1d",
+        "surface": "#713b3d",
+        "surfaceElevated": "#7e4d4e",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#c1f3fe",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 8,
+        "radius": 9,
+        "overlay": 0.55
+      },
+      "wallpaperTitle": "sky",
+      "generatedThemeName": "深红之夜"
+    },
+    {
+      "directory": "更新WEB播放器-东方Project-灵梦&魔理沙-精细动态壁纸",
+      "sourceKey": "838289251:preview.jpg",
+      "name": "更新WEB播放器-东方Project-灵梦&魔理沙-精细动态壁纸 · 暖阳配色",
+      "description": "基于 Wallpaper Engine 壁纸《更新WEB播放器-东方Project-灵梦&魔理沙-精细动态壁纸》设计。温暖橙调，活力十足的音乐主题",
+      "tags": [
+        "warm",
+        "orange",
+        "vibrant",
+        "anime"
+      ],
+      "palette": {
+        "background": "#d25a48",
+        "sidebar": "#b04c3c",
+        "surface": "#d76e5e",
+        "surfaceElevated": "#db7b6d",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#d25a48",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 82,
+        "blur": 15,
+        "radius": 16,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "更新WEB播放器-东方Project-灵梦&魔理沙-精细动态壁纸",
+      "generatedThemeName": "暖阳配色"
+    },
+    {
+      "directory": "崩坏学园2",
+      "sourceKey": "838533010:preview.jpg",
+      "name": "崩坏学园2 · 星夜音浪",
+      "description": "基于 Wallpaper Engine 壁纸《崩坏学园2》设计。深色主题，以蔚蓝紫色调，营造夜间音乐氛围。",
+      "tags": [
+        "music",
+        "dark",
+        "netease",
+        "cartoon",
+        "game"
+      ],
+      "palette": {
+        "background": "#578eb4",
+        "sidebar": "#497797",
+        "surface": "#6b9cbd",
+        "surfaceElevated": "#79a5c3",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#578eb4",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 12,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "崩坏学园2",
+      "generatedThemeName": "星夜音浪"
+    },
+    {
+      "directory": "Fate-Saber Lily[by wlop]-1080P 光玉漂浮动态壁纸",
+      "sourceKey": "840677892:preview.jpg",
+      "name": "Fate-Saber Lily[by wlop]-1080P 光玉漂浮动态壁纸 · 复古胶片",
+      "description": "基于 Wallpaper Engine 壁纸《Fate-Saber Lily[by wlop]-1080P 光玉漂浮动态壁纸》设计。暖灰调配色，怀旧感十足，适合老歌收听。",
+      "tags": [
+        "retro",
+        "vintage",
+        "music",
+        "anime"
+      ],
+      "palette": {
+        "background": "#564a43",
+        "sidebar": "#483e38",
+        "surface": "#6a605a",
+        "surfaceElevated": "#786e69",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#a29765",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 12,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "Fate-Saber Lily[by wlop]-1080P 光玉漂浮动态壁纸",
+      "generatedThemeName": "复古胶片"
+    },
+    {
+      "directory": "Comfy Rain",
+      "sourceKey": "843530721:preview.jpg",
+      "name": "Comfy Rain · 极简暗黑",
+      "description": "基于 Wallpaper Engine 壁纸《Comfy Rain》设计。干净利落的暗色界面，焦点突出在音乐内容上。",
+      "tags": [
+        "minimal",
+        "clean",
+        "dark",
+        "pixel-art",
+        "relaxing",
+        "retro"
+      ],
+      "palette": {
+        "background": "#848488",
+        "sidebar": "#6f6f72",
+        "surface": "#939396",
+        "surfaceElevated": "#9d9da0",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#5fb48e",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 12,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "Comfy Rain",
+      "generatedThemeName": "极简暗黑"
+    },
+    {
+      "directory": "{萌系}冲田总司 [樱花飘落]",
+      "sourceKey": "845587216:preview.jpg",
+      "name": "{萌系}冲田总司 [樱花飘落] · 暮光绛红",
+      "description": "基于 Wallpaper Engine 壁纸《{萌系}冲田总司 [樱花飘落]》设计。以深紫与绛红为主调，营造复古音乐氛围。",
+      "tags": [
+        "deep",
+        "purple",
+        "crimson",
+        "anime"
+      ],
+      "palette": {
+        "background": "#8d6c93",
+        "sidebar": "#765b7b",
+        "surface": "#9b7ea0",
+        "surfaceElevated": "#a489a9",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#6499ab",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "{萌系}冲田总司 [樱花飘落]",
+      "generatedThemeName": "暮光绛红"
+    },
+    {
+      "directory": "Tokisaki Kurumi with Flowers (1080p seamless loop ver.)",
+      "sourceKey": "863971667:preview.jpg",
+      "name": "Tokisaki Kurumi with Flowers (1080p seamless loop ver.) · 焰火绯红",
+      "description": "基于 Wallpaper Engine 壁纸《Tokisaki Kurumi with Flowers (1080p seamless loop ver.)》设计。温暖绯红调，界面活力十足。",
+      "tags": [
+        "fiery",
+        "red",
+        "warm",
+        "anime"
+      ],
+      "palette": {
+        "background": "#b75049",
+        "sidebar": "#9a433d",
+        "surface": "#c0655f",
+        "surfaceElevated": "#c5736d",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#b75049",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 8,
+        "radius": 15,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "Tokisaki Kurumi with Flowers (1080p seamless loop ver.)",
+      "generatedThemeName": "焰火绯红"
+    },
+    {
+      "directory": "[1080P 60fps]魔法少女小圆动态壁纸",
+      "sourceKey": "899497344:preview.jpg",
+      "name": "[1080P 60fps]魔法少女小圆动态壁纸 · 星尘蔷薇",
+      "description": "基于 Wallpaper Engine 壁纸《[1080P 60fps]魔法少女小圆动态壁纸》设计。柔和蔷薇粉，界面温婉细腻。",
+      "tags": [
+        "rose",
+        "pastel",
+        "soft",
+        "anime"
+      ],
+      "palette": {
+        "background": "#e04a91",
+        "sidebar": "#bc3e7a",
+        "surface": "#e4609e",
+        "surfaceElevated": "#e66ea7",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#e04a91",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 82,
+        "blur": 12,
+        "radius": 9,
+        "overlay": 0.6
+      },
+      "wallpaperTitle": "[1080P 60fps]魔法少女小圆动态壁纸",
+      "generatedThemeName": "星尘蔷薇"
+    },
+    {
+      "directory": "Saber",
+      "sourceKey": "966297578:preview.jpg",
+      "name": "Saber · 暮色轻舞",
+      "description": "基于 Wallpaper Engine 壁纸《Saber》设计。以柔和的灰紫色调为主，营造宁静的音乐聆听氛围。",
+      "tags": [
+        "minimal",
+        "soft",
+        "elegant",
+        "anime"
+      ],
+      "palette": {
+        "background": "#8b8ea2",
+        "sidebar": "#757788",
+        "surface": "#999cad",
+        "surfaceElevated": "#a2a5b5",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#fef5c0",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 6,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "Saber",
+      "generatedThemeName": "暮色轻舞"
+    },
+    {
+      "directory": "dark blue galexy",
+      "sourceKey": "973101892:preview.jpg",
+      "name": "dark blue galexy · 海岸回响",
+      "description": "基于 Wallpaper Engine 壁纸《dark blue galexy》设计。深蓝配色搭配清新文字，仿佛置身海边的音乐空间。",
+      "tags": [
+        "ocean",
+        "calm",
+        "retro",
+        "sci-fi"
+      ],
+      "palette": {
+        "background": "#5e85bf",
+        "sidebar": "#4f70a0",
+        "surface": "#7194c7",
+        "surfaceElevated": "#7e9dcc",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#5e85bf",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 92,
+        "blur": 10,
+        "radius": 15,
+        "overlay": 0.55
+      },
+      "wallpaperTitle": "dark blue galexy",
+      "generatedThemeName": "海岸回响"
+    },
+    {
+      "directory": "地獄少女-閻魔あい (60FPS)",
+      "sourceKey": "974555519:preview.jpg",
+      "name": "地獄少女-閻魔あい (60FPS) · 余光绽放",
+      "description": "基于 Wallpaper Engine 壁纸《地獄少女-閻魔あい (60FPS)》设计。温暖的红橙色系，激发活力与热情的音乐体验。",
+      "tags": [
+        "vibrant",
+        "fiery",
+        "dynamic",
+        "anime"
+      ],
+      "palette": {
+        "background": "#c22b28",
+        "sidebar": "#a32422",
+        "surface": "#c94442",
+        "surfaceElevated": "#ce5553",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#c22b28",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 4,
+        "radius": 10,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "地獄少女-閻魔あい (60FPS)",
+      "generatedThemeName": "余光绽放"
+    },
+    {
+      "directory": "Ocean Painting",
+      "sourceKey": "1883906261:preview.jpg",
+      "name": "Ocean Painting · 星光",
+      "description": "基于 Wallpaper Engine 壁纸《Ocean Painting》设计。基于深色界面的网易云音乐主题，提供舒适的视觉体验。",
+      "tags": [
+        "music",
+        "dark",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#665866",
+        "sidebar": "#564a56",
+        "surface": "#786c78",
+        "surfaceElevated": "#857985",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#a6d7f6",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 6,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "Ocean Painting",
+      "generatedThemeName": "星光"
+    },
+    {
+      "directory": "LoFi Chill - Walk in spring",
+      "sourceKey": "1944660134:preview.jpg",
+      "name": "LoFi Chill - Walk in spring · 绿野",
+      "description": "基于 Wallpaper Engine 壁纸《LoFi Chill - Walk in spring》设计。自然绿调的网易云音乐主题，深色背景搭配清新文字。",
+      "tags": [
+        "nature",
+        "green",
+        "anime"
+      ],
+      "palette": {
+        "background": "#6c953b",
+        "sidebar": "#5b7d32",
+        "surface": "#7ea253",
+        "surfaceElevated": "#89aa62",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#a7c279",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 80,
+        "blur": 4,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "LoFi Chill - Walk in spring",
+      "generatedThemeName": "绿野"
+    },
+    {
+      "directory": "战舰少女R 列克星敦 4K（by Showcage）",
+      "sourceKey": "1999178963:preview.jpg",
+      "name": "战舰少女R 列克星敦 4K（by Showcage） · 极夜",
+      "description": "基于 Wallpaper Engine 壁纸《战舰少女R 列克星敦 4K（by Showcage）》设计。极致深黑的网易云音乐主题，极简设计。",
+      "tags": [
+        "deep",
+        "dark",
+        "anime"
+      ],
+      "palette": {
+        "background": "#02010b",
+        "sidebar": "#020109",
+        "surface": "#201f28",
+        "surfaceElevated": "#35343c",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#7ce3f7",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 8,
+        "radius": 15,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "战舰少女R 列克星敦 4K（by Showcage）",
+      "generatedThemeName": "极夜"
+    },
+    {
+      "directory": "“Do you like rain I prefer you",
+      "sourceKey": "2022378163:preview.jpg",
+      "name": "“Do you like rain I prefer you · 星云配色",
+      "description": "基于 Wallpaper Engine 壁纸《“Do you like rain I prefer you》设计。深邃夜色，柔和渐变，适合夜间听歌。",
+      "tags": [
+        "night",
+        "minimal",
+        "smooth",
+        "anime"
+      ],
+      "palette": {
+        "background": "#2e4256",
+        "sidebar": "#273748",
+        "surface": "#47596a",
+        "surfaceElevated": "#586878",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#6d93a5",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "“Do you like rain I prefer you",
+      "generatedThemeName": "星云配色"
+    },
+    {
+      "directory": "Falling Sakura",
+      "sourceKey": "2030321061:preview.jpg",
+      "name": "Falling Sakura · 暖光配色",
+      "description": "基于 Wallpaper Engine 壁纸《Falling Sakura》设计。暖橙色调，舒适视觉，适合午间休息。",
+      "tags": [
+        "warm",
+        "retro",
+        "soft",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#b97e89",
+        "sidebar": "#9b6a73",
+        "surface": "#c18d97",
+        "surfaceElevated": "#c798a1",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#de848c",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 82,
+        "blur": 15,
+        "radius": 14,
+        "overlay": 0.55
+      },
+      "wallpaperTitle": "Falling Sakura",
+      "generatedThemeName": "暖光配色"
+    },
+    {
+      "directory": "도기코기 Doggie corgi",
+      "sourceKey": "2044597236:preview.jpg",
+      "name": "도기코기 Doggie corgi · 暗夜配色",
+      "description": "基于 Wallpaper Engine 壁纸《도기코기 Doggie corgi》设计。深棕色系，质感丰富，适合沉浸模式。",
+      "tags": [
+        "earth",
+        "deep",
+        "rich",
+        "relaxing"
+      ],
+      "palette": {
+        "background": "#663a3b",
+        "sidebar": "#563132",
+        "surface": "#785253",
+        "surfaceElevated": "#856162",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#c4bb82",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 8,
+        "radius": 9,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "도기코기 Doggie corgi",
+      "generatedThemeName": "暗夜配色"
+    },
+    {
+      "directory": "洋红の风景",
+      "sourceKey": "2069855119:preview.jpg",
+      "name": "洋红の风景 · 星光伴音",
+      "description": "基于 Wallpaper Engine 壁纸《洋红の风景》设计。深色界面，音乐与视觉的和谐共鸣，专为深夜听曲设计。",
+      "tags": [
+        "music",
+        "dark",
+        "minimal",
+        "anime"
+      ],
+      "palette": {
+        "background": "#252957",
+        "sidebar": "#1f2249",
+        "surface": "#3f436b",
+        "surfaceElevated": "#515479",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#81d4f3",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 4,
+        "radius": 8,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "洋红の风景",
+      "generatedThemeName": "星光伴音"
+    },
+    {
+      "directory": "Forest [4k]",
+      "sourceKey": "2111495079:preview.jpg",
+      "name": "Forest [4k] · 深海音浪",
+      "description": "基于 Wallpaper Engine 壁纸《Forest [4k]》设计。以海蓝色系为基调，营造宁静的音乐沉浸感。",
+      "tags": [
+        "music",
+        "night",
+        "ocean",
+        "nature"
+      ],
+      "palette": {
+        "background": "#1c3b3e",
+        "sidebar": "#183234",
+        "surface": "#375355",
+        "surfaceElevated": "#496265",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#78b68d",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 6,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "Forest [4k]",
+      "generatedThemeName": "深海音浪"
+    },
+    {
+      "directory": "도기코기 DoggieCorgi（Workshop 2118331982）",
+      "sourceKey": "2118331982:preview.jpg",
+      "name": "도기코기 DoggieCorgi · 极简黑夜",
+      "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCorgi》设计。复古棕调配色，简约不简单，带来温暖的音乐陪伴。",
+      "tags": [
+        "music",
+        "retro",
+        "minimal",
+        "relaxing"
+      ],
+      "palette": {
+        "background": "#524b37",
+        "sidebar": "#453f2e",
+        "surface": "#67614f",
+        "surfaceElevated": "#756f5f",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#a49d63",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 92,
+        "blur": 8,
+        "radius": 16,
+        "overlay": 0.65
+      },
+      "wallpaperTitle": "도기코기 DoggieCorgi",
+      "generatedThemeName": "极简黑夜"
+    },
+    {
+      "directory": "Summer",
+      "sourceKey": "2130367557:preview.jpg",
+      "name": "Summer · 夜色流动",
+      "description": "基于 Wallpaper Engine 壁纸《Summer》设计。深色底色搭配柔和点缀，还原网易云音乐经典暗黑界面",
+      "tags": [
+        "dark",
+        "minimal",
+        "music",
+        "nature"
+      ],
+      "palette": {
+        "background": "#403523",
+        "sidebar": "#362d1d",
+        "surface": "#574d3d",
+        "surfaceElevated": "#665d4f",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#3f9ca4",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 82,
+        "blur": 8,
+        "radius": 10,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "Summer",
+      "generatedThemeName": "夜色流动"
+    },
+    {
+      "directory": "「ATRI动态壁纸 4K 60FPS 精修版」ATRI -My Dear Moments-",
+      "sourceKey": "2141213975:preview.jpg",
+      "name": "「ATRI动态壁纸 4K 60FPS 精修版」ATRI -My Dear Moments- · 暮光配色",
+      "description": "基于 Wallpaper Engine 壁纸《「ATRI动态壁纸 4K 60FPS 精修版」ATRI -My Dear Moments-》设计。紫调深色主题，界面沉静，音乐播放体验柔和",
+      "tags": [
+        "purple",
+        "deep",
+        "soft",
+        "anime"
+      ],
+      "palette": {
+        "background": "#665963",
+        "sidebar": "#564b53",
+        "surface": "#786d76",
+        "surfaceElevated": "#857a82",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#6997d7",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 14,
+        "radius": 16,
+        "overlay": 0.55
+      },
+      "wallpaperTitle": "「ATRI动态壁纸 4K 60FPS 精修版」ATRI -My Dear Moments-",
+      "generatedThemeName": "暮光配色"
+    },
+    {
+      "directory": "富士山 樱花 富士山の桜",
+      "sourceKey": "2205252119:preview.jpg",
+      "name": "富士山 樱花 富士山の桜 · 海蓝调",
+      "description": "基于 Wallpaper Engine 壁纸《富士山 樱花 富士山の桜》设计。清新蓝调深色主题，界面清爽，适合长时间听音乐",
+      "tags": [
+        "blue",
+        "fresh",
+        "clean",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#4197cf",
+        "sidebar": "#377fae",
+        "surface": "#58a3d5",
+        "surfaceElevated": "#67acd9",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#5dabd8",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 80,
+        "blur": 6,
+        "radius": 8,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "富士山 樱花 富士山の桜",
+      "generatedThemeName": "海蓝调"
+    },
+    {
+      "directory": "紫罗兰永恒花园 16 9 4K",
+      "sourceKey": "2206476428:preview.jpg",
+      "name": "紫罗兰永恒花园 16 9 4K · 星云",
+      "description": "基于 Wallpaper Engine 壁纸《紫罗兰永恒花园 16 9 4K》设计。夜色绮境，音乐流转。",
+      "tags": [
+        "music",
+        "dark",
+        "neon",
+        "anime"
+      ],
+      "palette": {
+        "background": "#3e4e72",
+        "sidebar": "#344260",
+        "surface": "#556383",
+        "surfaceElevated": "#65718e",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#a0c3f8",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "紫罗兰永恒花园 16 9 4K",
+      "generatedThemeName": "星云"
+    },
+    {
+      "directory": "Just Breathe Neko girl movement wallpaper Audio reactive eyes",
+      "sourceKey": "2217475859:preview.jpg",
+      "name": "Just Breathe Neko girl movement wallpaper Audio reactive eyes · 暮光",
+      "description": "基于 Wallpaper Engine 壁纸《Just Breathe Neko girl movement wallpaper Audio reactive eyes》设计。暖色流转，陪你入睡。",
+      "tags": [
+        "music",
+        "warm",
+        "minimal",
+        "anime"
+      ],
+      "palette": {
+        "background": "#6b6a72",
+        "sidebar": "#5a5960",
+        "surface": "#7d7c83",
+        "surfaceElevated": "#89888e",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#d5ac95",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 14,
+        "radius": 15,
+        "overlay": 0.55
+      },
+      "wallpaperTitle": "Just Breathe Neko girl movement wallpaper Audio reactive eyes",
+      "generatedThemeName": "暮光"
+    },
+    {
+      "directory": "Water World (水の世界)",
+      "sourceKey": "2232932173:preview.jpg",
+      "name": "Water World (水の世界) · 繁星",
+      "description": "基于 Wallpaper Engine 壁纸《Water World (水の世界)》设计。紫意浮生，听雨吟香。",
+      "tags": [
+        "music",
+        "purple",
+        "elegant",
+        "anime"
+      ],
+      "palette": {
+        "background": "#986b9c",
+        "sidebar": "#805a83",
+        "surface": "#a47da8",
+        "surfaceElevated": "#ad89b0",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#386bb3",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 82,
+        "blur": 8,
+        "radius": 10,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "Water World (水の世界)",
+      "generatedThemeName": "繁星"
+    },
+    {
+      "directory": "SSSS古利特-机动战队",
+      "sourceKey": "2239265849:preview.jpg",
+      "name": "SSSS古利特-机动战队 · 星尘夜歌",
+      "description": "基于 Wallpaper Engine 壁纸《SSSS古利特-机动战队》设计。深色主题，柔和的星空配色，适合夜间听歌。",
+      "tags": [
+        "night",
+        "soft",
+        "music",
+        "game"
+      ],
+      "palette": {
+        "background": "#2a3346",
+        "sidebar": "#232b3b",
+        "surface": "#444b5c",
+        "surfaceElevated": "#555c6b",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#ceb08c",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "SSSS古利特-机动战队",
+      "generatedThemeName": "星尘夜歌"
+    },
+    {
+      "directory": "Cute anime cat girl 4k",
+      "sourceKey": "2255734516:preview.jpg",
+      "name": "Cute anime cat girl 4k · 暮光葡萄园",
+      "description": "基于 Wallpaper Engine 壁纸《Cute anime cat girl 4k》设计。紫色调的复古主题，营造温暖的音乐氛围。",
+      "tags": [
+        "vintage",
+        "purple",
+        "retro",
+        "anime"
+      ],
+      "palette": {
+        "background": "#816876",
+        "sidebar": "#6c5763",
+        "surface": "#907a86",
+        "surfaceElevated": "#9a8691",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#d9a999",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 8,
+        "radius": 12,
+        "overlay": 0.55
+      },
+      "wallpaperTitle": "Cute anime cat girl 4k",
+      "generatedThemeName": "暮光葡萄园"
+    },
+    {
+      "directory": "深度强袭高达（高达系列1）",
+      "sourceKey": "2258238193:preview.jpg",
+      "name": "深度强袭高达（高达系列1） · 森林黎明",
+      "description": "基于 Wallpaper Engine 壁纸《深度强袭高达（高达系列1）》设计。大地色系主题，清新自然，提升听歌体验。",
+      "tags": [
+        "nature",
+        "fresh",
+        "forest",
+        "anime"
+      ],
+      "palette": {
+        "background": "#39342b",
+        "sidebar": "#302c24",
+        "surface": "#514c44",
+        "surfaceElevated": "#615d55",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#a4e6d6",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 80,
+        "blur": 15,
+        "radius": 9,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "深度强袭高达（高达系列1）",
+      "generatedThemeName": "森林黎明"
+    },
+    {
+      "directory": "电锯人",
+      "sourceKey": "2305119719:preview.jpg",
+      "name": "电锯人 · 幽光流转",
+      "description": "基于 Wallpaper Engine 壁纸《电锯人》设计。深紫配色，灵动渐变，适合夜间聆听。",
+      "tags": [
+        "night",
+        "purple",
+        "smooth",
+        "anime"
+      ],
+      "palette": {
+        "background": "#844176",
+        "sidebar": "#6f3763",
+        "surface": "#935886",
+        "surfaceElevated": "#9d6791",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#f8b46b",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "电锯人",
+      "generatedThemeName": "幽光流转"
+    },
+    {
+      "directory": "魔女之旅",
+      "sourceKey": "2398417456:preview.jpg",
+      "name": "魔女之旅 · 墨香四溢",
+      "description": "基于 Wallpaper Engine 壁纸《魔女之旅》设计。复古棕调，静谧陪伴，每一次打开皆是温暖。",
+      "tags": [
+        "retro",
+        "warm",
+        "minimal",
+        "anime"
+      ],
+      "palette": {
+        "background": "#40332e",
+        "sidebar": "#362b27",
+        "surface": "#574b47",
+        "surfaceElevated": "#665c58",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#c4b184",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 82,
+        "blur": 8,
+        "radius": 14,
+        "overlay": 0.55
+      },
+      "wallpaperTitle": "魔女之旅",
+      "generatedThemeName": "墨香四溢"
+    },
+    {
+      "directory": "Minecraft Earth by WLabs",
+      "sourceKey": "2402436422:preview.jpg",
+      "name": "Minecraft Earth by WLabs · 蔚蓝深渊",
+      "description": "基于 Wallpaper Engine 壁纸《Minecraft Earth by WLabs》设计。深邃蓝调，科技感强，专注力助眠。",
+      "tags": [
+        "blue",
+        "focus",
+        "digital",
+        "pixel-art"
+      ],
+      "palette": {
+        "background": "#104d72",
+        "sidebar": "#0d4160",
+        "surface": "#2d6283",
+        "surfaceElevated": "#40718e",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#5bfeb4",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 16,
+        "radius": 9,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "Minecraft Earth by WLabs",
+      "generatedThemeName": "蔚蓝深渊"
+    },
+    {
+      "directory": "Alone in the Woodlands",
+      "sourceKey": "2431970333:preview.jpg",
+      "name": "Alone in the Woodlands · 暮光森林",
+      "description": "基于 Wallpaper Engine 壁纸《Alone in the Woodlands》设计。深绿与暖橙的复古交响，唤醒听觉与视觉的双重共鸣",
+      "tags": [
+        "retro",
+        "forest",
+        "warm",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#ac702c",
+        "sidebar": "#905e25",
+        "surface": "#b68145",
+        "surfaceElevated": "#bd8d56",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#ac702c",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "Alone in the Woodlands",
+      "generatedThemeName": "暮光森林"
+    },
+    {
+      "directory": "寂静星空下 基拉祈 宝可梦-Silent under the stars Jirachi Pokemon（试作157）",
+      "sourceKey": "2485965359:preview.jpg",
+      "name": "寂静星空下 基拉祈 宝可梦-Silent under the stars Jirachi Pokemon（试作157） · 海蓝深渊",
+      "description": "基于 Wallpaper Engine 壁纸《寂静星空下 基拉祈 宝可梦-Silent under the stars Jirachi Pokemon（试作157）》设计。暗夜海洋的沉静与蔚蓝的活力，营造专注与宁静的听觉环境",
+      "tags": [
+        "ocean",
+        "deep",
+        "calm",
+        "anime"
+      ],
+      "palette": {
+        "background": "#1b4246",
+        "sidebar": "#17373b",
+        "surface": "#36595c",
+        "surfaceElevated": "#49686b",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#20c7da",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 80,
+        "blur": 8,
+        "radius": 14,
+        "overlay": 0.55
+      },
+      "wallpaperTitle": "寂静星空下 基拉祈 宝可梦-Silent under the stars Jirachi Pokemon（试作157）",
+      "generatedThemeName": "海蓝深渊"
+    },
+    {
+      "directory": "Nier Automata +21 NSFW & SFW",
+      "sourceKey": "2505351195:preview.jpg",
+      "name": "Nier Automata +21 NSFW & SFW · 金色黎明",
+      "description": "基于 Wallpaper Engine 壁纸《Nier Automata +21 NSFW & SFW》设计。温暖的琥珀与摩卡棕的融合，点亮创意与灵感的每一刻",
+      "tags": [
+        "gold",
+        "warm",
+        "focus",
+        "game"
+      ],
+      "palette": {
+        "background": "#6d6d01",
+        "sidebar": "#5c5c01",
+        "surface": "#7f7f1f",
+        "surfaceElevated": "#8a8a34",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#6d6d01",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 6,
+        "radius": 16,
+        "overlay": 0.35
+      },
+      "wallpaperTitle": "Nier Automata +21 NSFW & SFW",
+      "generatedThemeName": "金色黎明"
+    },
+    {
+      "directory": "도기코기 DoggieCogi",
+      "sourceKey": "2595673940:preview.jpg",
+      "name": "도기코기 DoggieCogi · 云音乐深色主题",
+      "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCogi》设计。致力于为网易云音乐桌面端打造深色主题，提升视觉舒适度与个性化体验。",
+      "tags": [
+        "netease",
+        "music",
+        "bencm",
+        "wallpaper",
+        "theme",
+        "animal"
+      ],
+      "palette": {
+        "background": "#1a1b1f",
+        "sidebar": "#24252a",
+        "surface": "#2a2b30",
+        "surfaceElevated": "#303136",
+        "text": "#e0e0e0",
+        "muted": "#6b6b80",
+        "accent": "#c4a73c",
+        "danger": "#ff5f57",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "도기코기 DoggieCogi",
+      "generatedThemeName": "云音乐深色主题"
+    },
+    {
+      "directory": "About MC",
+      "sourceKey": "2624215601:preview.jpg",
+      "name": "About MC · 星光电台",
+      "description": "基于 Wallpaper Engine 壁纸《About MC》设计。适配网易云音乐深色模式，提供统一的视觉风格与流畅交互体验。",
+      "tags": [
+        "music",
+        "dark",
+        "cyber",
+        "unspecified"
+      ],
+      "palette": {
+        "background": "#4e382c",
+        "sidebar": "#422f25",
+        "surface": "#635045",
+        "surfaceElevated": "#716056",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#79c879",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "About MC",
+      "generatedThemeName": "星光电台"
+    },
+    {
+      "directory": "[4K] Heaven Burns Red",
+      "sourceKey": "2696254052:preview.jpg",
+      "name": "[4K] Heaven Burns Red · 星光音乐",
+      "description": "基于 Wallpaper Engine 壁纸《[4K] Heaven Burns Red》设计。基于 BetterNCM Community 网易云音乐桌面端深色主题，配色柔和，注重文字可读性与视觉舒适度。",
+      "tags": [
+        "dark",
+        "music",
+        "theme",
+        "anime"
+      ],
+      "palette": {
+        "background": "#3c9d9e",
+        "sidebar": "#328485",
+        "surface": "#53a9aa",
+        "surfaceElevated": "#63b1b1",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#69a0d1",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "[4K] Heaven Burns Red",
+      "generatedThemeName": "星光音乐"
+    },
+    {
+      "directory": "ANIME-PICTURES",
+      "sourceKey": "2722447236:preview.jpg",
+      "name": "ANIME-PICTURES · 云音乐深色主题",
+      "description": "基于 Wallpaper Engine 壁纸《ANIME-PICTURES》设计。BetterNCM Community 网易云音乐深色主题，界面简洁舒适，深色配色减少眼部疲劳，支持本地壁纸预览。",
+      "tags": [
+        "netease",
+        "betterncm",
+        "music",
+        "anime"
+      ],
+      "palette": {
+        "background": "#6a79ba",
+        "sidebar": "#59669c",
+        "surface": "#7c89c2",
+        "surfaceElevated": "#8894c8",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#6a79ba",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 6,
+        "radius": 12,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "ANIME-PICTURES",
+      "generatedThemeName": "云音乐深色主题"
+    },
+    {
+      "directory": "ヘブンバーンズレッド heaven burns red",
+      "sourceKey": "2759086620:preview.jpg",
+      "name": "ヘブンバーンズレッド heaven burns red · 暗夜星尘",
+      "description": "基于 Wallpaper Engine 壁纸《ヘブンバーンズレッド heaven burns red》设计。BetterNCM Community 网易云音乐桌面端深色主题，兼顾视觉舒适度与动态壁纸预览。",
+      "tags": [
+        "nc",
+        "music",
+        "dark",
+        "ncm",
+        "game"
+      ],
+      "palette": {
+        "background": "#645960",
+        "sidebar": "#544b51",
+        "surface": "#776d73",
+        "surfaceElevated": "#837a80",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#cbb28f",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 14,
+        "radius": 12,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "ヘブンバーンズレッド heaven burns red",
+      "generatedThemeName": "暗夜星尘"
+    },
+    {
+      "directory": "【4K 60fps】明日香纯净版",
+      "sourceKey": "2782447433:preview.jpg",
+      "name": "【4K 60fps】明日香纯净版 · 夜阑听雨",
+      "description": "基于 Wallpaper Engine 壁纸《【4K 60fps】明日香纯净版》设计。本主题专为网易云音乐桌面端设计，结合社区风格，提供深色界面与柔和配色，确保深夜使用的视觉舒适度与界面美观。",
+      "tags": [
+        "netease",
+        "music",
+        "dark",
+        "ncm",
+        "cartoon"
+      ],
+      "palette": {
+        "background": "#bd4437",
+        "sidebar": "#9f392e",
+        "surface": "#c55a4f",
+        "surfaceElevated": "#ca695f",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#c2867b",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 92,
+        "blur": 12,
+        "radius": 14,
+        "overlay": 0.38
+      },
+      "wallpaperTitle": "【4K 60fps】明日香纯净版",
+      "generatedThemeName": "夜阑听雨"
+    },
+    {
+      "directory": "艾尔登法环 菈妮 4k高清",
+      "sourceKey": "2785383629:preview.jpg",
+      "name": "艾尔登法环 菈妮 4k高清 · 夜岚",
+      "description": "基于 Wallpaper Engine 壁纸《艾尔登法环 菈妮 4k高清》设计。深色配色，舒适视听，专为网易云音乐主题设计。",
+      "tags": [
+        "ncim",
+        "cloud",
+        "music",
+        "game"
+      ],
+      "palette": {
+        "background": "#264978",
+        "sidebar": "#203d65",
+        "surface": "#405f88",
+        "surfaceElevated": "#516d93",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#6c9acd",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "艾尔登法环 菈妮 4k高清",
+      "generatedThemeName": "夜岚"
+    },
+    {
+      "directory": "碧蓝档案 古关忧 4k",
+      "sourceKey": "2803130830:preview.jpg",
+      "name": "碧蓝档案 古关忧 4k · 夜云音乐",
+      "description": "基于 Wallpaper Engine 壁纸《碧蓝档案 古关忧 4k》设计。基于 BetterNCM Community 的深色主题设计，界面简洁注重文字可读性与色彩统一。",
+      "tags": [
+        "cloud",
+        "music",
+        "dark",
+        "theme",
+        "anime"
+      ],
+      "palette": {
+        "background": "#6a6274",
+        "sidebar": "#595261",
+        "surface": "#7c7585",
+        "surfaceElevated": "#888190",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#daaa99",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "碧蓝档案 古关忧 4k",
+      "generatedThemeName": "夜云音乐"
+    },
+    {
+      "directory": "youer",
+      "sourceKey": "2808874251:preview.jpg",
+      "name": "youer · 网易云深色",
+      "description": "基于 Wallpaper Engine 壁纸《youer》设计。网易云音乐深色主题，深色界面文字清晰对比度足够，兼顾本地预览渲染。",
+      "tags": [
+        "ncms",
+        "music",
+        "theme",
+        "dark",
+        "girls"
+      ],
+      "palette": {
+        "background": "#b5846c",
+        "sidebar": "#986f5b",
+        "surface": "#be937e",
+        "surfaceElevated": "#c49d89",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#b5846c",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 6,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "youer",
+      "generatedThemeName": "网易云深色"
+    },
+    {
+      "directory": "柴郡",
+      "sourceKey": "2810642767:preview.jpg",
+      "name": "柴郡 · 夜曲",
+      "description": "基于 Wallpaper Engine 壁纸《柴郡》设计。深色主题，舒适阅读，网易云音乐风格。",
+      "tags": [
+        "ncm",
+        "betterncm",
+        "music",
+        "theme",
+        "dark",
+        "game"
+      ],
+      "palette": {
+        "background": "#936e99",
+        "sidebar": "#7b5c81",
+        "surface": "#a07fa5",
+        "surfaceElevated": "#a98bad",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#f2cbb8",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 92,
+        "blur": 5,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "柴郡",
+      "generatedThemeName": "夜曲"
+    },
+    {
+      "directory": "魔法少女小圓-曉美焰#4K#",
+      "sourceKey": "2811662119:preview.jpg",
+      "name": "魔法少女小圓-曉美焰#4K# · 云端粉黛",
+      "description": "基于 Wallpaper Engine 壁纸《魔法少女小圓-曉美焰#4K#》设计。基于网易云音乐深色界面的粉色系主题，兼容BetterNCM Community，预览图使用本地壁纸。",
+      "tags": [
+        "music",
+        "netease",
+        "dark",
+        "anime"
+      ],
+      "palette": {
+        "background": "#b060a0",
+        "sidebar": "#945186",
+        "surface": "#b973ab",
+        "surfaceElevated": "#c080b3",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#b060a0",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 14,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "魔法少女小圓-曉美焰#4K#",
+      "generatedThemeName": "云端粉黛"
+    },
+    {
+      "directory": "Fgo葛饰北斋（Spirits）",
+      "sourceKey": "2841088594:preview.jpg",
+      "name": "Fgo葛饰北斋（Spirits） · 星悦",
+      "description": "基于 Wallpaper Engine 壁纸《Fgo葛饰北斋（Spirits）》设计。深色配色的网易云音乐主题，界面简洁，对比清晰，致力于提供舒适的音乐聆听体验。",
+      "tags": [
+        "music",
+        "dark",
+        "ncm",
+        "theme",
+        "game"
+      ],
+      "palette": {
+        "background": "#a34b55",
+        "sidebar": "#893f47",
+        "surface": "#ae6169",
+        "surfaceElevated": "#b56f77",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#c8b08c",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 12,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "Fgo葛饰北斋（Spirits）",
+      "generatedThemeName": "星悦"
+    },
+    {
+      "directory": "三玖是神",
+      "sourceKey": "2869409186:preview.jpg",
+      "name": "三玖是神 · 夜色云音乐",
+      "description": "基于 Wallpaper Engine 壁纸《三玖是神》设计。网易云音乐深色主题，提供沉浸式视觉与流畅操作。",
+      "tags": [
+        "netease",
+        "dark",
+        "music",
+        "anime"
+      ],
+      "palette": {
+        "background": "#626262",
+        "sidebar": "#525252",
+        "surface": "#757575",
+        "surfaceElevated": "#818181",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#be84b6",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 14,
+        "radius": 10,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "三玖是神",
+      "generatedThemeName": "夜色云音乐"
+    },
+    {
+      "directory": "天门",
+      "sourceKey": "2871542851:preview.jpg",
+      "name": "天门 · 星光云听",
+      "description": "基于 Wallpaper Engine 壁纸《天门》设计。深色主题，专为网易云音乐桌面端设计，界面简洁舒适，夜间聆听首选。",
+      "tags": [
+        "dark",
+        "music",
+        "minimal",
+        "nature"
+      ],
+      "palette": {
+        "background": "#395070",
+        "sidebar": "#30435e",
+        "surface": "#516581",
+        "surfaceElevated": "#61738d",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#9fc6f1",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "天门",
+      "generatedThemeName": "星光云听"
+    },
+    {
+      "directory": "[真4K live2D动态]碧蓝航线-信浓-轰鸣的银轮-B站慕慕慕慕斯小蛋糕",
+      "sourceKey": "2872196813:preview.jpg",
+      "name": "[真4K live2D动态]碧蓝航线-信浓-轰鸣的银轮-B站慕慕慕慕斯小蛋糕 · 星光云听",
+      "description": "基于 Wallpaper Engine 壁纸《[真4K live2D动态]碧蓝航线-信浓-轰鸣的银轮-B站慕慕慕慕斯小蛋糕》设计。深色基调，星光点缀，流畅交互，专注音乐体验。",
+      "tags": [
+        "netease",
+        "dark",
+        "music",
+        "ncm",
+        "game"
+      ],
+      "palette": {
+        "background": "#489ca7",
+        "sidebar": "#3c838c",
+        "surface": "#5ea8b2",
+        "surfaceElevated": "#6db0b9",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#4ec4d3",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "[真4K live2D动态]碧蓝航线-信浓-轰鸣的银轮-B站慕慕慕慕斯小蛋糕",
+      "generatedThemeName": "星光云听"
+    },
+    {
+      "directory": "[4K 动态 正常版3.0]碧蓝航线-莱莎琳·斯托特「熬夜的炼金术士」-B站慕慕慕慕斯小蛋糕",
+      "sourceKey": "2894968698:preview.jpg",
+      "name": "[4K 动态 正常版3.0]碧蓝航线-莱莎琳·斯托特「熬夜的炼金术士」-B站慕慕慕慕斯小蛋糕 · 星尘小站",
+      "description": "基于 Wallpaper Engine 壁纸《[4K 动态 正常版3.0]碧蓝航线-莱莎琳·斯托特「熬夜的炼金术士」-B站慕慕慕慕斯小蛋糕》设计。基于网易云音乐深色基调的 BetterNCM Community 主题，提供沉浸式音乐体验。",
+      "tags": [
+        "nc",
+        "music",
+        "dark",
+        "game"
+      ],
+      "palette": {
+        "background": "#3c2c24",
+        "sidebar": "#32251e",
+        "surface": "#53453e",
+        "surfaceElevated": "#635650",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#ce933c",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "[4K 动态 正常版3.0]碧蓝航线-莱莎琳·斯托特「熬夜的炼金术士」-B站慕慕慕慕斯小蛋糕",
+      "generatedThemeName": "星尘小站"
+    },
+    {
+      "directory": "Anime Boy",
+      "sourceKey": "2895500500:preview.jpg",
+      "name": "Anime Boy · 云悦",
+      "description": "基于 Wallpaper Engine 壁纸《Anime Boy》设计。网易云音乐深色主题，提供深色界面与高对比度阅读体验，支持本地壁纸预览与配色个性化。",
+      "tags": [
+        "nc",
+        "netease",
+        "music",
+        "dark",
+        "community",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#6d9247",
+        "sidebar": "#5c7b3c",
+        "surface": "#7f9f5d",
+        "surfaceElevated": "#8aa86c",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#9ee8fa",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 8,
+        "radius": 12,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "Anime Boy",
+      "generatedThemeName": "云悦"
+    },
+    {
+      "directory": "Tokyo City Streets",
+      "sourceKey": "2910568926:preview.jpg",
+      "name": "Tokyo City Streets · 夜曲模式",
+      "description": "基于 Wallpaper Engine 壁纸《Tokyo City Streets》设计。网易云音乐深色主题，舒适视觉与个性化色彩搭配。",
+      "tags": [
+        "dark",
+        "music",
+        "ncim",
+        "anime"
+      ],
+      "palette": {
+        "background": "#60829b",
+        "sidebar": "#516d82",
+        "surface": "#7391a7",
+        "surfaceElevated": "#809baf",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#60829b",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "Tokyo City Streets",
+      "generatedThemeName": "夜曲模式"
+    },
+    {
+      "directory": "放課後の女生徒",
+      "sourceKey": "2928367620:preview.jpg",
+      "name": "放課後の女生徒 · 流动的音符",
+      "description": "基于 Wallpaper Engine 壁纸《放課後の女生徒》设计。专为网易云音乐桌面端深色主题设计，界面简洁流畅，提升听觉与视觉的双重享受。",
+      "tags": [
+        "netease",
+        "ncim",
+        "dark",
+        "music",
+        "anime"
+      ],
+      "palette": {
+        "background": "#23353b",
+        "sidebar": "#1d2d32",
+        "surface": "#3d4d53",
+        "surfaceElevated": "#4f5d62",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#4c9d9c",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "放課後の女生徒",
+      "generatedThemeName": "流动的音符"
+    },
+    {
+      "directory": "鬼针草 露比",
+      "sourceKey": "2933348761:preview.jpg",
+      "name": "鬼针草 露比 · 星光云间",
+      "description": "基于 Wallpaper Engine 壁纸《鬼针草 露比》设计。基于网易云音乐桌面端深色界面设计，搭配 BetterNCM Community 优化，提供舒适的视觉体验与丰富的自定义选项。界面暗色基调，关键文字与背景保证足够对比度，符合深色使用习惯。",
+      "tags": [
+        "music",
+        "dark",
+        "ncm",
+        "theme",
+        "cloud",
+        "anime"
+      ],
+      "palette": {
+        "background": "#887e84",
+        "sidebar": "#726a6f",
+        "surface": "#968d93",
+        "surfaceElevated": "#a0989d",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#e8f0f6",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "鬼针草 露比",
+      "generatedThemeName": "星光云间"
+    },
+    {
+      "directory": "Heaven Burns Red 红烧天堂Angel Beats联动",
+      "sourceKey": "2939232695:preview.jpg",
+      "name": "Heaven Burns Red 红烧天堂Angel Beats联动 · 星曜",
+      "description": "基于 Wallpaper Engine 壁纸《Heaven Burns Red 红烧天堂Angel Beats联动》设计。基于 BetterNCM Community 的深色主题，提供舒适的视觉体验与丰富的自定义选项。",
+      "tags": [
+        "netease",
+        "betterncm",
+        "dark",
+        "music",
+        "anime"
+      ],
+      "palette": {
+        "background": "#736ab3",
+        "sidebar": "#615996",
+        "surface": "#847cbc",
+        "surfaceElevated": "#8f88c2",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#736ab3",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "Heaven Burns Red 红烧天堂Angel Beats联动",
+      "generatedThemeName": "星曜"
+    },
+    {
+      "directory": "Chainsaw Man Makima",
+      "sourceKey": "2944983900:preview.jpg",
+      "name": "Chainsaw Man Makima · 夜曲模式",
+      "description": "基于 Wallpaper Engine 壁纸《Chainsaw Man Makima》设计。专为网易云音乐桌面端设计的深色主题，兼容BetterNCM Community，提供舒适的视觉体验。",
+      "tags": [
+        "dark",
+        "music",
+        "ncmi",
+        "wallpaper",
+        "anime"
+      ],
+      "palette": {
+        "background": "#97862e",
+        "sidebar": "#7f7127",
+        "surface": "#a39547",
+        "surfaceElevated": "#ac9e58",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#97862e",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "Chainsaw Man Makima",
+      "generatedThemeName": "夜曲模式"
+    },
+    {
+      "directory": "雏菊",
+      "sourceKey": "2950247086:preview.jpg",
+      "name": "雏菊 · 夜云计划",
+      "description": "基于 Wallpaper Engine 壁纸《雏菊》设计。BetterNCM Community 网易云音乐深色主题，舒适视觉与动态壁纸预览。",
+      "tags": [
+        "music",
+        "dark",
+        "theme",
+        "nature"
+      ],
+      "palette": {
+        "background": "#615d5b",
+        "sidebar": "#514e4c",
+        "surface": "#74706f",
+        "surfaceElevated": "#817d7c",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#cfb481",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "雏菊",
+      "generatedThemeName": "夜云计划"
+    },
+    {
+      "directory": "莉音",
+      "sourceKey": "2984914872:preview.jpg",
+      "name": "莉音 · 夜色云音乐",
+      "description": "基于 Wallpaper Engine 壁纸《莉音》设计。网易云音乐深色主题，BetterNCM Community 设计。",
+      "tags": [
+        "music",
+        "netease",
+        "dark",
+        "game"
+      ],
+      "palette": {
+        "background": "#2c3d64",
+        "sidebar": "#253354",
+        "surface": "#455477",
+        "surfaceElevated": "#566483",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#c1677d",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 8,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "莉音",
+      "generatedThemeName": "夜色云音乐"
+    },
+    {
+      "directory": "友利奈绪",
+      "sourceKey": "2996811810:preview.jpg",
+      "name": "友利奈绪 · 云音乐深色主题",
+      "description": "基于 Wallpaper Engine 壁纸《友利奈绪》设计。适配网易云音乐桌面端 3.x，配合 BetterNCM Community 使用。提供深色界面，细腻配色，流畅体验。",
+      "tags": [
+        "music",
+        "ncm",
+        "dark",
+        "anime"
+      ],
+      "palette": {
+        "background": "#0d080d",
+        "sidebar": "#0b070b",
+        "surface": "#2a262a",
+        "surfaceElevated": "#3d393d",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#fef9a2",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "友利奈绪",
+      "generatedThemeName": "云音乐深色主题"
+    },
+    {
+      "directory": "女仆",
+      "sourceKey": "3002654423:preview.jpg",
+      "name": "女仆 · 夜曲",
+      "description": "基于 Wallpaper Engine 壁纸《女仆》设计。深色主题，专为网易云音乐桌面端设计。",
+      "tags": [
+        "ncm",
+        "netease",
+        "music",
+        "girls"
+      ],
+      "palette": {
+        "background": "#636b74",
+        "sidebar": "#535a61",
+        "surface": "#767d85",
+        "surfaceElevated": "#828990",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#b48e6c",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "女仆",
+      "generatedThemeName": "夜曲"
+    },
+    {
+      "directory": "赛博color-宣纸国画-紫罗兰永恒花园",
+      "sourceKey": "3022080536:preview.jpg",
+      "name": "赛博color-宣纸国画-紫罗兰永恒花园 · 夜云",
+      "description": "基于 Wallpaper Engine 壁纸《赛博color-宣纸国画-紫罗兰永恒花园》设计。专为网易云音乐桌面端深色模式设计的 BetterNCM Community 主题，兼容 Wallpaper Engine 预览。",
+      "tags": [
+        "music",
+        "dark",
+        "ncm",
+        "girls"
+      ],
+      "palette": {
+        "background": "#736a5f",
+        "sidebar": "#615950",
+        "surface": "#847c72",
+        "surfaceElevated": "#8f887f",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#9e9789",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 14,
+        "radius": 12,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "赛博color-宣纸国画-紫罗兰永恒花园",
+      "generatedThemeName": "夜云"
+    },
+    {
+      "directory": "葬送的芙莉莲",
+      "sourceKey": "3046994131:preview.jpg",
+      "name": "葬送的芙莉莲 · 柚子音乐",
+      "description": "基于 Wallpaper Engine 壁纸《葬送的芙莉莲》设计。BetterNCM Community 协作主题，深色界面设计，专为网易云音乐桌面端 3.x 优化，提供统一配色与流畅体验。",
+      "tags": [
+        "nc",
+        "music",
+        "dark",
+        "anime"
+      ],
+      "palette": {
+        "background": "#7a685a",
+        "sidebar": "#66574c",
+        "surface": "#8a7a6e",
+        "surfaceElevated": "#95867b",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#4766b7",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "葬送的芙莉莲",
+      "generatedThemeName": "柚子音乐"
+    },
+    {
+      "directory": "抖音搜wallpaper旧言-龙女",
+      "sourceKey": "3048159108:preview.jpg",
+      "name": "抖音搜wallpaper旧言-龙女 · 星光逐浪",
+      "description": "基于 Wallpaper Engine 壁纸《抖音搜wallpaper旧言-龙女》设计。基于深色界面的网易云音乐主题，配色柔和，阅读舒适，支持 BetterNCM Community 扩展。",
+      "tags": [
+        "dark",
+        "music",
+        "ncms",
+        "cloud",
+        "anime"
+      ],
+      "palette": {
+        "background": "#626a79",
+        "sidebar": "#525966",
+        "surface": "#757c89",
+        "surfaceElevated": "#818894",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#81b0d1",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "抖音搜wallpaper旧言-龙女",
+      "generatedThemeName": "星光逐浪"
+    },
+    {
+      "directory": "雪夜灯火 4K",
+      "sourceKey": "3082872571:preview.jpg",
+      "name": "雪夜灯火 4K · 星光伴侣",
+      "description": "基于 Wallpaper Engine 壁纸《雪夜灯火 4K》设计。深色主题，专为网易云音乐设计，界面简洁流畅，夜间聆听更舒适",
+      "tags": [
+        "dark",
+        "music",
+        "ncm",
+        "wallpaper",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#342e52",
+        "sidebar": "#2c2745",
+        "surface": "#4c4767",
+        "surfaceElevated": "#5d5875",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#e397a3",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "雪夜灯火 4K",
+      "generatedThemeName": "星光伴侣"
+    },
+    {
+      "directory": "蓝色花海 4K",
+      "sourceKey": "3105940427:preview.jpg",
+      "name": "蓝色花海 4K · BetterNCM 深色主题",
+      "description": "基于 Wallpaper Engine 壁纸《蓝色花海 4K》设计。网易云音乐桌面深色主题，优化视觉层级与交互体验",
+      "tags": [
+        "nc",
+        "music",
+        "theme",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#3e4648",
+        "sidebar": "#343b3c",
+        "surface": "#555c5e",
+        "surfaceElevated": "#656b6d",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#c9b189",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 12,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "蓝色花海 4K",
+      "generatedThemeName": "BetterNCM 深色主题"
+    },
+    {
+      "directory": "Colorful Cloud",
+      "sourceKey": "3178766389:preview.jpg",
+      "name": "Colorful Cloud · 深海蔚蓝",
+      "description": "基于 Wallpaper Engine 壁纸《Colorful Cloud》设计。网易云音乐深色主题，专为桌面端设计，提供舒适视觉体验。",
+      "tags": [
+        "deep",
+        "music",
+        "night",
+        "cloud",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#295074",
+        "sidebar": "#224361",
+        "surface": "#436585",
+        "surfaceElevated": "#547390",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#4ab0c9",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "Colorful Cloud",
+      "generatedThemeName": "深海蔚蓝"
+    },
+    {
+      "directory": "【Frieren-芙莉莲】旅途的华章",
+      "sourceKey": "3219179685:preview.jpg",
+      "name": "【Frieren-芙莉莲】旅途的华章 · 星光咖韵",
+      "description": "基于 Wallpaper Engine 壁纸《【Frieren-芙莉莲】旅途的华章》设计。深色界面配色，以温暖咖色与星光粉为点缀，营造宁静音乐氛围。",
+      "tags": [
+        "coffee",
+        "dark",
+        "warm",
+        "music",
+        "anime"
+      ],
+      "palette": {
+        "background": "#b77465",
+        "sidebar": "#9a6155",
+        "surface": "#c08577",
+        "surfaceElevated": "#c59084",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#f9c3bf",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "【Frieren-芙莉莲】旅途的华章",
+      "generatedThemeName": "星光咖韵"
+    },
+    {
+      "directory": "由比滨结衣 长发",
+      "sourceKey": "3238063313:preview.jpg",
+      "name": "由比滨结衣 长发 · 夜曲云和",
+      "description": "基于 Wallpaper Engine 壁纸《由比滨结衣 长发》设计。网易云音乐深色主题预览。",
+      "tags": [
+        "netease",
+        "music",
+        "theme",
+        "anime"
+      ],
+      "palette": {
+        "background": "#8c6f70",
+        "sidebar": "#765d5e",
+        "surface": "#9a8081",
+        "surfaceElevated": "#a38c8d",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#dd968b",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 10,
+        "radius": 14,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "由比滨结衣 长发",
+      "generatedThemeName": "夜曲云和"
+    },
+    {
+      "directory": "orbital home（自用）",
+      "sourceKey": "3254571754:preview.jpg",
+      "name": "orbital home（自用） · 星光伴行",
+      "description": "基于 Wallpaper Engine 壁纸《orbital home（自用）》设计。深色配色，柔和余光，专注音乐体验",
+      "tags": [
+        "dark",
+        "music",
+        "neo",
+        "technology"
+      ],
+      "palette": {
+        "background": "#536d7a",
+        "sidebar": "#465c66",
+        "surface": "#687f8a",
+        "surfaceElevated": "#758a95",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#6a9eb6",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "orbital home（自用）",
+      "generatedThemeName": "星光伴行"
+    },
+    {
+      "directory": "Ayanami Rei-凌波丽『night』",
+      "sourceKey": "3258032485:preview.jpg",
+      "name": "Ayanami Rei-凌波丽『night』 · 夜曲",
+      "description": "基于 Wallpaper Engine 壁纸《Ayanami Rei-凌波丽『night』》设计。基于网易云音乐深色界面的 BetterNCM Community 主题，兼容 Wallpaper Engine 预览，提供统一的视觉体验。",
+      "tags": [
+        "music",
+        "dark",
+        "ncm",
+        "anime"
+      ],
+      "palette": {
+        "background": "#085d9c",
+        "sidebar": "#074e83",
+        "surface": "#2670a8",
+        "surfaceElevated": "#397db0",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#68a6d8",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "Ayanami Rei-凌波丽『night』",
+      "generatedThemeName": "夜曲"
+    },
+    {
+      "directory": "wall",
+      "sourceKey": "3262923557:preview.jpg",
+      "name": "wall · 夜色云音乐",
+      "description": "基于 Wallpaper Engine 壁纸《wall》设计。基于 BetterNCM Community 的深色主题，专为网易云音乐桌面端 3.x 设计，提供沉浸式音乐体验。",
+      "tags": [
+        "ncm",
+        "music",
+        "dark",
+        "community",
+        "unspecified"
+      ],
+      "palette": {
+        "background": "#5c6261",
+        "sidebar": "#4d5251",
+        "surface": "#707574",
+        "surfaceElevated": "#7d8181",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#bdb684",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "wall",
+      "generatedThemeName": "夜色云音乐"
+    },
+    {
+      "directory": "今年もよろしくお願いします",
+      "sourceKey": "3270040168:preview.jpg",
+      "name": "今年もよろしくお願いします · 云端暗色",
+      "description": "基于 Wallpaper Engine 壁纸《今年もよろしくお願いします》设计。适配网易云音乐桌面端的深色主题，界面简洁，对比度高，阅读舒适。",
+      "tags": [
+        "music",
+        "theme",
+        "ncm",
+        "girls"
+      ],
+      "palette": {
+        "background": "#666475",
+        "sidebar": "#565462",
+        "surface": "#787786",
+        "surfaceElevated": "#858391",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#666475",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "今年もよろしくお願いします",
+      "generatedThemeName": "云端暗色"
+    },
+    {
+      "directory": "艾莉同学",
+      "sourceKey": "3288280659:preview.jpg",
+      "name": "艾莉同学 · 夜色动听",
+      "description": "基于 Wallpaper Engine 壁纸《艾莉同学》设计。基于 BetterNCM Community 的深色主题，界面简洁，配色温润，兼顾阅读舒适度与视觉层次。",
+      "tags": [
+        "music",
+        "dark",
+        "theme",
+        "animal"
+      ],
+      "palette": {
+        "background": "#324f71",
+        "sidebar": "#2a425f",
+        "surface": "#4b6482",
+        "surfaceElevated": "#5b728d",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#a14e52",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "艾莉同学",
+      "generatedThemeName": "夜色动听"
+    },
+    {
+      "directory": "周防有希",
+      "sourceKey": "3289056733:preview.jpg",
+      "name": "周防有希 · 网易夜色",
+      "description": "基于 Wallpaper Engine 壁纸《周防有希》设计。网易云音乐深色主题，流畅视觉与优雅配色。",
+      "tags": [
+        "netease",
+        "music",
+        "theme",
+        "dark",
+        "custom",
+        "anime"
+      ],
+      "palette": {
+        "background": "#121212",
+        "sidebar": "#1e1e24",
+        "surface": "#25252a",
+        "surfaceElevated": "#2d2d37",
+        "text": "#f0f0f0",
+        "muted": "#8888a0",
+        "accent": "#c792ea",
+        "danger": "#ff7878",
+        "success": "#44e1b1"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 8,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "周防有希",
+      "generatedThemeName": "网易夜色"
+    },
+    {
+      "directory": "碧蓝档案 莉音 毁灭菇",
+      "sourceKey": "3293783173:preview.jpg",
+      "name": "碧蓝档案 莉音 毁灭菇 · 星光云主题",
+      "description": "基于 Wallpaper Engine 壁纸《碧蓝档案 莉音 毁灭菇》设计。适配网易云音乐桌面端 3.x 的深色主题，社区兼容，文字背景对比度高，动效流畅。",
+      "tags": [
+        "dark",
+        "music",
+        "ncm",
+        "anime"
+      ],
+      "palette": {
+        "background": "#de3c3c",
+        "sidebar": "#ba3232",
+        "surface": "#e25353",
+        "surfaceElevated": "#e56363",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#de3c3c",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 92,
+        "blur": 6,
+        "radius": 12,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "碧蓝档案 莉音 毁灭菇",
+      "generatedThemeName": "星光云主题"
+    },
+    {
+      "directory": "周防有希（Workshop 3296924840）",
+      "sourceKey": "3296924840:preview.jpg",
+      "name": "周防有希 · 星光漫步",
+      "description": "基于 Wallpaper Engine 壁纸《周防有希》设计。深色配色，专注音乐体验，界面流畅简洁，支持深色模式下的舒适阅读。",
+      "tags": [
+        "music",
+        "dark",
+        "minimal",
+        "anime"
+      ],
+      "palette": {
+        "background": "#586b73",
+        "sidebar": "#4a5a61",
+        "surface": "#6c7d84",
+        "surfaceElevated": "#79898f",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#c49d5a",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "周防有希",
+      "generatedThemeName": "星光漫步"
+    },
+    {
+      "directory": "【4K】不時輕聲地以俄語遮羞的鄰座艾莉同學｜時々ボソッとロシア語でデレる隣のアーリャさん",
+      "sourceKey": "3322411291:preview.jpg",
+      "name": "【4K】不時輕聲地以俄語遮羞的鄰座艾莉同學｜時々ボソッとロシア語でデレる隣のアーリャさん · 星光云听",
+      "description": "基于 Wallpaper Engine 壁纸《【4K】不時輕聲地以俄語遮羞的鄰座艾莉同學｜時々ボソッとロシア語でデレる隣のアーリャさん》设计。基于网易云音乐深色界面设计，兼容 BetterNCM Community，提供舒适的视觉体验。",
+      "tags": [
+        "ncmm",
+        "netease",
+        "music",
+        "dark",
+        "anime"
+      ],
+      "palette": {
+        "background": "#352d2d",
+        "sidebar": "#2d2626",
+        "surface": "#4d4646",
+        "surfaceElevated": "#5d5757",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#f2cab8",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 8,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "【4K】不時輕聲地以俄語遮羞的鄰座艾莉同學｜時々ボソッとロシア語でデレる隣のアーリャさん",
+      "generatedThemeName": "星光云听"
+    },
+    {
+      "directory": "【雪晴】金枝玉叶-01",
+      "sourceKey": "3323753742:preview.jpg",
+      "name": "【雪晴】金枝玉叶-01 · 夜色音乐",
+      "description": "基于 Wallpaper Engine 壁纸《【雪晴】金枝玉叶-01》设计。专为网易云音乐桌面端设计的深色主题，兼容 Wallpaper Engine 动态预览，界面简洁且符合人体工程学阅读习惯。",
+      "tags": [
+        "ncms",
+        "wallpaper",
+        "music",
+        "dark",
+        "girls"
+      ],
+      "palette": {
+        "background": "#716f72",
+        "sidebar": "#5f5d60",
+        "surface": "#828083",
+        "surfaceElevated": "#8d8c8e",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#dcab98",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 14,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "【雪晴】金枝玉叶-01",
+      "generatedThemeName": "夜色音乐"
+    },
+    {
+      "directory": "【雪晴】金枝玉叶-02",
+      "sourceKey": "3323760774:preview.jpg",
+      "name": "【雪晴】金枝玉叶-02 · 夜光音乐",
+      "description": "基于 Wallpaper Engine 壁纸《【雪晴】金枝玉叶-02》设计。基于社区的网易云音乐深色主题，界面简洁，护眼舒适，提供流畅的音乐体验。",
+      "tags": [
+        "net",
+        "music",
+        "dark",
+        "theme",
+        "girls"
+      ],
+      "palette": {
+        "background": "#675b5a",
+        "sidebar": "#574c4c",
+        "surface": "#796f6e",
+        "surfaceElevated": "#857c7b",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#f97150",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 8,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "【雪晴】金枝玉叶-02",
+      "generatedThemeName": "夜光音乐"
+    },
+    {
+      "directory": "【雪晴】金枝玉叶-03",
+      "sourceKey": "3323778314:preview.jpg",
+      "name": "【雪晴】金枝玉叶-03 · 夜曲",
+      "description": "基于 Wallpaper Engine 壁纸《【雪晴】金枝玉叶-03》设计。一款适配 BetterNCM Community 的网易云音乐深色主题，界面设计简洁，文字与背景对比度清晰，提供舒适的使用体验。",
+      "tags": [
+        "netecm",
+        "cloud",
+        "dark",
+        "music",
+        "girls"
+      ],
+      "palette": {
+        "background": "#b35036",
+        "sidebar": "#96432d",
+        "surface": "#bc654e",
+        "surfaceElevated": "#c2735e",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#b35036",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "【雪晴】金枝玉叶-03",
+      "generatedThemeName": "夜曲"
+    },
+    {
+      "directory": "【雪晴】金枝玉叶-05",
+      "sourceKey": "3323790020:preview.jpg",
+      "name": "【雪晴】金枝玉叶-05 · 云音乐主题",
+      "description": "基于 Wallpaper Engine 壁纸《【雪晴】金枝玉叶-05》设计。网易云音乐桌面端深色主题，专为社区设计，提供高对比度排版与流畅体验。",
+      "tags": [
+        "netease",
+        "cloud",
+        "music",
+        "girls"
+      ],
+      "palette": {
+        "background": "#2e3037",
+        "sidebar": "#27282e",
+        "surface": "#47494f",
+        "surfaceElevated": "#58595f",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#df9c86",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "【雪晴】金枝玉叶-05",
+      "generatedThemeName": "云音乐主题"
+    },
+    {
+      "directory": "【雪晴】金枝玉叶-04",
+      "sourceKey": "3323807559:preview.jpg",
+      "name": "【雪晴】金枝玉叶-04 · 夜色音乐",
+      "description": "基于 Wallpaper Engine 壁纸《【雪晴】金枝玉叶-04》设计。为网易云音乐桌面端设计的深色主题，兼容社区风格。",
+      "tags": [
+        "nc",
+        "music",
+        "dark",
+        "theme",
+        "girls"
+      ],
+      "palette": {
+        "background": "#67585e",
+        "sidebar": "#574a4f",
+        "surface": "#796c71",
+        "surfaceElevated": "#85797e",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#fd7449",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "【雪晴】金枝玉叶-04",
+      "generatedThemeName": "夜色音乐"
+    },
+    {
+      "directory": "丰川祥子 mygo mujica",
+      "sourceKey": "3325597728:preview.jpg",
+      "name": "丰川祥子 mygo mujica · 星光云间",
+      "description": "基于 Wallpaper Engine 壁纸《丰川祥子 mygo mujica》设计。深色基调的网易云音乐主题，界面简洁明亮，操作体验流畅。",
+      "tags": [
+        "dark",
+        "music",
+        "neo",
+        "anime"
+      ],
+      "palette": {
+        "background": "#776369",
+        "sidebar": "#645358",
+        "surface": "#87767b",
+        "surfaceElevated": "#928287",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#6184a0",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.48
+      },
+      "wallpaperTitle": "丰川祥子 mygo mujica",
+      "generatedThemeName": "星光云间"
+    },
+    {
+      "directory": "Azur Lane",
+      "sourceKey": "3337895063:preview.jpg",
+      "name": "Azur Lane · 夜色",
+      "description": "基于 Wallpaper Engine 壁纸《Azur Lane》设计。基于网易云音乐深色界面设计的社区主题，注重可读性与视觉舒适度，支持深色模式与自定义配色。",
+      "tags": [
+        "music",
+        "dark",
+        "theme",
+        "game"
+      ],
+      "palette": {
+        "background": "#0c0b0e",
+        "sidebar": "#0a090c",
+        "surface": "#29282b",
+        "surfaceElevated": "#3d3c3e",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#0c0b0e",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 90,
+        "blur": 6,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "Azur Lane",
+      "generatedThemeName": "夜色"
+    },
+    {
+      "directory": "祥子",
+      "sourceKey": "3358710380:preview.jpg",
+      "name": "祥子 · 夜曲",
+      "description": "基于 Wallpaper Engine 壁纸《祥子》设计。深色配色，专为夜间聆听网易云音乐而设，界面简洁且舒适。",
+      "tags": [
+        "music",
+        "dark",
+        "netease",
+        "anime"
+      ],
+      "palette": {
+        "background": "#2c3e78",
+        "sidebar": "#253465",
+        "surface": "#455588",
+        "surfaceElevated": "#566593",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#507196",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "祥子",
+      "generatedThemeName": "夜曲"
+    },
+    {
+      "directory": "Asuka Langley Soryu 明日香",
+      "sourceKey": "3391355116:preview.jpg",
+      "name": "Asuka Langley Soryu 明日香 · 星光云间",
+      "description": "基于 Wallpaper Engine 壁纸《Asuka Langley Soryu 明日香》设计。基于深色界面的网易云音乐主题，兼容 BetterNCM Community，提供流畅的视觉体验。",
+      "tags": [
+        "nc",
+        "music",
+        "dark",
+        "ncm",
+        "anime"
+      ],
+      "palette": {
+        "background": "#4c736a",
+        "sidebar": "#406159",
+        "surface": "#61847c",
+        "surfaceElevated": "#708f88",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#c85e9d",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "Asuka Langley Soryu 明日香",
+      "generatedThemeName": "星光云间"
+    },
+    {
+      "directory": "Kurumi Foot Up",
+      "sourceKey": "3409113400:preview.jpg",
+      "name": "Kurumi Foot Up · 星光音乐社",
+      "description": "基于 Wallpaper Engine 壁纸《Kurumi Foot Up》设计。沉浸式网易云音乐桌面主题，呈现流畅动效与配色。",
+      "tags": [
+        "netease",
+        "music",
+        "dynamic",
+        "anime"
+      ],
+      "palette": {
+        "background": "#df554a",
+        "sidebar": "#bb473e",
+        "surface": "#e36960",
+        "surfaceElevated": "#e5776e",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#df554a",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "Kurumi Foot Up",
+      "generatedThemeName": "星光音乐社"
+    },
+    {
+      "directory": "Kurumi's Sweaty Feet",
+      "sourceKey": "3416251890:preview.jpg",
+      "name": "Kurumi's Sweaty Feet · 夜色音乐",
+      "description": "基于 Wallpaper Engine 壁纸《Kurumi's Sweaty Feet》设计。基于网易云音乐深色模式的精心配色主题，兼容 BetterNCM Community，提供统一的视觉体验。",
+      "tags": [
+        "dark",
+        "red",
+        "music",
+        "anime"
+      ],
+      "palette": {
+        "background": "#5a140a",
+        "sidebar": "#4c1108",
+        "surface": "#6e3027",
+        "surfaceElevated": "#7b433b",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#d8524d",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 10,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "Kurumi's Sweaty Feet",
+      "generatedThemeName": "夜色音乐"
+    },
+    {
+      "directory": "Blue Archive丨蔚蓝档案丨调月莉音丨Tsukatsuki Rio",
+      "sourceKey": "3427326987:preview.jpg",
+      "name": "Blue Archive丨蔚蓝档案丨调月莉音丨Tsukatsuki Rio · 夜曲音乐",
+      "description": "基于 Wallpaper Engine 壁纸《Blue Archive丨蔚蓝档案丨调月莉音丨Tsukatsuki Rio》设计。BetterNCM Community 定制的深色音乐主题，界面简洁流畅，提供舒适的使用体验。",
+      "tags": [
+        "ncml",
+        "dark",
+        "custom",
+        "game"
+      ],
+      "palette": {
+        "background": "#615862",
+        "sidebar": "#514a52",
+        "surface": "#746c75",
+        "surfaceElevated": "#817981",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#8cd3fe",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 88,
+        "blur": 10,
+        "radius": 14,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "Blue Archive丨蔚蓝档案丨调月莉音丨Tsukatsuki Rio",
+      "generatedThemeName": "夜曲音乐"
+    },
+    {
+      "directory": "Saber-Shijian【2K】",
+      "sourceKey": "3446571258:preview.jpg",
+      "name": "Saber-Shijian【2K】 · 星夜听风",
+      "description": "基于 Wallpaper Engine 壁纸《Saber-Shijian【2K】》设计。网易云音乐桌面深色主题，优化视觉与操作体验。",
+      "tags": [
+        "dark",
+        "music",
+        "ncm",
+        "anime"
+      ],
+      "palette": {
+        "background": "#10111c",
+        "sidebar": "#0d0e18",
+        "surface": "#2d2e37",
+        "surfaceElevated": "#404149",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#754a6b",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 10,
+        "radius": 12,
+        "overlay": 0.45
+      },
+      "wallpaperTitle": "Saber-Shijian【2K】",
+      "generatedThemeName": "星夜听风"
+    },
+    {
+      "directory": "日落时分4K(专辑显示)",
+      "sourceKey": "3451391863:preview.jpg",
+      "name": "日落时分4K(专辑显示) · 星光云音乐",
+      "description": "基于 Wallpaper Engine 壁纸《日落时分4K(专辑显示)》设计。基于 BetterNCM Community 的深色主题，提供舒适的视觉体验与个性化的音乐播放界面。",
+      "tags": [
+        "music",
+        "ncm",
+        "cloud",
+        "custom",
+        "landscape"
+      ],
+      "palette": {
+        "background": "#a1742e",
+        "sidebar": "#876127",
+        "surface": "#ac8547",
+        "surfaceElevated": "#b49058",
+        "text": "#f8fafc",
+        "muted": "#cbd5e1",
+        "accent": "#a1742e",
+        "danger": "#fb7185",
+        "success": "#34d399"
+      },
+      "effects": {
+        "opacity": 85,
+        "blur": 12,
+        "radius": 12,
+        "overlay": 0.5
+      },
+      "wallpaperTitle": "日落时分4K(专辑显示)",
+      "generatedThemeName": "星光云音乐"
+    }
+  ],
+  "namedFromWallpaperMetadata": true
+}

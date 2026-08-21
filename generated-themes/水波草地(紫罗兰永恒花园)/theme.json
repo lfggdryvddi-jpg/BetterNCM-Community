@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1497574828:preview.jpg",
+  "id": "wallpaper-1497574828",
+  "name": "水波草地(紫罗兰永恒花园) · 海蓝清爽",
+  "description": "基于 Wallpaper Engine 壁纸《水波草地(紫罗兰永恒花园)》设计。以深蓝为基调，搭配清新青色点缀，界面沉静又不失活力。",
+  "tags": [
+    "deep",
+    "cool",
+    "refresh",
+    "landscape"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#394347",
+    "sidebar": "#30383c",
+    "surface": "#515a5d",
+    "surfaceElevated": "#61696c",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#ade0f6",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 8,
+    "radius": 12,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1497574828",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "水波草地(紫罗兰永恒花园)"
+  },
+  "wallpaperTitle": "水波草地(紫罗兰永恒花园)",
+  "generatedThemeName": "海蓝清爽"
+}

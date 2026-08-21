@@ -1,0 +1,42 @@
+{
+  "sourceKey": "2895500500:preview.jpg",
+  "id": "wallpaper-2895500500",
+  "name": "Anime Boy · 云悦",
+  "description": "基于 Wallpaper Engine 壁纸《Anime Boy》设计。网易云音乐深色主题，提供深色界面与高对比度阅读体验，支持本地壁纸预览与配色个性化。",
+  "tags": [
+    "nc",
+    "netease",
+    "music",
+    "dark",
+    "community",
+    "landscape"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#6d9247",
+    "sidebar": "#5c7b3c",
+    "surface": "#7f9f5d",
+    "surfaceElevated": "#8aa86c",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#9ee8fa",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 8,
+    "radius": 12,
+    "overlay": 0.48
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2895500500",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Anime Boy"
+  },
+  "wallpaperTitle": "Anime Boy",
+  "generatedThemeName": "云悦"
+}

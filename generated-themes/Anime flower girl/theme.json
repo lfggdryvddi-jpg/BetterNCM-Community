@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1734341404:preview.jpg",
+  "id": "wallpaper-1734341404",
+  "name": "Anime flower girl · 夜曲绅士",
+  "description": "基于 Wallpaper Engine 壁纸《Anime flower girl》设计。网易云音乐 BetterNCM 深色主题，深夜模式下的音乐陪伴，界面简洁与温暖色彩搭配。",
+  "tags": [
+    "cloud",
+    "music",
+    "style",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#886c74",
+    "sidebar": "#725b61",
+    "surface": "#967e85",
+    "surfaceElevated": "#a08990",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#cebf8a",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 12,
+    "radius": 15,
+    "overlay": 0.55
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1734341404",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Anime flower girl"
+  },
+  "wallpaperTitle": "Anime flower girl",
+  "generatedThemeName": "夜曲绅士"
+}

@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3238063313:preview.jpg",
+  "id": "wallpaper-3238063313",
+  "name": "由比滨结衣 长发 · 夜曲云和",
+  "description": "基于 Wallpaper Engine 壁纸《由比滨结衣 长发》设计。网易云音乐深色主题预览。",
+  "tags": [
+    "netease",
+    "music",
+    "theme",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#8c6f70",
+    "sidebar": "#765d5e",
+    "surface": "#9a8081",
+    "surfaceElevated": "#a38c8d",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#dd968b",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 10,
+    "radius": 14,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3238063313",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "由比滨结衣 长发"
+  },
+  "wallpaperTitle": "由比滨结衣 长发",
+  "generatedThemeName": "夜曲云和"
+}

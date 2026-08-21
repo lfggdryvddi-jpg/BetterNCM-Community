@@ -1,0 +1,40 @@
+{
+  "sourceKey": "863971667:preview.jpg",
+  "id": "wallpaper-863971667",
+  "name": "Tokisaki Kurumi with Flowers (1080p seamless loop ver.) · 焰火绯红",
+  "description": "基于 Wallpaper Engine 壁纸《Tokisaki Kurumi with Flowers (1080p seamless loop ver.)》设计。温暖绯红调，界面活力十足。",
+  "tags": [
+    "fiery",
+    "red",
+    "warm",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#b75049",
+    "sidebar": "#9a433d",
+    "surface": "#c0655f",
+    "surfaceElevated": "#c5736d",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#b75049",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 8,
+    "radius": 15,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "863971667",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Tokisaki Kurumi with Flowers (1080p seamless loop ver.)"
+  },
+  "wallpaperTitle": "Tokisaki Kurumi with Flowers (1080p seamless loop ver.)",
+  "generatedThemeName": "焰火绯红"
+}

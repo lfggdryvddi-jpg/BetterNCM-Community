@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2069855119:preview.jpg",
+  "id": "wallpaper-2069855119",
+  "name": "洋红の风景 · 星光伴音",
+  "description": "基于 Wallpaper Engine 壁纸《洋红の风景》设计。深色界面，音乐与视觉的和谐共鸣，专为深夜听曲设计。",
+  "tags": [
+    "music",
+    "dark",
+    "minimal",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#252957",
+    "sidebar": "#1f2249",
+    "surface": "#3f436b",
+    "surfaceElevated": "#515479",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#81d4f3",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 4,
+    "radius": 8,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2069855119",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "洋红の风景"
+  },
+  "wallpaperTitle": "洋红の风景",
+  "generatedThemeName": "星光伴音"
+}

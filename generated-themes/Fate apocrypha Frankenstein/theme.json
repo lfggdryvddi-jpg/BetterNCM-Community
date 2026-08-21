@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1133508068:preview.jpg",
+  "id": "wallpaper-1133508068",
+  "name": "Fate apocrypha Frankenstein · 星光岁月",
+  "description": "基于 Wallpaper Engine 壁纸《Fate apocrypha Frankenstein》设计。基于暖调复古色调的网易云音乐深色主题，兼容 BetterNCM Community。",
+  "tags": [
+    "retro",
+    "warm",
+    "dark",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#805a4a",
+    "sidebar": "#6c4c3e",
+    "surface": "#8f6e60",
+    "surfaceElevated": "#997b6e",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#9a495e",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.48
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1133508068",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Fate apocrypha Frankenstein"
+  },
+  "wallpaperTitle": "Fate apocrypha Frankenstein",
+  "generatedThemeName": "星光岁月"
+}

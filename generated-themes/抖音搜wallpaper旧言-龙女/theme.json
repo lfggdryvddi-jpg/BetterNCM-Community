@@ -1,0 +1,41 @@
+{
+  "sourceKey": "3048159108:preview.jpg",
+  "id": "wallpaper-3048159108",
+  "name": "抖音搜wallpaper旧言-龙女 · 星光逐浪",
+  "description": "基于 Wallpaper Engine 壁纸《抖音搜wallpaper旧言-龙女》设计。基于深色界面的网易云音乐主题，配色柔和，阅读舒适，支持 BetterNCM Community 扩展。",
+  "tags": [
+    "dark",
+    "music",
+    "ncms",
+    "cloud",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#626a79",
+    "sidebar": "#525966",
+    "surface": "#757c89",
+    "surfaceElevated": "#818894",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#81b0d1",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.48
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3048159108",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "抖音搜wallpaper旧言-龙女"
+  },
+  "wallpaperTitle": "抖音搜wallpaper旧言-龙女",
+  "generatedThemeName": "星光逐浪"
+}

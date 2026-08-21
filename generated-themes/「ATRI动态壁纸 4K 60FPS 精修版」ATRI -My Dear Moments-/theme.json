@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2141213975:preview.jpg",
+  "id": "wallpaper-2141213975",
+  "name": "「ATRI动态壁纸 4K 60FPS 精修版」ATRI -My Dear Moments- · 暮光配色",
+  "description": "基于 Wallpaper Engine 壁纸《「ATRI动态壁纸 4K 60FPS 精修版」ATRI -My Dear Moments-》设计。紫调深色主题，界面沉静，音乐播放体验柔和",
+  "tags": [
+    "purple",
+    "deep",
+    "soft",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#665963",
+    "sidebar": "#564b53",
+    "surface": "#786d76",
+    "surfaceElevated": "#857a82",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#6997d7",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 14,
+    "radius": 16,
+    "overlay": 0.55
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2141213975",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "「ATRI动态壁纸 4K 60FPS 精修版」ATRI -My Dear Moments-"
+  },
+  "wallpaperTitle": "「ATRI动态壁纸 4K 60FPS 精修版」ATRI -My Dear Moments-",
+  "generatedThemeName": "暮光配色"
+}

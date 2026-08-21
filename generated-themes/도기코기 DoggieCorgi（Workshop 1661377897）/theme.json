@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1661377897:preview.jpg",
+  "id": "wallpaper-1661377897",
+  "name": "도기코기 DoggieCorgi · 森系",
+  "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCorgi》设计。自然的绿意与音乐的节奏在暗色界面上和谐共鸣。",
+  "tags": [
+    "nature",
+    "fresh",
+    "minimal",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#654539",
+    "sidebar": "#553a30",
+    "surface": "#775b51",
+    "surfaceElevated": "#846a61",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#cbb287",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 14,
+    "radius": 8,
+    "overlay": 0.55
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1661377897",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "도기코기 DoggieCorgi"
+  },
+  "wallpaperTitle": "도기코기 DoggieCorgi",
+  "generatedThemeName": "森系"
+}

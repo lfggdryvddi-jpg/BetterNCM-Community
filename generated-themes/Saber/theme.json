@@ -1,0 +1,40 @@
+{
+  "sourceKey": "966297578:preview.jpg",
+  "id": "wallpaper-966297578",
+  "name": "Saber · 暮色轻舞",
+  "description": "基于 Wallpaper Engine 壁纸《Saber》设计。以柔和的灰紫色调为主，营造宁静的音乐聆听氛围。",
+  "tags": [
+    "minimal",
+    "soft",
+    "elegant",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#8b8ea2",
+    "sidebar": "#757788",
+    "surface": "#999cad",
+    "surfaceElevated": "#a2a5b5",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#fef5c0",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 6,
+    "radius": 12,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "966297578",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Saber"
+  },
+  "wallpaperTitle": "Saber",
+  "generatedThemeName": "暮色轻舞"
+}

@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1573769316:preview.jpg",
+  "id": "wallpaper-1573769316",
+  "name": "太空 地球 earth outer space 4K分辨率 · 云端之蓝",
+  "description": "基于 Wallpaper Engine 壁纸《太空 地球 earth outer space 4K分辨率》设计。以天空蓝为核心，界面通透开阔，配合温暖点缀带来舒适的听感体验。",
+  "tags": [
+    "blue",
+    "clean",
+    "airy",
+    "nature"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#3b8ad1",
+    "sidebar": "#3274b0",
+    "surface": "#5398d7",
+    "surfaceElevated": "#62a1da",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#3b8ad1",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 6,
+    "radius": 18,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1573769316",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "太空 地球 earth outer space 4K分辨率"
+  },
+  "wallpaperTitle": "太空 地球 earth outer space 4K分辨率",
+  "generatedThemeName": "云端之蓝"
+}

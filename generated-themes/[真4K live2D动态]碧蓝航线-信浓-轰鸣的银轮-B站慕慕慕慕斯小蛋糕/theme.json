@@ -1,0 +1,41 @@
+{
+  "sourceKey": "2872196813:preview.jpg",
+  "id": "wallpaper-2872196813",
+  "name": "[真4K live2D动态]碧蓝航线-信浓-轰鸣的银轮-B站慕慕慕慕斯小蛋糕 · 星光云听",
+  "description": "基于 Wallpaper Engine 壁纸《[真4K live2D动态]碧蓝航线-信浓-轰鸣的银轮-B站慕慕慕慕斯小蛋糕》设计。深色基调，星光点缀，流畅交互，专注音乐体验。",
+  "tags": [
+    "netease",
+    "dark",
+    "music",
+    "ncm",
+    "game"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#489ca7",
+    "sidebar": "#3c838c",
+    "surface": "#5ea8b2",
+    "surfaceElevated": "#6db0b9",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#4ec4d3",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2872196813",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "[真4K live2D动态]碧蓝航线-信浓-轰鸣的银轮-B站慕慕慕慕斯小蛋糕"
+  },
+  "wallpaperTitle": "[真4K live2D动态]碧蓝航线-信浓-轰鸣的银轮-B站慕慕慕慕斯小蛋糕",
+  "generatedThemeName": "星光云听"
+}

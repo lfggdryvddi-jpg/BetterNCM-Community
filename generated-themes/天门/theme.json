@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2871542851:preview.jpg",
+  "id": "wallpaper-2871542851",
+  "name": "天门 · 星光云听",
+  "description": "基于 Wallpaper Engine 壁纸《天门》设计。深色主题，专为网易云音乐桌面端设计，界面简洁舒适，夜间聆听首选。",
+  "tags": [
+    "dark",
+    "music",
+    "minimal",
+    "nature"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#395070",
+    "sidebar": "#30435e",
+    "surface": "#516581",
+    "surfaceElevated": "#61738d",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#9fc6f1",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2871542851",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "天门"
+  },
+  "wallpaperTitle": "天门",
+  "generatedThemeName": "星光云听"
+}

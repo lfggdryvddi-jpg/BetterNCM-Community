@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1311534675:preview.jpg",
+  "id": "wallpaper-1311534675",
+  "name": "Winter Forest · 幽暗深渊",
+  "description": "基于 Wallpaper Engine 壁纸《Winter Forest》设计。深沉的深色界面，适合夜间聆听，界面元素清晰突出。",
+  "tags": [
+    "deep",
+    "void",
+    "night",
+    "landscape"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#162327",
+    "sidebar": "#121d21",
+    "surface": "#323d41",
+    "surfaceElevated": "#454f52",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#101b1f",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 4,
+    "radius": 14,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1311534675",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Winter Forest"
+  },
+  "wallpaperTitle": "Winter Forest",
+  "generatedThemeName": "幽暗深渊"
+}

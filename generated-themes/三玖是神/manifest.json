@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "wallpaper-2869409186",
+  "name": "三玖是神 · 夜色云音乐",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《三玖是神》设计。网易云音乐深色主题，提供沉浸式视觉与流畅操作。",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "netease",
+    "dark",
+    "music",
+    "anime"
+  ]
+}

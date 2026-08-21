@@ -1,0 +1,40 @@
+{
+  "sourceKey": "840677892:preview.jpg",
+  "id": "wallpaper-840677892",
+  "name": "Fate-Saber Lily[by wlop]-1080P 光玉漂浮动态壁纸 · 复古胶片",
+  "description": "基于 Wallpaper Engine 壁纸《Fate-Saber Lily[by wlop]-1080P 光玉漂浮动态壁纸》设计。暖灰调配色，怀旧感十足，适合老歌收听。",
+  "tags": [
+    "retro",
+    "vintage",
+    "music",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#564a43",
+    "sidebar": "#483e38",
+    "surface": "#6a605a",
+    "surfaceElevated": "#786e69",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#a29765",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 12,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "840677892",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Fate-Saber Lily[by wlop]-1080P 光玉漂浮动态壁纸"
+  },
+  "wallpaperTitle": "Fate-Saber Lily[by wlop]-1080P 光玉漂浮动态壁纸",
+  "generatedThemeName": "复古胶片"
+}

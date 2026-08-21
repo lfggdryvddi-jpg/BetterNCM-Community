@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2722447236:preview.jpg",
+  "id": "wallpaper-2722447236",
+  "name": "ANIME-PICTURES · 云音乐深色主题",
+  "description": "基于 Wallpaper Engine 壁纸《ANIME-PICTURES》设计。BetterNCM Community 网易云音乐深色主题，界面简洁舒适，深色配色减少眼部疲劳，支持本地壁纸预览。",
+  "tags": [
+    "netease",
+    "betterncm",
+    "music",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#6a79ba",
+    "sidebar": "#59669c",
+    "surface": "#7c89c2",
+    "surfaceElevated": "#8894c8",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#6a79ba",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 6,
+    "radius": 12,
+    "overlay": 0.48
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2722447236",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "ANIME-PICTURES"
+  },
+  "wallpaperTitle": "ANIME-PICTURES",
+  "generatedThemeName": "云音乐深色主题"
+}

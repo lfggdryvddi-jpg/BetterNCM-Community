@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2130367557:preview.jpg",
+  "id": "wallpaper-2130367557",
+  "name": "Summer · 夜色流动",
+  "description": "基于 Wallpaper Engine 壁纸《Summer》设计。深色底色搭配柔和点缀，还原网易云音乐经典暗黑界面",
+  "tags": [
+    "dark",
+    "minimal",
+    "music",
+    "nature"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#403523",
+    "sidebar": "#362d1d",
+    "surface": "#574d3d",
+    "surfaceElevated": "#665d4f",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#3f9ca4",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 82,
+    "blur": 8,
+    "radius": 10,
+    "overlay": 0.48
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2130367557",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Summer"
+  },
+  "wallpaperTitle": "Summer",
+  "generatedThemeName": "夜色流动"
+}

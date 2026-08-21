@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2402436422:preview.jpg",
+  "id": "wallpaper-2402436422",
+  "name": "Minecraft Earth by WLabs · 蔚蓝深渊",
+  "description": "基于 Wallpaper Engine 壁纸《Minecraft Earth by WLabs》设计。深邃蓝调，科技感强，专注力助眠。",
+  "tags": [
+    "blue",
+    "focus",
+    "digital",
+    "pixel-art"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#104d72",
+    "sidebar": "#0d4160",
+    "surface": "#2d6283",
+    "surfaceElevated": "#40718e",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#5bfeb4",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 16,
+    "radius": 9,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2402436422",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Minecraft Earth by WLabs"
+  },
+  "wallpaperTitle": "Minecraft Earth by WLabs",
+  "generatedThemeName": "蔚蓝深渊"
+}

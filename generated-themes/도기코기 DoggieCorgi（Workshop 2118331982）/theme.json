@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2118331982:preview.jpg",
+  "id": "wallpaper-2118331982",
+  "name": "도기코기 DoggieCorgi · 极简黑夜",
+  "description": "基于 Wallpaper Engine 壁纸《도기코기 DoggieCorgi》设计。复古棕调配色，简约不简单，带来温暖的音乐陪伴。",
+  "tags": [
+    "music",
+    "retro",
+    "minimal",
+    "relaxing"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#524b37",
+    "sidebar": "#453f2e",
+    "surface": "#67614f",
+    "surfaceElevated": "#756f5f",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#a49d63",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 92,
+    "blur": 8,
+    "radius": 16,
+    "overlay": 0.65
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2118331982",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "도기코기 DoggieCorgi"
+  },
+  "wallpaperTitle": "도기코기 DoggieCorgi",
+  "generatedThemeName": "极简黑夜"
+}

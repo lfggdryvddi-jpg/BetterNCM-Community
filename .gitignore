@@ -55,3 +55,6 @@ enc_temp_folder
 # VCPKG packages
 vcpkg_installed/
 vcpkg_installed_86/
+# Local Wallpaper Engine theme generation
+generated-themes/*/local-settings.json
+artifacts/

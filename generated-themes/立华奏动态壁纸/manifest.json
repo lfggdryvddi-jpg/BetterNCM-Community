@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "wallpaper-1682358029",
+  "name": "立华奏动态壁纸 · 星尘灰度",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《立华奏动态壁纸》设计。冷调灰系配色，界面沉静，突出专辑封面与歌名，适合专注聆听。",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "cool",
+    "monochrome",
+    "focus",
+    "anime"
+  ]
+}

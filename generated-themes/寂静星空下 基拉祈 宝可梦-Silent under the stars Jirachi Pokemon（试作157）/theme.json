@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2485965359:preview.jpg",
+  "id": "wallpaper-2485965359",
+  "name": "寂静星空下 基拉祈 宝可梦-Silent under the stars Jirachi Pokemon（试作157） · 海蓝深渊",
+  "description": "基于 Wallpaper Engine 壁纸《寂静星空下 基拉祈 宝可梦-Silent under the stars Jirachi Pokemon（试作157）》设计。暗夜海洋的沉静与蔚蓝的活力，营造专注与宁静的听觉环境",
+  "tags": [
+    "ocean",
+    "deep",
+    "calm",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#1b4246",
+    "sidebar": "#17373b",
+    "surface": "#36595c",
+    "surfaceElevated": "#49686b",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#20c7da",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 80,
+    "blur": 8,
+    "radius": 14,
+    "overlay": 0.55
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2485965359",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "寂静星空下 基拉祈 宝可梦-Silent under the stars Jirachi Pokemon（试作157）"
+  },
+  "wallpaperTitle": "寂静星空下 基拉祈 宝可梦-Silent under the stars Jirachi Pokemon（试作157）",
+  "generatedThemeName": "海蓝深渊"
+}

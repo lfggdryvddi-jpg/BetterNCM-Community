@@ -1,0 +1,41 @@
+{
+  "sourceKey": "827982449:preview.jpg",
+  "id": "wallpaper-827982449",
+  "name": "Miku-可自定义-雪花散落的冬季 v1.31 · 深海余烬",
+  "description": "基于 Wallpaper Engine 壁纸《Miku-可自定义-雪花散落的冬季 v1.31》设计。深海余烬，界面宁静，适合深夜聆听。",
+  "tags": [
+    "dark",
+    "ocean",
+    "calm",
+    "anime",
+    "fantasy"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#423940",
+    "sidebar": "#373036",
+    "surface": "#595157",
+    "surfaceElevated": "#686166",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#649edb",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 8,
+    "radius": 15,
+    "overlay": 0.35
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "827982449",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Miku-可自定义-雪花散落的冬季 v1.31"
+  },
+  "wallpaperTitle": "Miku-可自定义-雪花散落的冬季 v1.31",
+  "generatedThemeName": "深海余烬"
+}

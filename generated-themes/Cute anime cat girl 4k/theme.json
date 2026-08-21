@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2255734516:preview.jpg",
+  "id": "wallpaper-2255734516",
+  "name": "Cute anime cat girl 4k · 暮光葡萄园",
+  "description": "基于 Wallpaper Engine 壁纸《Cute anime cat girl 4k》设计。紫色调的复古主题，营造温暖的音乐氛围。",
+  "tags": [
+    "vintage",
+    "purple",
+    "retro",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#816876",
+    "sidebar": "#6c5763",
+    "surface": "#907a86",
+    "surfaceElevated": "#9a8691",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#d9a999",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 90,
+    "blur": 8,
+    "radius": 12,
+    "overlay": 0.55
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2255734516",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Cute anime cat girl 4k"
+  },
+  "wallpaperTitle": "Cute anime cat girl 4k",
+  "generatedThemeName": "暮光葡萄园"
+}

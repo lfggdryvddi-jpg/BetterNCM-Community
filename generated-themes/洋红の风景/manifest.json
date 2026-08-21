@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "wallpaper-2069855119",
+  "name": "洋红の风景 · 星光伴音",
+  "version": "1.0.0",
+  "author": "BetterNCM Community local generator",
+  "description": "基于 Wallpaper Engine 壁纸《洋红の风景》设计。深色界面，音乐与视觉的和谐共鸣，专为深夜听曲设计。",
+  "entry": "theme.css",
+  "license": "CC0-1.0 (generated code; source artwork remains third-party)",
+  "compatibility": {
+    "betterncm": "BetterNCM Community",
+    "ncm": "3.x"
+  },
+  "tags": [
+    "music",
+    "dark",
+    "minimal",
+    "anime"
+  ]
+}

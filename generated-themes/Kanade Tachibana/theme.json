@@ -1,0 +1,40 @@
+{
+  "sourceKey": "1199203934:preview.jpg",
+  "id": "wallpaper-1199203934",
+  "name": "Kanade Tachibana · 星海漫步",
+  "description": "基于 Wallpaper Engine 壁纸《Kanade Tachibana》设计。星空蓝调主题，柔和对比，营造沉浸式音乐氛围。",
+  "tags": [
+    "neon",
+    "space",
+    "calm",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#616ab7",
+    "sidebar": "#51599a",
+    "surface": "#747cc0",
+    "surfaceElevated": "#8188c5",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#649fe8",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 88,
+    "blur": 16,
+    "radius": 12,
+    "overlay": 0.38
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "1199203934",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Kanade Tachibana"
+  },
+  "wallpaperTitle": "Kanade Tachibana",
+  "generatedThemeName": "星海漫步"
+}

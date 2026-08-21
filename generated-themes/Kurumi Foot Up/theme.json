@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3409113400:preview.jpg",
+  "id": "wallpaper-3409113400",
+  "name": "Kurumi Foot Up · 星光音乐社",
+  "description": "基于 Wallpaper Engine 壁纸《Kurumi Foot Up》设计。沉浸式网易云音乐桌面主题，呈现流畅动效与配色。",
+  "tags": [
+    "netease",
+    "music",
+    "dynamic",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#df554a",
+    "sidebar": "#bb473e",
+    "surface": "#e36960",
+    "surfaceElevated": "#e5776e",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#df554a",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3409113400",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Kurumi Foot Up"
+  },
+  "wallpaperTitle": "Kurumi Foot Up",
+  "generatedThemeName": "星光音乐社"
+}

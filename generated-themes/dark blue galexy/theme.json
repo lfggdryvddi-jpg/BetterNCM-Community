@@ -1,0 +1,40 @@
+{
+  "sourceKey": "973101892:preview.jpg",
+  "id": "wallpaper-973101892",
+  "name": "dark blue galexy · 海岸回响",
+  "description": "基于 Wallpaper Engine 壁纸《dark blue galexy》设计。深蓝配色搭配清新文字，仿佛置身海边的音乐空间。",
+  "tags": [
+    "ocean",
+    "calm",
+    "retro",
+    "sci-fi"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#5e85bf",
+    "sidebar": "#4f70a0",
+    "surface": "#7194c7",
+    "surfaceElevated": "#7e9dcc",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#5e85bf",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 92,
+    "blur": 10,
+    "radius": 15,
+    "overlay": 0.55
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "973101892",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "dark blue galexy"
+  },
+  "wallpaperTitle": "dark blue galexy",
+  "generatedThemeName": "海岸回响"
+}

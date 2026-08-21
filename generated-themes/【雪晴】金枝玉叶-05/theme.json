@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3323790020:preview.jpg",
+  "id": "wallpaper-3323790020",
+  "name": "【雪晴】金枝玉叶-05 · 云音乐主题",
+  "description": "基于 Wallpaper Engine 壁纸《【雪晴】金枝玉叶-05》设计。网易云音乐桌面端深色主题，专为社区设计，提供高对比度排版与流畅体验。",
+  "tags": [
+    "netease",
+    "cloud",
+    "music",
+    "girls"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#2e3037",
+    "sidebar": "#27282e",
+    "surface": "#47494f",
+    "surfaceElevated": "#58595f",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#df9c86",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3323790020",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "【雪晴】金枝玉叶-05"
+  },
+  "wallpaperTitle": "【雪晴】金枝玉叶-05",
+  "generatedThemeName": "云音乐主题"
+}

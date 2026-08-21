@@ -1,0 +1,40 @@
+{
+  "sourceKey": "2785383629:preview.jpg",
+  "id": "wallpaper-2785383629",
+  "name": "艾尔登法环 菈妮 4k高清 · 夜岚",
+  "description": "基于 Wallpaper Engine 壁纸《艾尔登法环 菈妮 4k高清》设计。深色配色，舒适视听，专为网易云音乐主题设计。",
+  "tags": [
+    "ncim",
+    "cloud",
+    "music",
+    "game"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#264978",
+    "sidebar": "#203d65",
+    "surface": "#405f88",
+    "surfaceElevated": "#516d93",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#6c9acd",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 12,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2785383629",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "艾尔登法环 菈妮 4k高清"
+  },
+  "wallpaperTitle": "艾尔登法环 菈妮 4k高清",
+  "generatedThemeName": "夜岚"
+}

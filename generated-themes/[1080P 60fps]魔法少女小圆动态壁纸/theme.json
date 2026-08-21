@@ -1,0 +1,40 @@
+{
+  "sourceKey": "899497344:preview.jpg",
+  "id": "wallpaper-899497344",
+  "name": "[1080P 60fps]魔法少女小圆动态壁纸 · 星尘蔷薇",
+  "description": "基于 Wallpaper Engine 壁纸《[1080P 60fps]魔法少女小圆动态壁纸》设计。柔和蔷薇粉，界面温婉细腻。",
+  "tags": [
+    "rose",
+    "pastel",
+    "soft",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#e04a91",
+    "sidebar": "#bc3e7a",
+    "surface": "#e4609e",
+    "surfaceElevated": "#e66ea7",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#e04a91",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 82,
+    "blur": 12,
+    "radius": 9,
+    "overlay": 0.6
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "899497344",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "[1080P 60fps]魔法少女小圆动态壁纸"
+  },
+  "wallpaperTitle": "[1080P 60fps]魔法少女小圆动态壁纸",
+  "generatedThemeName": "星尘蔷薇"
+}

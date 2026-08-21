@@ -1,0 +1,40 @@
+{
+  "sourceKey": "3446571258:preview.jpg",
+  "id": "wallpaper-3446571258",
+  "name": "Saber-Shijian【2K】 · 星夜听风",
+  "description": "基于 Wallpaper Engine 壁纸《Saber-Shijian【2K】》设计。网易云音乐桌面深色主题，优化视觉与操作体验。",
+  "tags": [
+    "dark",
+    "music",
+    "ncm",
+    "anime"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#10111c",
+    "sidebar": "#0d0e18",
+    "surface": "#2d2e37",
+    "surfaceElevated": "#404149",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#754a6b",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 10,
+    "radius": 12,
+    "overlay": 0.45
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "3446571258",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "Saber-Shijian【2K】"
+  },
+  "wallpaperTitle": "Saber-Shijian【2K】",
+  "generatedThemeName": "星夜听风"
+}

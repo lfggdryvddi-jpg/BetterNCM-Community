@@ -1,0 +1,41 @@
+{
+  "sourceKey": "2808874251:preview.jpg",
+  "id": "wallpaper-2808874251",
+  "name": "youer · 网易云深色",
+  "description": "基于 Wallpaper Engine 壁纸《youer》设计。网易云音乐深色主题，深色界面文字清晰对比度足够，兼顾本地预览渲染。",
+  "tags": [
+    "ncms",
+    "music",
+    "theme",
+    "dark",
+    "girls"
+  ],
+  "mode": "dark",
+  "palette": {
+    "background": "#b5846c",
+    "sidebar": "#986f5b",
+    "surface": "#be937e",
+    "surfaceElevated": "#c49d89",
+    "text": "#f8fafc",
+    "muted": "#cbd5e1",
+    "accent": "#b5846c",
+    "danger": "#fb7185",
+    "success": "#34d399"
+  },
+  "effects": {
+    "opacity": 85,
+    "blur": 6,
+    "radius": 10,
+    "overlay": 0.5
+  },
+  "source": {
+    "type": "wallpaper-engine-local",
+    "projectId": "2808874251",
+    "fileName": "preview.jpg",
+    "localOnly": true,
+    "pathOmitted": true,
+    "wallpaperTitle": "youer"
+  },
+  "wallpaperTitle": "youer",
+  "generatedThemeName": "网易云深色"
+}
