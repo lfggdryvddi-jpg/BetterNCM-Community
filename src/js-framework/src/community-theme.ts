@@ -448,6 +448,17 @@ html[data-bncm-community-theme="glass"] [class*="DefaultBarWrapper_"]::after {
 	background-image: none !important;
 	border-color: var(--bncm-community-border) !important;
 }
+/* The liked-music page creates a fixed sticky operation header while scrolling. Override its skin background. */
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_mine_like_music [class*="StyledStickyOper_"] {
+	background-color: var(--bncm-community-panel) !important;
+	background-image:
+		linear-gradient(105deg,
+			rgba(var(--bncm-community-accent-alt-rgb), .22),
+			rgba(var(--bncm-community-accent-rgb), .12)) !important;
+	border-bottom: 1px solid var(--bncm-community-border) !important;
+	box-shadow: 0 10px 28px rgba(0, 0, 0, .16) !important;
+	color: var(--bncm-community-text) !important;
+}
 /* Primary content actions and active tabs should not fall back to the NCM skin accent. */
 html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [data-testid="tid_playlist_playall_btn"] {
 	background: var(--bncm-community-control-gradient) !important;
