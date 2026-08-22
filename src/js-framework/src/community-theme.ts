@@ -260,7 +260,8 @@ html[data-bncm-community-wallpaper="true"] #g_iframe {
 }
 /* QQ Music and NCM official skins both keep artwork in one dedicated background layer.
  * Clear every full-window native skin layer and render our media only once inside it. */
-html[data-bncm-community-wallpaper="true"] [data-bncm-community-wallpaper-background="true"] {
+html[data-bncm-community-wallpaper="true"] [data-bncm-community-wallpaper-background="true"],
+html[data-bncm-community-wallpaper="true"] .should-hide-under-vinyl-mode[class*="StyledBackground_"] {
 	background: transparent !important;
 	filter: none !important;
 	opacity: 1 !important;
@@ -448,8 +449,8 @@ html[data-bncm-community-theme="glass"] [class*="DefaultBarWrapper_"]::after {
 	background-image: none !important;
 	border-color: var(--bncm-community-border) !important;
 }
-/* The liked-music page creates a fixed sticky operation header while scrolling. Override its skin background. */
-html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) #page_mine_like_music [class*="StyledStickyOper_"] {
+/* Playlist pages create a fixed sticky operation header while scrolling. Keep every playlist route on the active community skin. */
+html[data-bncm-community-theme]:not([data-bncm-community-theme="default"]) [class*="StyledStickyOper_"] {
 	background-color: var(--bncm-community-panel) !important;
 	background-image:
 		linear-gradient(105deg,
@@ -1287,15 +1288,52 @@ let surfaceObserver: MutationObserver | null = null;
 function scheduleCommunityThemeTargetRefresh(force = false) {
 	const wallpaperTargetsAreStable = [...markedWallpaperBackgrounds].every((element) => element.isConnected);
 	if (!force && communitySurfaceTargetsAreStable() && wallpaperTargetsAreStable) return;
-	window.clearTimeout(surfaceRefreshTimer);
+	// Do not keep extending the timer while a route is streaming in. Repeated
+	// layout scans during playlist navigation were visible as a slow first paint.
+	if (force && surfaceRefreshTimer) {
+		window.clearTimeout(surfaceRefreshTimer);
+		surfaceRefreshTimer = 0;
+	}
+	if (surfaceRefreshTimer) return;
 	surfaceRefreshTimer = window.setTimeout(() => {
+		surfaceRefreshTimer = 0;
 		refreshCommunityThemeTargets();
-	}, 450);
+	}, force ? 0 : 180);
+}
+
+function nodeContainsWallpaperLayer(node: Node) {
+	if (!(node instanceof Element)) return false;
+	if (markedWallpaperBackgrounds.has(node as HTMLElement)) return true;
+	return node.matches('[class*="StyledBackground"]') || Boolean(node.querySelector('[class*="StyledBackground"]'));
 }
 
 function observeCommunityThemeTargets() {
 	if (surfaceObserver || !document.body) return;
-	surfaceObserver = new MutationObserver(() => scheduleCommunityThemeTargetRefresh(false));
+	surfaceObserver = new MutationObserver((records) => {
+		const childListRecords = records.filter((record) => record.type === "childList");
+		const wallpaperChanged = childListRecords.some((record) =>
+			[...record.removedNodes, ...record.addedNodes].some(nodeContainsWallpaperLayer),
+		);
+
+		if (wallpaperChanged) {
+			// Playlist routes mount a new full-window native skin layer while the
+			// page is settling. Mark it in this mutation turn so the original skin
+			// cannot flash through the themed sticky operation header.
+			markCommunityWallpaperBackground();
+			ensureCommunityDynamicWallpaperHost();
+		}
+
+		// Most route mutations are virtualized rows inside an already-marked
+		// surface. They do not change the surface target and should not trigger
+		// getBoundingClientRect/querySelectorAll work on every row update.
+		const needsRefresh = childListRecords.some((record) => {
+			const target = record.target instanceof HTMLElement ? record.target : null;
+			if (target?.closest(".better-ncm-manager")) return false;
+			if (target?.closest("[" + SURFACE_ATTRIBUTE + "]")) return false;
+			return true;
+		});
+		if (needsRefresh) scheduleCommunityThemeTargetRefresh(false);
+	});
 	surfaceObserver.observe(document.body, {
 		childList: true,
 		subtree: true,
